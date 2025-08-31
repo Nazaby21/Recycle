@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.fs-kp{
+  font-family: "Kantumruy Pro", sans-serif;
+  font-optical-sizing: auto;
+}
+.fs-rb{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
