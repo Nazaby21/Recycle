@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../chhorng/img/pexel-leaf.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* placeholder  */
+
+/* Change placeholder color */
+.login-area input::placeholder {
+    color: gray !important;
+    opacity: 1;
+}
+
+/* input:focus::placeholder {
+    color: black;
+} */
+
+.login-area input:focus {
+    outline: none;
+    border: 1px solid #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
+    transition: 0.3s ease;
+}
+.login-area .bg-black {
+    /* background-color: rgbr(0, 0, 0, 0.15)!important; */
+    background-color: rgba(0, 0, 0, 0.885)!important ;
+}
+/* dok padding col-6 oy vea jit knea vnh   */
+.login-area .row{
+    --bs-gutter-x: 0rem!important;
+}
+.login-area .bg-dark {
+    background-color: rgba(0, 0, 0, 0.55)!important;
+}
+
+
+/* sigin  */
+
+.signin-area .icon {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+}
+.signin-area .icon:hover {
+    background-color: rgba(0, 0, 255, 0.475);
+}
