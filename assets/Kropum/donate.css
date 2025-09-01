@@ -1,0 +1,102 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Hanuman', sans-serif;
+}
+.masonry {
+  column-count: 4;
+  column-gap: 16px;
+}
+    .hero-banner {
+      background-image: url('https://i.pinimg.com/1200x/4f/0c/cd/4f0ccdc6cfc43be89ceed82cead2775d.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* 🔑 background attached */
+      padding: 80px 20px;
+      color: #fff;
+      text-align: center;
+      filter: brightness(0.9);
+      margin-top: 30px;
+      height: 50%;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: auto;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .hero-content h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+
+.card5 {
+  display: inline-block;
+  margin: 0 0 16px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  break-inside: avoid;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.50);
+  color: #fff;
+  text-align: start;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-title5  {
+  font-size: 16px;
+  margin-bottom: 8px;
+  text-align: start;
+  color: white;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.card5:hover .card-overlay {
+  opacity: 1;
+}
+
+.card5:hover .card-title {
+  animation: fadeInUp 0.4s ease-in-out;
+}
+
+.card5:hover .card-text {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+.footer {
+  background-color: rgb(52, 52, 52);
+  padding: 40px 0;
+  font-size: 14px;
+}
+.card {
+  min-width: 200px;
+}
