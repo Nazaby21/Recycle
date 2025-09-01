@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-.fs-kp{
-  font-family: "Kantumruy Pro", sans-serif;
+.fs-kp {
+  font-family: 'Kantumruy Pro', sans-serif;
   font-optical-sizing: auto;
 }
-.fs-rb{
-  font-family: "Roboto", sans-serif;
+.fs-rb {
+  font-family: 'Roboto', sans-serif;
   font-optical-sizing: auto;
 }
+
+.product-card {
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
