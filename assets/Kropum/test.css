@@ -22,6 +22,8 @@ body{
 h5 .text-color:hover{
     color: black !important;
     transition: color 0.3s ease;
+    
+    
 }
 
 
