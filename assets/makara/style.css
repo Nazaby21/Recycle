@@ -14,6 +14,13 @@
 }
 .product-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(32, 32, 32, 0.2);
+}
+
+.btn-addcart:hover{
+  background-color: #fff;
+  border: 2px solid green;
+  color: #000;
+  color: green;
 }
 
