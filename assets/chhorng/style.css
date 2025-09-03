@@ -34,9 +34,9 @@ body {
     background-color: rgba(0, 0, 0, 0.885)!important ;
 }
 /* dok padding col-6 oy vea jit knea vnh   */
-.login-area .row{
+/* .login-area .row{
     --bs-gutter-x: 0rem!important;
-}
+} */
 .login-area .bg-dark {
     background-color: rgba(0, 0, 0, 0.55)!important;
 }
@@ -51,4 +51,7 @@ body {
 }
 .signin-area .icon:hover {
     background-color: rgba(0, 0, 255, 0.475);
+}
+.signin-area .bg-light {
+    background-color: #ffffffb1!important;
 }
