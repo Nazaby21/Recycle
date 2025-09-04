@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card-img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* comment user */
+.user{
+    width: 100%;
+    display: flex;
+    line-height: 1.6;
+    
+}
+.user-pf{
+    width: 65px;
+    height: 60px;
+    
+}
+.user-pf img{
+    width: 100%;
+    height: 100%;
+     border-radius: 100%;
+}
+.user-name{
+    width: 100%;
+   
+    margin-left: 10px;
+}
