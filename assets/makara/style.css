@@ -23,4 +23,34 @@
   color: #000;
   color: green;
 }
+/* Apply animation when Bootstrap shows toast */
+.animate-toast.showing {
+  animation: slideInRight 0.6s forwards;
+}
+/* Apply animation when Bootstrap hides toast */
+.animate-toast.hide {
+  animation: slideOutRight 0.6s forwards;
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
 

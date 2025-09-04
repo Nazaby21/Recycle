@@ -35,35 +35,70 @@
                   <td>$14.00</td>
                   <td>
                     <div class="d-flex justify-content-center gap-2 flex-wrap">
-                      <button class="btn btn-danger btn-sm">លុប</button>
+                      <button class="btn btn-danger btn-sm" id="deleteBtn">លុប</button>
+                      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="deleteToast" class="toast animate-toast" role="alert" aria-live="assertive"
+                          aria-atomic="true">
+                          <div class="toast-header">
+                            <!-- <strong class="me-auto text-danger">ការដំណើរការ</strong> -->
+                            <img src="assets/makara/image/logo.png" class="rounded me-2" alt="..." style="width: 40px;">
+                            <small class="ms-auto">Just now</small>
+                            
+                          </div>
+                          <div class="toast-body">
+                            អ្នកបានលុបដោយជោគជ័យ ✅
+                          </div>
+                        </div>
+                      </div>
                       <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editModal"
                         data-name="ធុងទឹកប្លាស្ទិច" data-quantity="2">
                         កែប្រែ
                       </button>
                       <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel"
                         aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog ">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="editModalLabel">កែប្រែផលិតផល</h5>
+                              <h5 class="modal-title fs-kp" id="editModalLabel">តើអ្នកពិតជាចង់កែប្រែផលិតផលមែនដែរឬទេ?
+                              </h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                               <form>
-                                <div class="mb-3">
-                                  <label for="product-name" class="form-label">ឈ្មោះផលិតផល</label>
-                                  <p id="modal-product-name" class="fw-bold"></p>
-                                </div>
-                                <div class="mb-3">
-                                  <label for="product-quantity" class="form-label">ចំនួនផលិតផល</label>
-                                  <input type="number" class="form-control" id="modal-product-quantity" value="2" min="1" max="20">
+                                <div class="row gy-4">
+                                  <div class="col-6">
+                                    <label for="product-name" class="form-label fw-bold">ឈ្មោះផលិតផល</label>
+                                    <p id="modal-product-name">ធុងទឹកប្លាស្ទិច</p>
+                                  </div>
+                                  <div class="col-6">
+                                    <label for="product-quantity" class="form-label fw-bold">ចំនួនផលិតផល</label>
+                                    <input type="number" class="form-control text-center" id="modal-product-quantity"
+                                      value="2" min="1" max="20">
+                                  </div>
                                 </div>
                               </form>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បិទ</button>
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">រក្សាទុកការផ្លាស់ប្តូរ</button>
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">បិទ</button>
+                              <!-- Save button -->
+                              <button type="button" class="btn btn-success" id="saveBtn">
+                                រក្សាទុកការផ្លាស់ប្តូរ
+                              </button>
+                              <!-- Toast -->
+                              <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                <div id="save" class="toast animate-toast" role="alert" aria-live="assertive"
+                                  aria-atomic="true">
+                                  <div class="toast-header">
+                                    <img src="assets/makara/image/logo.png" class="rounded me-2" alt="..."
+                                      style="width: 40px;">
+                                    
+                                  </div>
+                                  <div class="toast-body">
+                                    ✅ ផលិតផលត្រូវបានកែប្រែដោយជោគជ័យ!
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
