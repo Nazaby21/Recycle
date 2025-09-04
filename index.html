@@ -6,16 +6,28 @@
     <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/d9ad53b8e3.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Recycle</title>
   </head>
   <body>
     <header>
-      <nav class="navbar bg-nav fixed-top navbar-expand-md" style="height: 70px;">
+      <nav
+        class="navbar bg-nav fixed-top navbar-expand-md"
+        style="height: 70px"
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img
               src="assets/image/green_leaves_round_logo.png"
-              style="width: 50px"
+              style="width: 60px"
+              class="ms-5"
               alt="logo"
             />
           </a>
@@ -35,12 +47,12 @@
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
-            <div class="offcanvas-header bg-nav" style="height: 70px;">
+            <div class="offcanvas-header bg-nav" style="height: 70px">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand d-block" href="#">
                   <img
                     src="assets/image/green_leaves_round_logo.png"
-                    style="width: 50px"
+                    style="width: 60px"
                     alt="logo"
                   />
                 </a>
@@ -53,14 +65,25 @@
               ></button>
             </div>
             <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 align-items-center"
+              >
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
+                  <a
+                    class="nav-link active fs-5 nav-hover"
+                    aria-current="page"
+                    href="#"
+                    >ទំព័រដើម</a
                   >
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="#">អត្ថបទ</a>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="#">បរិចាក</a>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="#">វត្ថុកែច្នៃ</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -86,23 +109,207 @@
                   </ul>
                 </li>
               </ul>
-              <form class="d-flex mt-3" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
             </div>
+          </div>
+          <div class="nav-profile d-flex align-items-center">
+            <button
+              class="navbar-toggler border-0 shadow-none fs-6"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Search Button -->
+            <button
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#searchModal"
+            >
+              <i class="bi bi-search"></i>
+            </button>
+
+            <!-- notification -->
+
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle no-caret"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 text-center"
+                  style="font-size: 10px"
+                >
+                  4
+                </span>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-scroll"
+              >
+                <div
+                  class="notifi d-flex align-items-center justify-content-between border-bottom px-2"
+                >
+                  <h5>Notification</h5>
+                  <i class="bi bi-three-dots"></i>
+                </div>
+                <a
+                  href=""
+                  class="text-decoration-none py-2 pe-2 m-0 float-end"
+                  style="font-size: 14px"
+                  >See all</a
+                >
+                <!-- 1 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-1.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 2 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-2.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">John Doe</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 3 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-3.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Lina</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 4 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-4.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Devid</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 5 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-5.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Dam</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <img
+              src="assets/image/avatar-4.jpg"
+              alt=""
+              class="avatar rounded-circle ms-2"
+              style="width: 40px; height: 40px;"
+            />
           </div>
         </div>
       </nav>
     </header>
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form class="input-group">
+            <input
+              type="search"
+              class="form-control rounded-start"
+              placeholder="Search..."
+            />
+            <button type="submit" class="btn btn-primary rounded-end">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="hero-banner">
+        <img
+          src="assets/image/photo_2025-08-25_15-54-12.jpg"
+          alt=""
+          class="banner-img"
+        />
+      </section>
+      <section>
+        <div class="container">
+          <h1>Benefit Of Recycle</h1>
+        </div>
+      </section>
+    </main>
 
     <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/function.js"></script>
   </body>
 </html>

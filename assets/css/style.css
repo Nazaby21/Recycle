@@ -1,5 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-.bg-nav{
-    background-color: #f0ffeb;
+body {
+  font-family: "Hanuman", Roboto;
+}
+
+.bg-nav {
+  background-color: #f0ffeb;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.nav-hover:hover {
+  color: rgb(23, 167, 23) !important;
+  transition: 0.3s ease;
+}
+
+.active {
+  color: rgb(23, 167, 23) !important;
+}
+
+.no-caret::after {
+  display: none !important;
+}
+
+.dropdown-menu-center {
+  left: 50% !important;
+  transform: translateX(-80%) !important;
+}
+
+.limit-line-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
