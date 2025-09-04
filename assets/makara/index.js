@@ -7,24 +7,33 @@ function changeQty(amount, inputId) {
   input.value = current;
 }
 
-// Toast handler
-const toastTrigger = document.getElementById('saveBtn');
-const toastLiveExample = document.getElementById('save');
+const toastEl = document.getElementById('mainToast');
+const toastMessage = document.getElementById('toastMessage');
+const mainToast = new bootstrap.Toast(toastEl);
 
-if (toastTrigger) {
-  toastTrigger.addEventListener('click', () => {
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(
-      toastLiveExample,
-      { delay: 3000 }
-    );
-    toastBootstrap.show();
+// Delete button
+document.querySelectorAll('.deleteBtn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    toastMessage.textContent = 'អ្នកបានលុបដោយជោគជ័យ ✅';
+    mainToast.show();
   });
-}
-//delete
-const deleteBtn = document.getElementById('deleteBtn');
-    const deleteToastEl = document.getElementById('deleteToast');
-    const deleteToast = new bootstrap.Toast(deleteToastEl);
+});
 
-    deleteBtn.addEventListener('click', () => {
-      deleteToast.show();
-    });
+// Edit button → open modal
+const editModal = new bootstrap.Modal(document.getElementById('editModal'));
+document.querySelectorAll('.editBtn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    document.getElementById('modal-product-name').textContent =
+      btn.dataset.name;
+    document.getElementById('modal-product-quantity').value =
+      btn.dataset.quantity;
+    editModal.show();
+  });
+});
+
+// Save button
+document.getElementById('saveBtn').addEventListener('click', () => {
+  toastMessage.textContent = '✅ ផលិតផលត្រូវបានកែប្រែដោយជោគជ័យ!';
+  mainToast.show();
+  editModal.hide();
+});
