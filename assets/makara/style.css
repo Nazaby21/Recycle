@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.fs-kp {
+  font-family: 'Kantumruy Pro', sans-serif;
+  font-optical-sizing: auto;
+}
+.fs-rb {
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+}
+
+.product-card {
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(32, 32, 32, 0.2);
+}
+
+.btn-addcart:hover{
+  background-color: #fff;
+  border: 2px solid green;
+  color: #000;
+  color: green;
+}
+/* Apply animation when Bootstrap shows toast */
+.animate-toast.showing {
+  animation: slideInRight 0.6s forwards;
+}
+/* Apply animation when Bootstrap hides toast */
+.animate-toast.hide {
+  animation: slideOutRight 0.6s forwards;
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+
