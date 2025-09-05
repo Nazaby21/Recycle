@@ -4,12 +4,37 @@
     padding: 0;
 }
 
-register-page {
+.register-page {
     background-image: url(../chhorng/img/pexel-leaf.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+}
+
+.signin-page {
+    background-image: url(../chhorng/img/s-lake.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.forgetpwd-area {
+    background-image: url(../chhorng/img/field.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.newpassword-area {
+    background-image: url(../chhorng/img/grass.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.pin-page {
+    background-color: #92e3a996;
 }
 
 /* placeholder  */
@@ -20,10 +45,6 @@ register-page {
     opacity: 1;
 }
 
-/* input:focus::placeholder {
-    color: black;
-} */
-
 .login-area input:focus {
     outline: none;
     border: 1px solid #4A90E2;
@@ -32,14 +53,9 @@ register-page {
 }
 
 .login-area .bg-black {
-    /* background-color: rgbr(0, 0, 0, 0.15)!important; */
     background-color: rgba(0, 0, 0, 0.885) !important;
 }
 
-/* dok padding col-6 oy vea jit knea vnh   */
-/* .login-area .row{
-    --bs-gutter-x: 0rem!important;
-} */
 .login-area .bg-dark {
     background-color: rgba(0, 0, 0, 0.55) !important;
 }
@@ -58,7 +74,26 @@ register-page {
 }
 
 .signin-area .bg-light {
-    background-color: #ffffffb1 !important;
+    background-color: #ffffffea !important;
+}
+
+/* change focus  */
+.signin-area .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 253, 133, 0.25) !important;
+}
+
+/* forgetpwd-area */
+.forgetpwd-area .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 253, 133, 0.25) !important;
+}
+/* pin page  */
+.pin-page .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 253, 133, 0.25) !important;
+}
+
+/* newpwd  */
+.newpwd-page .bg-light {
+    background-color: #ffffffe2!important;
 }
 
 /* aboutpage  */
@@ -114,7 +149,6 @@ register-page {
     display: block;
     margin-top: 20px;
     text-align: center;
-    /* font-size: 20px; */
     padding-left: 16px;
 }
 
