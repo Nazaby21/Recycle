@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/makara/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<style>
+  body {
+    background-color: #f8f9fa;
+  }
+
+  .order-summary {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .purchase-btn {
+    width: 100%;
+    border: 2px solid #007bff;
+    background: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .purchase-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+</style>
+
+<body>
+
+  <main>
+    <section>
+      <div class="container py-5">
+        <div class="row g-4">
+
+          <!-- Payment Form -->
+          <div class="col-lg-8">
+            <div class="card p-4 shadow-sm">
+              <h5 class="mb-3">SELECT PAYMENT METHOD</h5>
+
+              <!-- Nav Tabs -->
+              <ul class="nav nav-tabs mb-3" id="paymentTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="credit-tab" data-bs-toggle="tab" data-bs-target="#credit"
+                    type="button" role="tab">
+                    Credit Card
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="bank-tab" data-bs-toggle="tab" data-bs-target="#bank" type="button"
+                    role="tab">
+                    Bank Transfer
+                  </button>
+                </li>
+
+              </ul>
+
+              <!-- Tab Content -->
+              <div class="tab-content" id="paymentTabContent">
+
+                <!-- Credit Card -->
+                <div class="tab-pane fade show active" id="credit" role="tabpanel">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Name on Card</label>
+                      <input type="text" class="form-control" placeholder="Enter name">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Card Number</label>
+                      <input type="text" class="form-control" placeholder="0000 - 0000 - 0000 - 0000">
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-md-4">
+                        <label class="form-label">Month</label>
+                        <select class="form-select">
+                          <option>Select Month</option>
+                          <option>01</option>
+                          <option>02</option>
+                          <option>03</option>
+                          <option>04</option>
+                          <option>05</option>
+                          <option>06</option>
+                          <option>07</option>
+                          <option>08</option>
+                          <option>09</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label">Year</label>
+                        <select class="form-select">
+                          <option>Select Year</option>
+                          <option>2025</option>
+                          <option>2026</option>
+                          <option>2027</option>
+                          <option>2028</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label">CVV</label>
+                        <input type="text" class="form-control" placeholder="•••">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Bank Transfer -->
+                <div class="tab-pane fade" id="bank" role="tabpanel">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Account Holder Name</label>
+                      <input type="text" class="form-control" placeholder="Enter name">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Account Number</label>
+                      <input type="text" class="form-control" placeholder="Enter account number">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Bank Name</label>
+                      <input type="text" class="form-control" placeholder="Enter bank name">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="col-lg-4">
+            <div class="order-summary shadow-sm">
+              <h6 class="fw-bold">ORDER SUMMARY</h6>
+              <div class="d-flex justify-content-between">
+                <p class="mb-1">Samsung Galaxy S8</p>
+                <p class="mb-1 text-primary fw-bold">$685</p>
+              </div>
+              <p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <ul class="list-unstyled small">
+                <li>✔ 128GB Storage</li>
+                <li>✔ 5.7” screen</li>
+                <li>✔ 6GB Ram</li>
+                <li>✔ 4K display</li>
+                <li>✔ Silver</li>
+              </ul>
+              <div class="border-top pt-3">
+                <p class="mb-1 fw-bold">WEDNESDAY</p>
+                <p class="small text-muted">January 18, 2017 | 11:00 AM</p>
+              </div>
+              <button class="btn purchase-btn mt-3">PURCHASE NOW</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
