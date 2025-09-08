@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     padding: 0;
     margin: 0;
     padding: 0;
+}
+body {
+    font-family: "Roboto" , "Hanuman" , serif!important;
 }
 
 .register-page {
@@ -115,7 +119,7 @@
     position: absolute;
     bottom: -32px;
     backdrop-filter: blur(5px);
-    transition: 0.7s;
+    transition: 0.9s;
     left: 0;
 }
 
@@ -134,7 +138,7 @@
     display: flex;
     flex-wrap: wrap;
     backdrop-filter: blur(5px);
-    transition: 1s;
+    transition: 0.7s;
 }
 
 .about-area .img-icon {
