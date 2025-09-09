@@ -19,28 +19,19 @@
   <body>
     <header>
       <nav
-        class="navbar bg-nav fixed-top navbar-expand-md"
+        class="navbar bg-nav fixed-top navbar-expand-lg"
         style="height: 70px"
       >
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img
               src="assets/image/green_leaves_round_logo.png"
-              style="width: 60px"
-              class="ms-5"
+              class="ms-0 ms-md-5 logo"
+              style="width: 40px"
               alt="logo"
             />
           </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+
           <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
@@ -66,8 +57,17 @@
             </div>
             <div class="offcanvas-body">
               <ul
-                class="navbar-nav justify-content-center flex-grow-1 pe-3 align-items-center"
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
               >
+                <!-- Search Button -->
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control search-1"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
                 <li class="nav-item">
                   <a
                     class="nav-link active fs-5 nav-hover"
@@ -104,9 +104,9 @@
               </ul>
             </div>
           </div>
-          <div class="nav-profile d-flex align-items-center">
+          <div class="user-profile d-flex align-items-center">
             <button
-              class="navbar-toggler border-0 shadow-none fs-6"
+              class="navbar-toggler border-0 shadow-none fs-4"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
@@ -115,26 +115,24 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-
             <!-- Search Button -->
-            <button
-              class="btn"
-              data-bs-toggle="modal"
-              data-bs-target="#searchModal"
-            >
-              <i class="bi bi-search"></i>
-            </button>
-
+            <form class="d-flex" role="search">
+              <input
+                class="form-control mx-2 search-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
             <!-- notification -->
-
-            <div class="dropdown">
+            <div class="dropdown pt-2">
               <button
                 class="btn dropdown-toggle no-caret"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i class="bi bi-bell"></i>
+                <i class="bi bi-bell fs-5"></i>
                 <span
                   class="badge bg-danger rounded-circle position-absolute start-50 text-center"
                   style="font-size: 10px"
@@ -260,33 +258,46 @@
               </ul>
             </div>
 
-            <img
-              src="assets/image/avatar-4.jpg"
-              alt=""
-              class="avatar rounded-circle ms-2"
-              style="width: 40px; height: 40px;"
-            />
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-guest.webp"
+                alt=""
+                class="avatar dropdown-toggle no-caret rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-center">
+                <div
+                  class="notifi d-flex align-items-center border-bottom px-2"
+                >
+                  <h5>Notification</h5>
+                </div>
+                <a
+                  href=""
+                  class="text-decoration-none py-2 pe-2 m-0 float-end"
+                  style="font-size: 14px"
+                  >See all</a
+                >
+                <li>
+                  <a class="dropdown-item" data-bs-theme-value="light" href="#">
+                    <i class="bi bi-brightness-high"></i>
+                    <span class="ms-2">Light</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" data-bs-theme-value="dark" href="#">
+                    <i class="bi bi-moon"></i>
+                    <span class="ms-2">Dark</span>
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
     </header>
-    <!-- Search Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <form class="input-group">
-            <input
-              type="search"
-              class="form-control rounded-start"
-              placeholder="Search..."
-            />
-            <button type="submit" class="btn btn-primary rounded-end">
-              <i class="bi bi-search"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
     <main>
       <section class="hero-banner">
         <img
