@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Hanuman', sans-serif;
+  font-family: "Hanuman", sans-serif;
 }
 
 .masonry {
@@ -14,8 +14,7 @@ body {
 }
 
 .hero-banner {
-
-  background-image: url('https://i.pinimg.com/1200x/36/b2/e5/36b2e5b59f51b5f10c64a0c79efb4781.jpg');
+  background-image: url("https://i.pinimg.com/1200x/36/b2/e5/36b2e5b59f51b5f10c64a0c79efb4781.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -25,85 +24,83 @@ body {
 }
 
 .hero-content {
-    text-align: center;
+  text-align: center;
 
   max-width: 800px;
   margin: auto;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-
-
 .hero-content h2 {
   font-size: 36px;
   margin-bottom: 15px;
 }
 .card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-    }
+.card:hover {
+  transform: translateY(-8px);
+}
 
-    .card-img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
 
-    .card-body {
-      padding: 15px;
-      text-align: center;
-    }
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
 
-    .card-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 10px 0 5px;
-    }
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
 
-    .card-text {
-      font-size: 14px;
-      color: #777;
-      text-transform: uppercase;
-    }
+.card-text {
+  font-size: 14px;
+  color: #777;
+  text-transform: uppercase;
+}
 
-    /* Hover Overlay */
-    .card-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 128, 0, 0.6);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+/* Hover Overlay */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 128, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .card:hover .card-overlay {
-      opacity: 1;
-    }
+.card:hover .card-overlay {
+  opacity: 1;
+}
 
-    .card-overlay-icon {
-      background: #fff;
-      padding: 12px;
-      border-radius: 50%;
-      font-size: 18px;
-      color: green;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    .stroke-text {
-      font-size: 80px;
-      font-weight: bold;
-      color:black; /* Make inside transparent */
-    }
+.card-overlay-icon {
+  background: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: green;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.stroke-text {
+  font-size: 80px;
+  font-weight: bold;
+  color: black; /* Make inside transparent */
+}
