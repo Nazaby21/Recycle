@@ -33,7 +33,7 @@ body {
   display: none !important;
 }
 
-.badge{
+.badge {
   top: 10% !important;
 }
 
@@ -51,52 +51,45 @@ body {
 }
 
 .hero-banner {
-  margin-top: 70px; /* offset fixed navbar */
-  width: 100%;
-  height: 70vh;
-  overflow: hidden;
+  background-color: #f0ffeb;
 }
 
-.banner-img {
+/* .banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
+} */
 
 /* ============ RESPONSIVE FIXES ============ */
-      @media (max-width: 576px) {
-        .search-2{
-          display: none;
-        }
-        .logo{
-          width:40px !important;
-        }
-        .landing-nav{
-          display: none;
-        }
-        .landing-btn{
-          font-size: 12px;
-        }
-      }
+@media (max-width: 576px) {
+  .search-2 {
+    display: none;
+  }
+  .logo {
+    width: 40px !important;
+  }
+  .landing-nav {
+    display: none;
+  }
+  .landing-btn {
+    font-size: 12px;
+  }
+}
 
-      @media (max-width: 768px ) {
-        .search-2{
-          display: none;
-        }
-        .logo{
-          width:40px !important;
-        }
-      }
+@media (max-width: 768px) {
+  .search-2 {
+    display: none;
+  }
+  .logo {
+    width: 40px !important;
+  }
+}
 
-      @media (min-width: 768.5px) {
-        .search-1{
-          display: none;
-        }
-        .hero-banner {
-          height: 40vh;
-        }
-        .logo{
-          width:45px !important;
-        }
-      }
+@media (min-width: 768.5px) {
+  .search-1 {
+    display: none;
+  }
+  .logo {
+    width: 45px !important;
+  }
+}
