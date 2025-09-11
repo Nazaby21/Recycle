@@ -5,3 +5,16 @@ links.forEach(link => {
     e.currentTarget.classList.add('active');
   });
 });
+
+// animation
+var animation = document.getElementById('text-animation');
+
+var typewriter = new Typewriter(animation, {
+    loop: true
+});
+
+typewriter
+  .typeString('រួមគ្នាថែរក្សាបរិស្ថាន')
+  .pauseFor(2500)
+  .start();
+

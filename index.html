@@ -14,12 +14,13 @@
       src="https://kit.fontawesome.com/d9ad53b8e3.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Recycle</title>
   </head>
   <body>
     <header>
       <nav
-        class="navbar bg-nav fixed-top navbar-expand-lg"
+        class="navbar bg-nav fixed-top navbar-expand-lg border shadow"
         style="height: 70px"
       >
         <div class="container-fluid">
@@ -60,7 +61,7 @@
                 class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
               >
                 <!-- Search Button -->
-                <form class="d-flex" role="search">
+                <form class="d-flex mb-2" role="search">
                   <input
                     class="form-control search-1"
                     type="search"
@@ -298,17 +299,16 @@
       </nav>
     </header>
     <main>
-      <section class="hero-banner mt-8 py-5">
-        <!-- <img
-          src="assets/image/photo_2025-08-25_15-54-12.jpg"
-          alt=""
-          class="banner-img"
-        /> -->
-        <div class="container d-flex align-items-center">
-          <div class="row">
-            <div class="col-6">
-              <h6 class="text-success fs-6 mt-5">សូមចូលរួមថែរក្សាបរិស្ថាន</h6>
-              <h2>បរិស្ថានស្អាត់​ ការពារការបំពុល សុខភាពល្អ</h2>
+      <section class="hero-banner mt-8 mt-md-0 pb-5">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-12 col-md-6">
+              <h6 class="text-success fs-6 mt-5" id="text-animation"></h6>
+              <h2 class="mt-3">សាមគ្គីគ្នានាំមកនៅការជោគជ័យ, ចូររួមទាំងអស់គ្នាដើម្បី<span class="text-success">បរិស្ថាន</span> </h2>
+
+            </div>
+            <div class="col-md-6">
+              <img src="assets/image/banner-1.png" alt="" class="banner-img">
             </div>
           </div>
         </div>
@@ -322,5 +322,6 @@
 
     <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/function.js"></script>
+    
   </body>
 </html>
