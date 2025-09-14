@@ -18,3 +18,9 @@ typewriter
   .pauseFor(2500)
   .start();
 
+
+// AOS Animation
+AOS.init({
+  duration: 1000,
+  once: false, // run loop
+});
