@@ -26,6 +26,20 @@
   color: #000;
   color: green;
 }
+/* Default: small screens → bottom */
+.toast-position {
+  bottom: 0;
+  right: 0;
+}
+
+/* Medium screens and up → top */
+@media (min-width: 768px) {
+  .toast-position {
+    top: 500px;
+    bottom: auto;
+    right: 0;
+  }
+}
 /* style an9mation h1  */
 .typing-loop {
     display: inline-block;
