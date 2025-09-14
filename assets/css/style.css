@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
   font-family: "Hanuman", Roboto;
@@ -55,19 +54,27 @@ body {
   background-color: #f0ffeb;
 }
 
-.banner-img .banner-1{
-  top:-32.5%;
-  left:5%;
+.banner-img .banner-1 {
+  top: -32.5%;
+  left: 5%;
 }
 
-.banner-img .banner-2{
-  bottom:-32.5%;
-  left:-13.5%;
+.banner-img .banner-2 {
+  bottom: -32.5%;
+  left: -13.5%;
 }
 
-.banner-img .banner-3{
-  bottom:-32.5%;
-  right:-24.5%;
+.banner-img .banner-3 {
+  bottom: -32.5%;
+  right: -24.5%;
+}
+
+.benefit {
+  background-image: url(../image/enviroment.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* ============ RESPONSIVE FIXES ============ */
@@ -106,7 +113,7 @@ body {
 
 /* animation */
 
- #text-animation {
+#text-animation {
   font-size: 50px;
   font-weight: bold;
   background-image: linear-gradient(-225deg, #198754);
@@ -124,31 +131,32 @@ body {
   to {
     background-position: 200% center;
   }
-} 
+}
 
 .scale-up-ver-center {
-	-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-up-ver-center 0.4s
+    cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-ver-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @-webkit-keyframes scale-up-ver-center {
   0% {
     -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
+    transform: scaleY(0.4);
   }
   100% {
     -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
   }
 }
 @keyframes scale-up-ver-center {
   0% {
     -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
+    transform: scaleY(0.4);
   }
   100% {
     -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
   }
 }
 
@@ -214,7 +222,9 @@ body {
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
 }
-.hvr-wobble-top:hover, .hvr-wobble-top:focus, .hvr-wobble-top:active {
+.hvr-wobble-top:hover,
+.hvr-wobble-top:focus,
+.hvr-wobble-top:active {
   -webkit-animation-name: hvr-wobble-top;
   animation-name: hvr-wobble-top;
   -webkit-animation-duration: 1s;
