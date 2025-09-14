@@ -69,14 +69,6 @@ body {
   right: -24.5%;
 }
 
-.benefit {
-  background-image: url(../image/enviroment.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
 /* ============ RESPONSIVE FIXES ============ */
 @media (max-width: 576px) {
   .search-2 {
