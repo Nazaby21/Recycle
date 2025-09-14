@@ -69,6 +69,17 @@ body {
   right: -24.5%;
 }
 
+.section-random{
+  height: 100%;
+  background-image: url(../image/enviroment.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.test{
+  height: 100vh;
+}
+
 /* ============ RESPONSIVE FIXES ============ */
 @media (max-width: 576px) {
   .search-2 {
@@ -226,3 +237,4 @@ body {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
