@@ -107,3 +107,12 @@ body {
       font-weight: bold;
       color:black; /* Make inside transparent */
     }
+    .limit-lines {
+  display: -webkit-box;        /* Required for flexbox line clamp */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;      /* Limit to 3 lines */
+  overflow: hidden;            /* Hide overflow text */
+  text-overflow: ellipsis;     /* Show "..." at the end */
+}
+
+    
