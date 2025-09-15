@@ -130,7 +130,7 @@
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(to right, #a6ea99, #3bed09);
+    /* background: linear-gradient(to right, #a6ea99, #3bed09); */
   }
 
   .payment-summary h5 {
@@ -167,7 +167,7 @@
   }
 
   .total-price {
-    background: linear-gradient(to right, #a6ea99, #3bed09);
+    background-color: green;
     display: flex;
     justify-content: space-around;
     align-items: center;
