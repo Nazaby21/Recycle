@@ -19,8 +19,8 @@ body {
 }
 .register-page .login-area input:focus {
     outline: none;
-    border: 1px solid #4A90E2;
-    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
+    /* border: 1px solid #4A90E2; */
+    box-shadow: 0 0 8px #198754;
     transition: 0.3s ease;
 
 }
