@@ -10,37 +10,30 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/d9ad53b8e3.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Recycle</title>
   </head>
   <body>
     <header>
       <nav
-        class="navbar bg-nav fixed-top navbar-expand-md"
+        class="navbar bg-nav fixed-top navbar-expand-lg border shadow"
         style="height: 70px"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img
               src="assets/image/green_leaves_round_logo.png"
-              style="width: 60px"
-              class="ms-5"
+              class="logo"
+              style="width: 40px"
               alt="logo"
             />
           </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+
           <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
@@ -49,7 +42,7 @@
           >
             <div class="offcanvas-header bg-nav" style="height: 70px">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <a class="navbar-brand d-block" href="#">
+                <a class="navbar-brand d-block" href="index.html">
                   <img
                     src="assets/image/green_leaves_round_logo.png"
                     style="width: 60px"
@@ -66,20 +59,29 @@
             </div>
             <div class="offcanvas-body">
               <ul
-                class="navbar-nav justify-content-center flex-grow-1 pe-3 align-items-center"
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
               >
+                <!-- Search Button -->
+                <form class="d-flex mb-2" role="search">
+                  <input
+                    class="form-control search-1 d-md-none"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
                 <li class="nav-item">
                   <a
                     class="nav-link active fs-5 nav-hover"
                     aria-current="page"
-                    href="#"
+                    href="index.html"
                     >ទំព័រដើម</a
                   >
                 </li>
                 <li class="nav-item dropdown fs-5">
                   <a
                     class="nav-link nav-hover no-caret dropdown-toggle"
-                    href="#"
+                    href="index.html"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -96,17 +98,25 @@
                   </ul>
                 </li>
                 <li class="nav-item fs-5">
-                  <a class="nav-link nav-hover" href="#">សកម្មភាពសង្គម</a>
+                  <a class="nav-link nav-hover" href="ng.html">សកម្មភាពសង្គម</a>
                 </li>
                 <li class="nav-item fs-5">
-                  <a class="nav-link nav-hover" href="#">ផលិតផលកែច្នៃ</a>
+                  <a class="nav-link nav-hover" href="e-commerce.html">ផលិតផលកែច្នៃ</a>
+                </li>
+                <li class="nav-item fs-5">
+                  <a
+                    class="nav-link nav-hover"
+                    aria-current="page"
+                    href="about.html"
+                    >អំពីយើង</a
+                  >
                 </li>
               </ul>
             </div>
           </div>
-          <div class="nav-profile d-flex align-items-center">
+          <div class="user-profile d-flex align-items-center">
             <button
-              class="navbar-toggler border-0 shadow-none fs-6"
+              class="navbar-toggler border-0 shadow-none fs-4"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
@@ -115,26 +125,24 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-
             <!-- Search Button -->
-            <button
-              class="btn"
-              data-bs-toggle="modal"
-              data-bs-target="#searchModal"
-            >
-              <i class="bi bi-search"></i>
-            </button>
-
+            <form class="d-flex" role="search">
+              <input
+                class="form-control mx-2 search-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
             <!-- notification -->
-
-            <div class="dropdown">
+            <div class="dropdown pt-2">
               <button
                 class="btn dropdown-toggle no-caret"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i class="bi bi-bell"></i>
+                <i class="bi bi-bell fs-5"></i>
                 <span
                   class="badge bg-danger rounded-circle position-absolute start-50 text-center"
                   style="font-size: 10px"
@@ -260,48 +268,163 @@
               </ul>
             </div>
 
-            <img
-              src="assets/image/avatar-4.jpg"
-              alt=""
-              class="avatar rounded-circle ms-2"
-              style="width: 40px; height: 40px;"
-            />
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-guest.webp"
+                alt=""
+                class="avatar dropdown-toggle no-caret rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-center">
+                <div
+                  class="notifi d-flex align-items-center border-bottom px-2"
+                >
+                  <h5>Notification</h5>
+                </div>
+                <a
+                  href=""
+                  class="text-decoration-none py-2 pe-2 m-0 float-end"
+                  style="font-size: 14px"
+                  >See all</a
+                >
+                <li>
+                  <a class="dropdown-item" data-bs-theme-value="light" href="#">
+                    <i class="bi bi-brightness-high"></i>
+                    <span class="ms-2">Light</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" data-bs-theme-value="dark" href="#">
+                    <i class="bi bi-moon"></i>
+                    <span class="ms-2">Dark</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
     </header>
-    <!-- Search Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <form class="input-group">
-            <input
-              type="search"
-              class="form-control rounded-start"
-              placeholder="Search..."
-            />
-            <button type="submit" class="btn btn-primary rounded-end">
-              <i class="bi bi-search"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
     <main>
-      <section class="hero-banner">
-        <img
-          src="assets/image/photo_2025-08-25_15-54-12.jpg"
-          alt=""
-          class="banner-img"
-        />
+      <section class="hero-banner mt-9 mt-md-0">
+        <img src="assets/image/enviroment.jpg" alt="" class="bg-banner-img position-relative">
+        <div class="container banner">
+          <div class="row d-flex align-items-center">
+            <div class="col-12 col-md-6">
+              <h6 class="text-success fs-6 mt-5" id="text-animation"></h6>
+              <h2 class="mt-3 text-fs">
+                សាមគ្គីគ្នានាំមកនៅការជោគជ័យ, ចូររួមទាំងអស់គ្នាដើម្បី<span
+                  class="text-success"
+                  >បរិស្ថាន</span
+                >
+              </h2>
+              <a
+                href="ng.html"
+                class="btn bg-success text-white mt-2 mb-3 mb-md-0 mt-md-5 hvr-wobble-top btn-fs"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
+                ចូលរួមជាមួយយើង
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <div
+                class="banner-img position-relative d-none d-md-block"
+              >
+                <img
+                  src="assets/image/banner-1.png"
+                  alt=""
+                  class="banner-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section>
+      <section class="benefit">
+        <div class="text-center pt-4 bg-body-secondary">
+          <h2 class="scale-up-ver-center m-0">អត្ថប្រយោជន៍នៃការកែច្នៃ</h2>
+        </div>
+        <div class="content">
+          <div class="content-body bg-body-secondary">
+            <div class="text container py-3">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-8">
+                <h3>១. ការការពារបរិស្ថាន</h3>
+                <p>
+                  <span class="me-1">-</span> ការកែច្នៃជួយកាត់បន្ថយសំណល់ដែលត្រូវចាក់ចូលក្នុងកន្លែងចាក់សំរាម និងកន្លែងចាក់កាកសំណល់ផ្សេងៗ។
+                </p>
+                <p>
+                  <span class="me-1">-</span> បញ្ហាសំណល់ច្រើនធ្វើឲ្យមានការបំពុលដី ទឹក និងខ្យល់។
+                  ការកែច្នៃអាចជួយកាត់បន្ថយបញ្ហានេះ។
+                </p>
+                <p>
+                  <span class="me-1">-</span> ការកែច្នៃក៏អាចអភិរក្សធនធានធម្មជាតិដូចជាទឹក ដើមឈើ និងរ៉ែ
+                  ដែលគេត្រូវប្រើក្នុងការផលិតថ្មី។
+                </p>
+              </div>
+              <div class="col-12 col-md-4">
+                <img src="assets/image/Environmental Protection.jpg" alt="" class="img-fluid rounded-4" data-aos="flip-left"
+                data-aos-duration="1000"
+                data-aos-delay="200" height="300px">
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-body bg-white">
+            <div class="text container py-3">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-8">
+                <h3>២. ការសន្សំថាមពល</h3>
+                <p>
+                  <span class="me-1">-</span> ការផលិតថ្មីត្រូវការថាមពលច្រើនក្នុងដំណើរការដែលចាប់ផ្តើមពីការទាញយកវត្ថុធាតុដើម រហូតដល់ការផលិត និងដឹកជញ្ជូន។
+                </p>
+                <p>
+                  <span class="me-1">-</span> ការកែច្នៃប្រើថាមពលតិចជាង ដោយសារវាអនុញ្ញាតឲ្យយើងប្រើសម្ភារៈដែលមានរួចហើយ។
+                </p>
+              </div>
+              <div class="col-12 col-md-4">
+                <img src="assets/image/energy save.jpg" alt="" class="img-fluid" data-aos="flip-left"
+                data-aos-duration="1000"
+                data-aos-delay="200" style="height: 300px;">
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-body bg-body-secondary pb-5">
+            <div class="text container py-3">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-8">
+                <h3>៣. ឥទ្ធិពលអាកាសធាតុ</h3>
+                <p>
+                  <span class="me-1">-</span> ការកែច្នៃអាចកាត់បន្ថយការបំភាយឧស្ម័នផ្ទះកញ្ចក់ (CO₂, CH₄) ដែលបង្កឲ្យកើតមានការឡើងកម្ដៅផែនដី។
+                </p>
+                <p>
+                  <span class="me-1">-</span> ពេលសំណល់ត្រូវចាក់ចោលក្នុងកន្លែងចាក់សំរាមវាអាចបញ្ចេញឧស្ម័នមេតាន (CH₄) ដែលមានឥទ្ធិពលខ្លាំងលើអាកាសធាតុ។ ការកែច្នៃអាចជួយកាត់បន្ថយបញ្ហានេះ។
+                </p>
+              </div>
+              <div class="col-12 col-md-4">
+                <img src="assets/image/climate.jpg" alt="" class="img-fluid rounded-4" data-aos="flip-left"
+                data-aos-duration="1000"
+                data-aos-delay="200" style="height: 300px;">
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-random">
         <div class="container">
-          <h1>Benefit Of Recycle</h1>
+          <div class="row">
+            <div class="test"></div>
+          </div>
         </div>
       </section>
     </main>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/function.js"></script>
   </body>
