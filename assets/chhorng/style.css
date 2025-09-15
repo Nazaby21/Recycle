@@ -17,6 +17,16 @@ body {
     background-size: cover;
     height: 100vh;
 }
+.register-page .login-area input:focus {
+    outline: none;
+    border: 1px solid #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
+    transition: 0.3s ease;
+
+}
+.register-page .col-lg-6:first-child {
+    backdrop-filter: blur(3px);
+}
 
 .signin-page {
     background-image: url(../chhorng/img/s-lake.jpg);
@@ -327,7 +337,8 @@ $amount: 20;
     height: 100vh;
 } */
 .pin-page,
-.newpwd-page {
+.newpwd-page ,
+.forgetpwd-page{
     background-color: #92e3a996;
 }
 
