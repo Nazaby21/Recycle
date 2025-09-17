@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .fs-kp {
-  font-family: 'Kantumruy Pro', sans-serif;
+  font-family: "Hanuman", serif !important;
   font-optical-sizing: auto;
 }
 .fs-rb {
@@ -130,7 +130,7 @@
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(to right, #a6ea99, #3bed09);
+    /* background: linear-gradient(to right, #a6ea99, #3bed09); */
   }
 
   .payment-summary h5 {
@@ -167,7 +167,7 @@
   }
 
   .total-price {
-    background: linear-gradient(to right, #a6ea99, #3bed09);
+    background-color: green;
     display: flex;
     justify-content: space-around;
     align-items: center;
