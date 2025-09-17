@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="assets/css/theme.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/Kropum/donate.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -20,173 +20,437 @@
 </head>
 
 <body>
-  <section class="mt-5">
-    <div class="container  rounded-3 gx-3 ">
-      <div class="row ">
-        <div class="col-md-12 col-lg-6 mt-15">
-          <div class="card animate__animated animate__fadeInLeft border-0">
-            <h1 class="text-center fw-bold ">កន្លែង<span class="text-success">បរិច្ចាគ</span></h1>
-            <p class="text-center fw-bold">Drop-off points for plastic, clothes, and household goods
-              <br>ចូលរួមជាមួយពួកយើង ដើម្បីការពារបរិស្ថាន</p>
-            <p class="text-center fw-bold"></p>
+  <header>
+    <nav class="navbar bg-nav fixed-top navbar-expand-lg border shadow" style="height: 70px">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/image/green_leaves_round_logo.png" class="logo" style="width: 40px" alt="logo" />
+        </a>
 
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header bg-nav" style="height: 70px">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <a class="navbar-brand d-block" href="index.html">
+                <img src="assets/image/green_leaves_round_logo.png" style="width: 60px" alt="logo" />
+              </a>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2">
+              <!-- Search Button -->
+              <form class="d-flex mb-2" role="search">
+                <input class="form-control search-1 d-md-none" type="search" placeholder="Search" aria-label="Search" />
+              </form>
+              <li class="nav-item">
+                <a class="nav-link active fs-5 nav-hover" aria-current="page" href="index.html">ទំព័រដើម</a>
+              </li>
+              <li class="nav-item dropdown fs-5">
+                <a class="nav-link nav-hover no-caret dropdown-toggle" href="index.html" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  អត្ថបទ
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">ឯកសារ</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">វីដេអូ</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item fs-5">
+                <a class="nav-link nav-hover" href="ng.html">សកម្មភាពសង្គម</a>
+              </li>
+              <li class="nav-item fs-5">
+                <a class="nav-link nav-hover" href="e-commerce.html">ផលិតផលកែច្នៃ</a>
+              </li>
+              <li class="nav-item fs-5">
+                <a class="nav-link nav-hover" aria-current="page" href="about.html">អំពីយើង</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="col-md-12 col-lg-6">
-          <img src="https://i.pinimg.com/736x/6f/9b/64/6f9b64479df8be4e6f7eb523aeb9be99.jpg" alt=""
-            class="animate__animated animate__fadeInRight img-fluid rounded-3" style="width: 80%;">
+        <div class="user-profile d-flex align-items-center">
+          <button class="navbar-toggler border-0 shadow-none fs-4" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Search Button -->
+          <form class="d-flex" role="search">
+            <input class="form-control mx-2 search-2" type="search" placeholder="Search" aria-label="Search" />
+          </form>
+          <!-- notification -->
+          <div class="dropdown pt-2">
+            <button class="btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-bell fs-5"></i>
+              <span class="badge bg-danger rounded-circle position-absolute start-50 text-center"
+                style="font-size: 10px">
+                4
+              </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-center dropdown-menu-scroll">
+              <div class="notifi d-flex align-items-center justify-content-between border-bottom px-2">
+                <h5>Notification</h5>
+                <i class="bi bi-three-dots"></i>
+              </div>
+              <a href="" class="text-decoration-none py-2 pe-2 m-0 float-end" style="font-size: 14px">See all</a>
+              <!-- 1 -->
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="py-2 d-flex align-items-center">
+                    <img src="assets/img/avata/avatar-1.jpg" alt="" class="rounded-circle"
+                      style="width: 40px; height: 40px" />
+                    <div class="content ms-3" style="max-width: 220px">
+                      <p class="fw-bolder mb-1">Pozz Mao</p>
+                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Neque, at.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <!-- 2 -->
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="py-2 d-flex align-items-center">
+                    <img src="assets/img/avata/avatar-2.jpg" alt="" class="rounded-circle"
+                      style="width: 40px; height: 40px" />
+                    <div class="content ms-3" style="max-width: 220px">
+                      <p class="fw-bolder mb-1">John Doe</p>
+                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Neque, at.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <!-- 3 -->
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="py-2 d-flex align-items-center">
+                    <img src="assets/img/avata/avatar-3.jpg" alt="" class="rounded-circle"
+                      style="width: 40px; height: 40px" />
+                    <div class="content ms-3" style="max-width: 220px">
+                      <p class="fw-bolder mb-1">Lina</p>
+                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Neque, at.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <!-- 4 -->
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="py-2 d-flex align-items-center">
+                    <img src="assets/img/avata/avatar-4.jpg" alt="" class="rounded-circle"
+                      style="width: 40px; height: 40px" />
+                    <div class="content ms-3" style="max-width: 220px">
+                      <p class="fw-bolder mb-1">Devid</p>
+                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Neque, at.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <!-- 5 -->
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="py-2 d-flex align-items-center">
+                    <img src="assets/img/avata/avatar-5.jpg" alt="" class="rounded-circle"
+                      style="width: 40px; height: 40px" />
+                    <div class="content ms-3" style="max-width: 220px">
+                      <p class="fw-bolder mb-1">Dam</p>
+                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Neque, at.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <img src="assets/image/avatar-guest.webp" alt="" class="avatar dropdown-toggle no-caret rounded-circle ms-2"
+              style="width: 40px; height: 40px" data-bs-toggle="dropdown" aria-expanded="false" />
+            <ul class="dropdown-menu dropdown-menu-center">
+              <div class="notifi d-flex align-items-center border-bottom px-2">
+                <h5>Notification</h5>
+              </div>
+              <a href="" class="text-decoration-none py-2 pe-2 m-0 float-end" style="font-size: 14px">See all</a>
+              <li>
+                <a class="dropdown-item" data-bs-theme-value="light" href="#">
+                  <i class="bi bi-brightness-high"></i>
+                  <span class="ms-2">Light</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" data-bs-theme-value="dark" href="#">
+                  <i class="bi bi-moon"></i>
+                  <span class="ms-2">Dark</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
+  </header>
+  <main>
+    <section class="mt-10 py-5 bg-light rounded-3">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- Banner Text -->
+          <div class="col-md-12 col-lg-8">
+            <div class="text-center animate__animated animate__fadeInLeft">
+              <h1 class="fw-bold mb-4">
+                <i class="bi bi-recycle text-success"></i>
+                កន្លែង <span class="text-success">បរិច្ចាគ</span>
+              </h1>
+              <p class="lead fw-semibold mb-3">
+                <i class="bi bi-box-seam-fill text-success me-2"></i>
+                Drop-off points for plastic, clothes, and household goods
+              </p>
+              <p class="fw-semibold text-muted">
+                <i class="bi bi-globe2 text-success me-2"></i>
+                ចូលរួមជាមួយពួកយើង ដើម្បីការពារបរិស្ថាន
+              </p>
+              <div class="mt-4">
+                <a href="#donate" class="btn btn-success btn-lg shadow rounded-pill">
+                  <i class="bi bi-hand-thumbs-up-fill me-2"></i> រកមើលកន្លែងបរិច្ចាគ
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  </section>
-  <section>
-    <div class="hero-banner">
-      <div class="hero-content">
-        <h2 class="stroke-text">ចូលរួមបរិច្ចាគ និងកែច្នៃផ្លាស្ទិកនៅកម្ពុជា</h2>
-        <p class="text-dark">( Donate & Recycle in Cambodia)</p>
+        <!-- Mini Cards Row -->
+        <div class="row mt-5">
+          <!-- Plastic -->
+          <div class="col-md-4 mb-4">
+            <div class="card text-center shadow-sm border-0 h-100 p-4">
+              <i class="bi bi-recycle text-success display-4 mb-3"></i>
+              <h5 class="card-title fw-bold">ផ្លាស្ទិក</h5>
+              <p class="card-text text-muted​ fs-6">កែច្នៃប្លាស្ទិក, កាកសំណស់ផ្លាស្ទិក
+                គឺជាទំនួលខុសត្រូវរបស់យើងទាំងអស់គ្នា ♻️</p>
+              <a href="plastic.html" class="stretched-link"></a>
+            </div>
+          </div>
+
+          <!-- Clothes -->
+          <div class="col-md-4 mb-4">
+            <div class="card text-center shadow-sm border-0 h-100 p-4">
+              <i class="bi bi-bag-heart-fill text-danger display-4 mb-3"></i>
+              <h5 class="card-title fw-bold">សម្លៀកបំពាក់</h5>
+              <p class="card-text text-muted​ fs-6">
+                បរិច្ចាគសម្លៀកបំពាក់ដែលមិនប្រើប្រាស់ឬប្រើប្រាស់រូចរបស់អ្នកដើម្បីជួយអ្នកដទៃ និងកាត់បន្ថយកាកសំណល់ 👕</p>
+              <a href="#donate" class="stretched-link"></a>
+            </div>
+          </div>
+
+          <!-- Household -->
+          <div class="col-md-4 mb-4">
+            <div class="card text-center shadow-sm border-0 h-100 p-4">
+              <i class="bi bi-house-heart-fill text-primary display-4 mb-3"></i>
+              <h5 class="card-title fw-bold">សម្ភារៈប្រើប្រាស់</h5>
+              <p class="card-text text-muted​ fs-6">ផ្តល់ជីវិតទីពីរដល់គ្រឿងសង្ហារឹម និងសម្ភារៈប្រើប្រាស់ 🏠</p>
+              <a href="#donate" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-  </section>
-  <section class="my-10">
-    <div class="container">
-      <h3 class="text-center fw-bold mb-5 ">ទីតាំងបរិច្ចាគ និងកែច្នៃនៅកម្ពុជា</h3>
-      <div class="row gy-4">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="assets/Kropum/img/snurkhorav.jpg" alt="Ocean Turtle" class="card-img">
-            <div class="card-overlay">
-                <a href="clothline.html" class="text-decoration-none"><span class="card-overlay-icon" >&#128279;</span></a>
-
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"> ស្នួរខោអាវ</h3>
-              <p class="card-text limit-lines" style="text-indent: 2rem;">យើងបានចាប់ផ្តើមអាជីវកម្មសង្គមរបស់យើងមករយៈពេលប្រាំបួនឆ្នាំមុនដោយមានគោលបំណងផ្ដល់ផលប្រយោជន៍ត្រឡប់ទៅសង្គមវិញ។ យើងដំណើរការ</p>
-            </div>
-          </div>
-        </div>
+    </section>
 
 
+    <section>
+      <div class="hero-banner">
+        <div class="hero-content">
 
-        <!-- Card 1 -->
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="assets/Kropum/img/p1.jpg" alt="White Tiger" class="card-img">
-            <div class="card-overlay">
-              <a href="pizza4ps.html" class="text-decoration-none"><span class="card-overlay-icon" >&#128279;</span></a>
-              
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Pizza 4P's</h3>
-              <p class="card-text limit-lines" style="text-indent: 2rem;">ធម្មជាតិបានផ្តល់ឱ្យយើងនូវបរិស្ថាន ហើយវាជាការទទួលខុសត្រូវរបស់យើងក្នុងការការពារវាពីឥទ្ធិពលអាក្រក់
-ព្រោះយើងមិនមានទីជម្រកស្រួលផ្សេងទៀតឡើយ។</p>
-            </div>
-          </div>
         </div>
+      </div>
 
-        <!-- Card 2 -->
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="assets/Kropum/img/beco____-.jpg" alt="Present for You" class="card-img">
-            <div class="card-overlay">
-              <a href="be_eco.html" class="text-decoration-none"><span class="card-overlay-icon" >&#128279;</span></a>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Be Eco</h3>
-              <p class="card-text">Location</p>
-            </div>
-          </div>
-        </div>
-        
+    </section>
+    <section class="my-10" id="donate">
+      <div class="container">
+        <h3 class="text-center fw-bold mb-5 ">ទីតាំងបរិច្ចាគ និងកែច្នៃនៅកម្ពុជា</h3>
+        <div class="row gy-4">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="assets/Kropum/img/snurkhorav.jpg" alt="Ocean Turtle" class="card-img">
+              <div class="card-overlay">
+                <a href="clothline.html" class="text-decoration-none stretched-link"><span class="card-overlay-icon"
+                    style="font-size: 40px;">&#128279;</span></a>
 
-        <!-- Card 3 -->
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="assets/Kropum/img/jasnaktmeyknhom.jpg" alt="Ocean Turtle" class="card-img">
-            <div class="card-overlay">
-              <span class="card-overlay-icon">&#128279;</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"> ស្នួរខោអាវ</h3>
+                <p class="card-text limit-lines" style="text-indent: 2rem;">
+                  យើងបានចាប់ផ្តើមអាជីវកម្មសង្គមរបស់យើងមករយៈពេលប្រាំបួនឆ្នាំមុនដោយមានគោលបំណងផ្ដល់ផលប្រយោជន៍ត្រឡប់ទៅសង្គមវិញ។
+                  យើងដំណើរការ</p>
+              </div>
             </div>
-            <div class="card-body">
-              <h3 class="card-title">ចាស់អ្នក ថ្មីខ្ញុំ</h3>
-              <p class="card-text">Location</p>
+          </div>
+
+
+
+          <!-- Card 1 -->
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="assets/Kropum/img/p1.jpg" alt="White Tiger" class="card-img">
+              <div class="card-overlay">
+                <a href="pizza4ps.html" class="text-decoration-none stretched-link"><span class="card-overlay-icon "
+                    style="font-size: 40px;">&#128279;</span></a>
+
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Pizza 4P's</h3>
+                <p class="card-text limit-lines" style="text-indent: 2rem;">ធម្មជាតិបានផ្តល់ឱ្យយើងនូវបរិស្ថាន
+                  ហើយវាជាការទទួលខុសត្រូវរបស់យើងក្នុងការការពារវាពីឥទ្ធិពលអាក្រក់
+                  ព្រោះយើងមិនមានទីជម្រកស្រួលផ្សេងទៀតឡើយ។</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="assets/Kropum/img/beco____-.jpg" alt="Present for You" class="card-img">
+              <div class="card-overlay">
+                <a href="be_eco.html" class="text-decoration-none stretched-link"><span class="card-overlay-icon"
+                    style="font-size: 40px;">&#128279;</span></a>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Be Eco</h3>
+                <p class="card-text limit-lines" style="text-indent: 2rem;">ធម្មជាតិបានផ្តល់ឱ្យយើងនូវបរិស្ថាន
+                  ហើយវាជាការទទួលខុសត្រូវរបស់យើងក្នុងការការពារវាពីឥទ្ធិពលអាក្រក់
+                  ព្រោះយើងមិនមានទីជម្រកស្រួលផ្សេងទៀតឡើយ។</p>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card 3 -->
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="assets/Kropum/img/jasnaktmeyknhom.jpg" alt="Ocean Turtle" class="card-img">
+              <div class="card-overlay">
+                <a href="be_eco.html" class="text-decoration-none stretched-link"><span class="card-overlay-icon"
+                    style="font-size: 40px;">&#128279;</span></a>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">ចាស់អ្នក ថ្មីខ្ញុំ</h3>
+                <p class="card-text limit-lines" style="text-indent: 2rem;">ធម្មជាតិបានផ្តល់ឱ្យយើងនូវបរិស្ថាន
+                  ហើយវាជាការទទួលខុសត្រូវរបស់យើងក្នុងការការពារវាពីឥទ្ធិពលអាក្រក់
+                  ព្រោះយើងមិនមានទីជម្រកស្រួលផ្សេងទៀតឡើយ។</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="assets/Kropum/img/thecircle.jpg" alt="Ocean Turtle" class="card-img">
+              <div class="card-overlay">
+                <a href="be_eco.html" class="text-decoration-none stretched-link"><span class="card-overlay-icon"
+                    style="font-size: 40px;">&#128279;</span></a>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">The Clothes Circle</h3>
+                <p class="card-text limit-lines" style="text-indent: 2rem;">ធម្មជាតិបានផ្តល់ឱ្យយើងនូវបរិស្ថាន
+                  ហើយវាជាការទទួលខុសត្រូវរបស់យើងក្នុងការការពារវាពីឥទ្ធិពលអាក្រក់
+                  ព្រោះយើងមិនមានទីជម្រកស្រួលផ្សេងទៀតឡើយ។</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="assets/Kropum/img/donate11.jpg" alt="Ocean Turtle" class="card-img">
+              <div class="card-overlay">
+                <a href="be_eco.html" class="text-decoration-none stretched-link"><span class="card-overlay-icon"
+                    style="font-size: 40px;">&#128279;</span></a>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">The Circle Waste</h3>
+                <p class="card-text limit-lines" style="text-indent: 2rem;">ធម្មជាតិបានផ្តល់ឱ្យយើងនូវបរិស្ថាន
+                  ហើយវាជាការទទួលខុសត្រូវរបស់យើងក្នុងការការពារវាពីឥទ្ធិពលអាក្រក់
+                  ព្រោះយើងមិនមានទីជម្រកស្រួលផ្សេងទៀតឡើយ។</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="assets/Kropum/img/trashisnice1.jpg" alt="Ocean Turtle" class="card-img">
+              <div class="card-overlay">
+                <a href="be_eco.html" class="text-decoration-none stretched-link"><span class="card-overlay-icon"
+                    style="font-size: 40px;">&#128279;</span></a>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Trash Is Nice</h3>
+                <p class="card-text limit-lines" style="text-indent: 2rem;">ធម្មជាតិបានផ្តល់ឱ្យយើងនូវបរិស្ថាន
+                  ហើយវាជាការទទួលខុសត្រូវរបស់យើងក្នុងការការពារវាពីឥទ្ធិពលអាក្រក់
+                  ព្រោះយើងមិនមានទីជម្រកស្រួលផ្សេងទៀតឡើយ។</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="assets/Kropum/img/ch.png" alt="Ocean Turtle" class="card-img">
+              <div class="card-overlay">
+                <a href="be_eco.html" class="text-decoration-none stretched-link"><span class="card-overlay-icon"
+                    style="font-size: 40px;">&#128279;</span></a>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Clean PhnomPenh via CleanHub</h3>
+                <p class="card-text limit-lines" style="text-indent: 2rem;">ធម្មជាតិបានផ្តល់ឱ្យយើងនូវបរិស្ថាន
+                  ហើយវាជាការទទួលខុសត្រូវរបស់យើងក្នុងការការពារវាពីឥទ្ធិពលអាក្រក់
+                  ព្រោះយើងមិនមានទីជម្រកស្រួលផ្សេងទៀតឡើយ។</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="assets/Kropum/img/hh.jpg" alt="Ocean Turtle" class="card-img">
+              <div class="card-overlay">
+                <a href="be_eco.html" class="text-decoration-none stretched-link"><span class="card-overlay-icon"
+                    style="font-size: 40px;">&#128279;</span></a>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Uycycler Cambodia</h3>
+                <p class="card-text limit-lines" style="text-indent: 2rem;">ធម្មជាតិបានផ្តល់ឱ្យយើងនូវបរិស្ថាន
+                  ហើយវាជាការទទួលខុសត្រូវរបស់យើងក្នុងការការពារវាពីឥទ្ធិពលអាក្រក់
+                  ព្រោះយើងមិនមានទីជម្រកស្រួលផ្សេងទៀតឡើយ។</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="https://scontent.fpnh5-3.fna.fbcdn.net/v/t39.30808-6/469237685_122160187076282363_6391423039477311967_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeE62jnz3DzKYMacmAOytyicKQV0MyhXyX0pBXQzKFfJfU7u09ZQyiIr94qOYDNBKMWnSsfVvhHUAc5uSoADEwNz&_nc_ohc=fY7Uf45fs7MQ7kNvwFqRFnr&_nc_oc=AdkOrWmWSCb6Rcc7zzaqL_mqHfJn0PWL8QnXekl87DaYxERkcE7KX0sIfmEWRko9b_Q&_nc_zt=23&_nc_ht=scontent.fpnh5-3.fna&_nc_gid=PhF35MbXvbyQdiQ6sCYVKg&oh=00_AfYBD8P3k7zcwKpRMREK3G_a5i8LCLmyf8o3jLFUGO7rBg&oe=68BF2DF4" alt="Ocean Turtle" class="card-img">
-            <div class="card-overlay">
-              <span class="card-overlay-icon">&#128279;</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">The Clothes Circle</h3>
-              <p class="card-text">Location</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="assets/Kropum/img/donate11.jpg" alt="Ocean Turtle" class="card-img">
-            <div class="card-overlay">
-              <span class="card-overlay-icon">&#128279;</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Ocean Turtle</h3>
-              <p class="card-text">Location</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="https://scontent.fpnh5-6.fna.fbcdn.net/v/t39.30808-6/483957562_4112981985691382_617147835329748131_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeHXBpfRFXSovZXK8yHkVGVuTO9r-ldjvDNM72v6V2O8MwHoZsW87INjYKGpMIrlJUJ41deGxIzyd61vxf2XpOmK&_nc_ohc=bi2XQW6ETmsQ7kNvwHU4Oc_&_nc_oc=Adktn1wzp1_winJt3QdwPZi8KIl_QpOtEaD8YGqeB1Px7e8aikpnOPwyko8kcdfhchE&_nc_zt=23&_nc_ht=scontent.fpnh5-6.fna&_nc_gid=5mKNma5PoOWXvgv_000J6A&oh=00_AfZTkI1z2WyP2fijC5u7xHsfg0Lgl8frD-7pl5nb5k5A5w&oe=68BF0605" alt="Ocean Turtle" class="card-img">
-            <div class="card-overlay">
-              <span class="card-overlay-icon">&#128279;</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Trash Is Nice</h3>
-              <p class="card-text">Location</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="https://cdn.maticagroup.com/assets/files/CleanHub-banner.jpg" alt="Ocean Turtle" class="card-img">
-            <div class="card-overlay">
-              <span class="card-overlay-icon">&#128279;</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Clean PhnomPenh via CleanHub</h3>
-              <p class="card-text">Location</p>
-            </div>
-          </div>
-        </div>
-         <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="https://www.globalheroes.com/wp-content/uploads/2024/02/2024-02-16T010447Z_1_LYNXNPEK1F00Y_RTROPTP_4_CAMBODIA-ENVIRONMENT-BROOMSTICKS-1536x1024.jpg" alt="Ocean Turtle" class="card-img">
-            <div class="card-overlay">
-              <span class="card-overlay-icon">&#128279;</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Uycycler Cambodia</h3>
-              <p class="card-text">Location</p>
-            </div>
-          </div>
-        </div>
-      </div>  
-    </div>
-  </section>
-      <nav aria-label="Course pagination" class="mb-5">
+      </div>
+    </section>
+    <nav aria-label="Course pagination" class="mb-5">
       <ul class="pagination justify-content-center">
         <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
         <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#donate">2</a></li>
         <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item"><a class="page-link" href="#">4</a></li>
         <li class="page-item"><a class="page-link" href="#">5</a></li>
         <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
       </ul>
     </nav>
+  </main>
+
 
 
   <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
