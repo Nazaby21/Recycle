@@ -1,10 +1,10 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family:  "Hanuman", serif;
+body {
+  font-family: "Hanuman", serif;
 }
 .hero-banner {
   position: relative;
@@ -17,42 +17,44 @@ body{
   height: 100%;
   object-fit: cover;
   /* Fade bottom to transparent */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   mask-repeat: no-repeat;
   mask-size: cover;
 }
 
-
-.card-img-top{
-    width:100%;
-    height:200px;
+.card-img-top {
+  width: 100%;
+  height: 200px;
 }
 .card {
-      border-radius: 12px;
-      overflow: hidden;
-    }
+  border-radius: 12px;
+  overflow: hidden;
+}
 
-    .card-img {
-      width: 100%;
-      border-radius: 12px;
-    }
+.card-img {
+  width: 100%;
+  border-radius: 12px;
+}
 
-    /* Swiper arrows */
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: brown;
-    }
+/* Swiper arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: brown;
+}
 
-    /* Swiper pagination */
-    .swiper-pagination-bullet {
-      background: #a0522d;
-      opacity: 0.6;
-    }
-    .swiper-pagination-bullet-active {
-      background: #5a2d0c;
-      opacity: 1;
-    }
-    
+/* Swiper pagination */
+.swiper-pagination-bullet {
+  background: #a0522d;
+  opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+  background: #5a2d0c;
+  opacity: 1;
+}
