@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/image/green_leaves_round_logo.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Hanuman:wght@100..900&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap"
+        rel="stylesheet">
+    <title>Dashboard-Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --sidebar-bg: #f8f9fa;
+            --primary-blue: #2196F3;
+            --success-green: #4CAF50;
+            --warning-orange: #FF9800;
+            --danger-red: #F44336;
+            --text-muted: #6c757d;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+        }
+
+        /* .sidebar {
+            background-color: var(--sidebar-bg);
+            min-height: 100vh;
+            padding: 0;
+            border-right: 1px solid #e9ecef;
+        } */
+
+        .sidebar .nav-link {
+            color: #495057;
+            padding: 12px 20px;
+            border-radius: 0;
+            margin: 2px 8px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar .nav-link:hover {
+            background-color: #e9ecef;
+            color: var(--primary-blue);
+        }
+
+        .sidebar .nav-link.active {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .sidebar .nav-section {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 15px 20px 5px;
+            margin-top: 15px;
+        }
+
+        .brand {
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .brand h6 {
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .kpi-card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            border: 1px solid #e9ecef;
+            height: 100%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .kpi-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .kpi-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .kpi-change {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .kpi-change.positive {
+            color: var(--success-green);
+        }
+
+        .kpi-change.negative {
+            color: var(--danger-red);
+        }
+
+        .kpi-change.warning {
+            color: var(--warning-orange);
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            border: 1px solid #e9ecef;
+            margin-top: 20px;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .chart-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #212529;
+        }
+
+        .btn-group-sm .btn {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+
+        .kpi-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 8px;
+        }
+
+        .week-stats-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .top-bar {
+            background: white;
+            padding: 12px 20px;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            width: 300px;
+        }
+
+        .search-box input {
+            padding-left: 35px;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar" id="sidebar">
+                <div class="brand">
+                    <h6><i class="bi bi-box-seam text-primary me-2"></i>Dashboard-Admin</h6>
+                </div>
+
+                <div class="nav-section">Navigation</div>
+                <nav class="nav flex-column">
+                    <a class="nav-link active " href="#"><i
+                            class="fas fa-tachometer-alt me-2 text-light"></i>Dashboard</a>
+                </nav>
+
+                <div class="nav-section">Authentication</div>
+                <nav class="nav flex-column">
+                    <a class="nav-link fw-semibold" href="#"><i class="bi bi-lock me-2"></i>Login</a>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 main-content">
+                <!-- Search Bar for Desktop -->
+                <div class="d-none d-md-flex justify-content-between align-items-center mb-4">
+                    <div class="search-box">
+                        <input type="text" class="form-control" placeholder="Search for">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    
+                    <!-- [Mobile Media Block end] -->
+                    <div class="ms-auto">
+                        <ul class="list-unstyled d-flex align-items-center mb-0">
+
+                            <!-- Messages Dropdown -->
+                            <li class="dropdown me-3">
+                                <a class="pc-head-link position-relative" data-bs-toggle="dropdown" href="#"
+                                    role="button" aria-expanded="false">
+                                    <i class="bi bi-envelope fs-5"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">4</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end shadow-lg rounded-3 border-0 p-0"
+                                    style="min-width: 320px;">
+                                    <div
+                                        class="d-flex align-items-center justify-content-between px-3 py-2 border-bottom">
+                                        <h6 class="mb-0 fw-semibold">Messages</h6>
+                                        <a href="#!" class="text-muted"><i class="ti ti-x fs-6"></i></a>
+                                    </div>
+                                    <div class="list-group list-group-flush"
+                                        style="max-height: 350px; overflow-y: auto;">
+                                        <a class="list-group-item list-group-item-action d-flex align-items-start">
+                                            <img src="../assets/vuthy/img/image.png" alt="user"
+                                                class="rounded-circle me-3" width="40" height="40">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="mb-1 fw-semibold">Cristina Danny</p>
+                                                    <small class="text-muted">3:00 AM</small>
+                                                </div>
+                                                <small class="text-muted">Birthday today 🎉</small>
+                                            </div>
+                                        </a>
+                                        <a class="list-group-item list-group-item-action d-flex align-items-start">
+                                            <img src="../assets/vuthy/img/image1.png" alt="user"
+                                                class="rounded-circle me-3" width="40" height="40">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="mb-1 fw-semibold">Aida Burg</p>
+                                                    <small class="text-muted">6:00 PM</small>
+                                                </div>
+                                                <small class="text-muted">Commented your post 💬</small>
+                                            </div>
+                                        </a>
+                                        <a class="list-group-item list-group-item-action d-flex align-items-start">
+                                            <img src="../assets/vuthy/img/image2.png" alt="user"
+                                                class="rounded-circle me-3" width="40" height="40">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="mb-1 fw-semibold text-danger">System Alert</p>
+                                                    <small class="text-muted">2:45 PM</small>
+                                                </div>
+                                                <small class="text-muted">Failure in setup ⚠️</small>
+                                            </div>
+                                        </a>
+                                        <a class="list-group-item list-group-item-action d-flex align-items-start">
+                                            <img src="../assets/vuthy/img/image3.png" alt="user"
+                                                class="rounded-circle me-3" width="40" height="40">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="mb-1 fw-semibold">Meeting Invite</p>
+                                                    <small class="text-muted">9:10 PM</small>
+                                                </div>
+                                                <small class="text-muted">Daily scrum meeting 📅</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="border-top text-center py-2">
+                                        <a href="#" class="fw-semibold text-primary">View all</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- User Profile Dropdown -->
+                            <li class="dropdown">
+                                <a class="d-flex align-items-center text-decoration-none" data-bs-toggle="dropdown"
+                                    href="#" role="button" aria-expanded="false">
+                                    <img src="../assets/image/avatar-4.jpg" alt="user"
+                                        class="rounded-circle me-2 shadow-sm" width="36" height="36">
+                                    <span class="fw-semibold d-none d-md-inline">Stebin Ben</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end shadow-lg rounded-3 border-0 p-0"
+                                    style="min-width: 250px;">
+                                    <div class="d-flex align-items-center px-3 py-3 border-bottom">
+                                        <img src="../assets/image/avatar-4.jpg" alt="user" class="rounded-circle me-3"
+                                            width="50" height="50">
+                                        <div>
+                                            <h6 class="mb-0">Stebin Ben</h6>
+                                            <small class="text-muted">Admin</small>
+                                        </div>
+                                        <a href="#!" class="ms-auto text-danger"><i class="ti ti-power"></i></a>
+                                    </div>
+                                    <div class="list-group list-group-flush">
+                                        <a href="#" class="list-group-item list-group-item-action"><i
+                                                class="bi bi-person-fill me-2"></i> View Profile</a>
+                                        <a href="#" class="list-group-item list-group-item-action"><i
+                                                class="bi bi-pencil-square me-2"></i> Edit Profile</a>
+                                        <a href="#" class="list-group-item list-group-item-action"><i
+                                                class="bi bi-wallet2 me-2"></i> Billing</a>
+                                        <a href="#" class="list-group-item list-group-item-action"><i
+                                                class="bi bi-patch-question me-2"></i> Help & Support</a>
+                                        <a href="#" class="list-group-item list-group-item-action text-danger"><i
+                                                class="bi bi-power me-2"></i> Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- KPI Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="kpi-card">
+                            <div class="kpi-label">សរុបអ្នកបរិច្ចាគ</div>
+                            <div class="kpi-value">2,845</div>
+                            <div class="kpi-change positive">
+                                <i class="bi bi-arrow-up-right me-1"></i>15.3%
+                            </div>
+                            <div class="mt-2 text-muted" style="font-size: 0.8rem;">
+                                អ្នកបរិច្ចាគថ្មី <strong>380</strong> នាក់ក្នុងឆ្នាំនេះ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="kpi-card">
+                            <div class="kpi-label">ចំនួនព្រឺត្តិការណ៍</div>
+                            <div class="kpi-value"> 280</div>
+                            <div class="kpi-change positive">
+                                <i class="bi bi-arrow-up-right me-1"></i>42.8%
+                            </div>
+                            <div class="mt-2 text-muted" style="font-size: 0.8rem;">
+                                ទទួលបានបន្ថែមចំនួនព្រឺត្តិការណ៍ <strong>​​ 85</strong> ក្នុងឆ្នាំនេះ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="kpi-card">
+                            <div class="kpi-label">សរុបអ្នកចូលរួមព្រឺត្តិការណ៍</div>
+                            <div class="kpi-value">1800</div>
+                            <div class="kpi-change positive">
+                                <i class="bi bi-arrow-up-right me-1"></i>12.5%
+                            </div>
+                            <div class="mt-2 text-muted" style="font-size: 0.8rem;">
+                                ចំនួនអ្នកចូលរួមក្នុងព្រឺត្តិការណ៍កើនឡើង <strong>500</strong> ក្នុងខែនេះ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="kpi-card">
+                            <div class="kpi-label">ផលិតផលដែលលក់ចេញ</div>
+                            <div class="kpi-value">9,245</div>
+                            <div class="kpi-change positive">
+                                <i class="bi bi-arrow-up-right me-1"></i>18.7%
+                            </div>
+                            <div class="mt-2 text-muted" style="font-size: 0.8rem;">
+                                ផលិតផលដែលលក់ចេញ <strong>1,450</strong> ក្នុងឆ្នាំនេះ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Data Table -->
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h5 class="chart-title">តារាង</h5>
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">ទាំងអស់</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">ថ្ងៃនេះ</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-contact" type="button" role="tab"
+                                            aria-controls="pills-contact" aria-selected="false">សប្តាហ៍នេះ</button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="pills-home-tab" tabindex="0">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col">លេខសម្គាល់</th>
+                                                    <th scope="col">អ្នកបរិច្ចាគ</th>
+                                                    <th scope="col">គម្រោង</th>
+                                                    <th scope="col">ចំនួនទឹកប្រាក់</th>
+                                                    <th scope="col">ស្ថានភាព</th>
+                                                    <th scope="col">កាលបរិច្ឆេទ</th>
+                                                    <th scope="col">សកម្មភាព</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span class="fw-semibold">#DN001</span></td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="user-avatar me-3"
+                                                                style="width: 40px; height: 40px; background: #FF5722;">
+                                                                សវ
+                                                            </div>
+                                                            <div>
+                                                                <div class="fw-semibold">លោក សុវណ្ណ វិចិត្រា</div>
+                                                                <div class="text-muted small">sovann.vichitra@gmail.com
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <div class="fw-semibold">សាងសង់សាលារៀន</div>
+                                                            <div class="text-muted small">អប់រំ</div>
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="fw-semibold">$ 500</span></td>
+                                                    <td>
+                                                        <span class="badge bg-success">បានទទួល</span>
+                                                    </td>
+                                                    <td>
+                                                        <div>28 សីហា 2025</div>
+                                                        <div class="text-muted small">2:30 ល្ងាច</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn-group btn-group-sm">
+                                                            <button class="btn btn-outline-primary" title="មើល">
+                                                                <i class="bi bi-eye"></i>
+                                                            </button>
+                                                            <button class="btn btn-outline-secondary" title="កែប្រែ">
+                                                                <i class="bi bi-pencil-square"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab" tabindex="0">
+
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col">លេខសម្គាល់</th>
+                                                    <th scope="col">អ្នកបរិច្ចាគ</th>
+                                                    <th scope="col">គម្រោង</th>
+                                                    <th scope="col">ចំនួនទឹកប្រាក់</th>
+                                                    <th scope="col">ស្ថានភាព</th>
+                                                    <th scope="col">កាលបរិច្ឆេទ</th>
+                                                    <th scope="col">សកម្មភាព</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                    aria-labelledby="pills-contact-tab" tabindex="0">
+                                <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col">លេខសម្គាល់</th>
+                                                    <th scope="col">អ្នកបរិច្ចាគ</th>
+                                                    <th scope="col">គម្រោង</th>
+                                                    <th scope="col">ចំនួនទឹកប្រាក់</th>
+                                                    <th scope="col">ស្ថានភាព</th>
+                                                    <th scope="col">កាលបរិច្ឆេទ</th>
+                                                    <th scope="col">សកម្មភាព</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div class="text-muted small">
+                                    បង្ហាញ 1 ដល់ 5 នៃ 47 ការបរិច្ចាគ
+                                </div>
+                                <nav>
+                                    <ul class="pagination pagination-sm mb-0">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">មុន</a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">បន្ទាប់</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</html>
