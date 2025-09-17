@@ -43,6 +43,10 @@ body {
   transform: translateX(-80%) !important;
 }
 
+.avatar{
+  cursor: pointer;
+}
+
 .limit-line-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2; /* limit to 2 lines */
