@@ -73,7 +73,7 @@
               <div class="total-price">
                 <p class="mb-1">
                   ចំនួនសរុប</p>
-                <h4>$199.00</h4>
+                <h4>$204.00</h4>
               </div>
             </div>
 
@@ -98,8 +98,8 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-purchase">
-                <i class="fas fa-shopping-bag me-2"></i>ទិញទំនិញ
+              <button class="btn btn-purchase btn-primary" id="purchaseBtn">
+                <i class="fas fa-shopping-bag me-2"></i> ទិញទំនិញ
               </button>
             </div>
           </div>
@@ -117,8 +117,8 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-center py-4">
-          <img src="assets/makara/image/qrcode.jpg" alt="ABA QR Code"
-            class="img-fluid rounded" style="max-width: 280px;">
+          <img src="assets/makara/image/qrcode.jpg" alt="ABA QR Code" class="img-fluid rounded"
+            style="max-width: 280px;">
           <p class="mt-4">សូមស្កែន QR Code ដើម្បីបង់ប្រាក់តាមរយៈ ABA Bank</p>
         </div>
         <div class="modal-footer justify-content-center">
@@ -136,8 +136,8 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-center py-4">
-          <img src="assets/makara/image/qrcode.jpg"
-            alt="ACLEDA QR Code" class="img-fluid rounded" style="max-width: 280px;">
+          <img src="assets/makara/image/qrcode.jpg" alt="ACLEDA QR Code" class="img-fluid rounded"
+            style="max-width: 280px;">
           <p class="mt-4">សូមស្កែន QR Code ដើម្បីបង់ប្រាក់តាមរយៈ ACLEDA Bank</p>
         </div>
         <div class="modal-footer justify-content-center">
@@ -146,9 +146,35 @@
       </div>
     </div>
   </div>
+<!-- payment -->
+  <div class="toast-container position-fixed  end-0 p-3" style="top: 10%;">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <small class="text-muted">just now</small>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      ✅ ការទូលទាត់បានជោគជ័យ
+    </div>
+  </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const purchaseBtn = document.getElementById("purchaseBtn");
+    const toastLive = document.getElementById("liveToast");
 
+    const toast = new bootstrap.Toast(toastLive, {
+      delay: 3000,   // auto hide after 3s
+      autohide: true
+    });
+
+    purchaseBtn.addEventListener("click", () => {
+      toast.show();
+    });
+  });
+</script>
 </body>
 
 </html>
