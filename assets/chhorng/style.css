@@ -1,30 +1,27 @@
+/* =========================================
+   1. IMPORTS & GLOBAL STYLES
+========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Roboto", "Hanuman", serif !important;
 }
 
+/* =========================================
+   2. PAGE BACKGROUNDS
+========================================= */
 .register-page {
     background-image: url(../chhorng/img/pexel-leaf.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-}
-.register-page .login-area input:focus {
-    outline: none;
-    box-shadow: 0 0 8px #198754;
-    transition: 0.3s ease;
-
-}
-.register-page .col-lg-6:first-child {
-    backdrop-filter: blur(3px);
 }
 
 .signin-page {
@@ -35,35 +32,38 @@ body {
     height: 100vh;
 }
 
-
-
-/* forgetpwd bg  */
-.forgetpwd-page {
-    margin: 0;
-    overflow: hidden;
-}
-
 .pin-page,
-.newpwd-page ,
-.forgetpwd-page{
+.newpwd-page,
+.forgetpwd-page {
     background-color: #92e3a996;
 }
 
-/* placeholder  */
+/* =========================================
+   3. FORMS & INPUTS
+========================================= */
+/* General focus effect */
+.login-area input:focus,
+.signin-area .form-control:focus,
+.forgetpwd-area .form-control:focus,
+.pin-page .form-control:focus,
+.newpwd-page .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(13, 253, 133, 0.25);
+    transition: 0.3s ease;
+}
 
-/* Change placeholder color */
+/* Register page specific input focus */
+.register-page .login-area input:focus {
+    box-shadow: 0 0 8px #198754;
+}
+
+/* Input placeholders */
 .login-area input::placeholder {
     color: gray !important;
     opacity: 1;
 }
 
-.login-area input:focus {
-    outline: none;
-    border: 1px solid #4A90E2;
-    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
-    transition: 0.3s ease;
-}
-
+/* Black / dark backgrounds */
 .login-area .bg-black {
     background-color: rgba(0, 0, 0, 0.885) !important;
 }
@@ -72,9 +72,9 @@ body {
     background-color: rgba(0, 0, 0, 0.55) !important;
 }
 
-
-/* sigin  */
-
+/* =========================================
+   4. SIGN-IN / REGISTER AREA
+========================================= */
 .signin-area .icon {
     width: 35px;
     height: 35px;
@@ -89,36 +89,46 @@ body {
     background-color: #ffffffea !important;
 }
 
-/* change focus  */
-.signin-area .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(13, 253, 133, 0.25) !important;
+/* =========================================
+   5. NAV / TABS
+========================================= */
+.nav-pills .nav-link.active {
+    background-color: #198754 !important;
+    color: #fff !important;
 }
 
-/* forgetpwd-area */
-.forgetpwd-area .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(13, 253, 133, 0.25) !important;
+.nav-pills .nav-link {
+    color: #198754;
+    background-color: transparent;
 }
 
-/* pin page  */
-.pin-page .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(13, 253, 133, 0.25) !important;
+.nav-pills .nav-link:hover {
+    color: #198754 !important;
+    background-color: transparent !important;
 }
 
-/* newpwd  */
+/* =========================================
+   6. FORGET / PIN / NEW PASSWORD PAGES
+========================================= */
+.forgetpwd-page {
+    margin: 0;
+    overflow: hidden;
+}
+
 .newpwd-page .bg-light {
     background-color: #ffffffe2 !important;
 }
 
 .newpwd-page .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(13, 253, 133, 0.25);
     border: none;
 }
 
-/* aboutpage  */
-
+/* =========================================
+   7. ABOUT PAGE
+========================================= */
 .about-area .card-member {
     border-radius: 10px;
-    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
     transition: 0.7s;
@@ -154,7 +164,6 @@ body {
     transition: 0.7s;
 }
 
-
 .about-area .card-member .btn-group {
     width: 60px;
     height: 70%;
@@ -162,18 +171,21 @@ body {
     position: absolute;
     top: 0px;
     right: -60px;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 5px 0 0 5px;
     display: flex;
     flex-wrap: wrap;
     backdrop-filter: blur(5px);
     transition: 0.7s;
 }
 
+.about-area .card-member:hover .btn-group {
+    right: 0px;
+}
+
 .about-area .img-icon {
     width: 29px;
     height: 29px;
-    border-radius: 100%;
-
+    border-radius: 50%;
 }
 
 .about-area .nav-link {
@@ -185,10 +197,6 @@ body {
     padding-left: 14px;
 }
 
-.about-area .card-member:hover .btn-group {
-    right: 0px;
-}
-
 .about-area .card {
     border: none;
 }
@@ -197,6 +205,7 @@ body {
     padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
 }
 
+/* Triangle in about page */
 .about-page .triangle {
     width: 0px;
     height: 0px;
