@@ -68,40 +68,41 @@
 <body>
     <!-- Hero Section -->
     <section>
-        <div class="hero-banner" style="background-color: #e9f5ec; width: 100%; height: 550px;">
-            <div class="container text-center ">
-                <div class="row">
-                    <div class="col-6"
-                        style="margin-top: 200px; text-align: left; padding-left: 50px; animation: fadeInUp; animation-duration: 2s;">
-                        <h1 class="">បរិច្ចាគរបស់ដែលអ្នកប្រើប្រាស់រួច</h1>
-                        <p class="lead">Help us reduce waste by donating your used items.</p>
-                        <a href="reuse.html" class="btn btn-success animate__animated animate__pulse"
-                            style="width: 200px; ">បរិច្ចាគឥឡូវនេះ</a>
-                    </div>
+  <div class="hero-banner position-relative text-white d-flex align-items-center" style="min-height: 80vh; background: url('assets/Kropum/img/pexels-subhrajyoti-paul-447200412-33926291.jpg') center/cover no-repeat;">
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
 
-                    <div class="col-6">
-                        <img src="https://plus.unsplash.com/premium_photo-1681487702577-9c13a36d5b98?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="" class="img-fluid"
-                            style="border-radius: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 100%; height: auto; margin-bottom: 300px;">
-                    </div>
-                </div>
-            </div>
-
+    <div class="container text-center position-relative">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">
+            បរិច្ចាគវត្ថុដែលបានប្រើរួច
+          </h1>
+          <p class="lead mt-3 animate__animated animate__fadeInUp">
+            បរិច្ចាគវត្ថុដែលអ្នកមិនប្រើ ឬប្រើប្រាស់រួច ដើម្បីជួយសង្គម និងបរិស្ថាន
+          </p>
+          <a href="reuse.html" class="btn btn-success btn-lg shadow rounded-pill animate__animated animate__pulse" style="--animate-duration: 2s;">
+            បរិច្ចាគវត្ថុថ្មី
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- Static user posts -->
-    <section id="user-posts" class="container mb-23">
+    <section id="user-posts" class="container ">
         <div class="container">
-            <h2 class="text-center mb-4">របស់ដែលបានបរិច្ចាគ</h2>
+            <h2 class="text-center mb-4 mt-5">របស់ដែលបានបរិច្ចាគ</h2>
             <!-- Nav Tabs -->
             <ul class="nav nav-tabs justify-content-center" id="donatedItemsTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active  " id="recent-tab" data-bs-toggle="tab" data-bs-target="#recent"
-                        type="button" role="tab">Recent</button>
+                        type="button" role="tab">ថ្មីៗ</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link btn " id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button"
-                        role="tab">All</button>
+                        role="tab">ទាំងអស់</button>
                 </li>
             </ul>
 
@@ -114,11 +115,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/clothes.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Used Clothes</h5>
-                                    <p class="card-text"><strong>Category:</strong> Clothes</p>
-                                    <p class="card-text"><strong>Item:</strong> T-shirts & Jeans</p>
-                                    <p class="card-text"><strong>Contact:</strong> 012345678</p>
-                                    <p><strong>Description:</strong> Gently used clothing in good.</p>
+                                    <h5 class="card-title">អាវក្រៅ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សម្លៀកបំពាក់</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> អាវក្រៅ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 012345678</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> Size M.</p>
                                 </div>
                             </div>
                         </div>
@@ -126,11 +127,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/wooden table.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Furniture</h5>
-                                    <p class="card-text"><strong>Category:</strong> Household</p>
-                                    <p class="card-text"><strong>Item:</strong> Wooden Table</p>
-                                    <p class="card-text"><strong>Contact:</strong> 098765432</p>
-                                    <p><strong>Description:</strong> Gently used wooden table.</p>
+                                    <h5 class="card-title">តុឈើ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សម្ភារៈផ្ទះ</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> តុឈើ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 098765432</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> តុឈើដែលប្រើប្រាស់ហើយ។</p>
                                 </div>
                             </div>
                         </div>
@@ -138,23 +139,23 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/pc1.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Old Laptop</h5>
-                                    <p class="card-text"><strong>Category:</strong> Electronics</p>
-                                    <p class="card-text"><strong>Item:</strong> Dell Latitude</p>
-                                    <p class="card-text"><strong>Contact:</strong> 011223344</p>
-                                    <p><strong>Description:</strong> Used laptop in working condition.</p>
+                                    <h5 class="card-title">Laptop</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> ឧបករណ៍អេឡិចត្រូនិក</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> Dell Latitude</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 011223344</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> Laptop ប្រើប្រាស់ក្នុងស្ថានភាពធ្វើការបាន។</p>
                                 </div>
-                            </div>
+                            </div>  
                         </div>
                         <div class="col-md-4">
                             <div class="card">
                                 <img src="assets/Kropum/img/book.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title"> Books</h5>
-                                    <p class="card-text"><strong>Category:</strong> Books</p>
-                                    <p class="card-text"><strong>Item:</strong> Storybooks</p>
-                                    <p class="card-text"><strong>Contact:</strong> 015667788</p>
-                                    <p><strong>Description:</strong> A collection of gently used children's storybooks.
+                                    <h5 class="card-title"> សៀវភៅ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សៀវភៅ</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> សៀវភៅរឿង</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 015667788</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> សៀវភៅរឿងដែលប្រើប្រាស់ហើយ។
                                     </p>
                                 </div>
                             </div>
@@ -163,11 +164,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/shoes.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Shoes</h5>
-                                    <p class="card-text"><strong>Category:</strong> Clothes</p>
-                                    <p class="card-text"><strong>Item:</strong> Sneakers (Size 40)</p>
-                                    <p class="card-text"><strong>Contact:</strong> 012334455</p>
-                                    <p><strong>Description:</strong> Lightly used sneakers in good condition.</p>
+                                    <h5 class="card-title">ស្បែកជើង</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សម្លៀកបំពាក់</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> ស្បែកជើងកីឡា (ទំហំ 40)</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 012334455</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> ស្បែកជើងកីឡាដែលប្រើប្រាស់ហើយ។</p>
                                 </div>
                             </div>
                         </div>
@@ -175,11 +176,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/2-Seater Sofa.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Sofa</h5>
-                                    <p class="card-text"><strong>Category:</strong> Furniture</p>
-                                    <p class="card-text"><strong>Item:</strong> 2-Seater Sofa</p>
-                                    <p class="card-text"><strong>Contact:</strong> 013445566</p>
-                                    <p><strong>Description:</strong> Comfortable 2-seater sofa in good condition.</p>
+                                    <h5 class="card-title">សាឡុង</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> គ្រឿងសង្ហារឹម</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> 2-Seater Sofa</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 013445566</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> សាឡុងដែលប្រើប្រាស់ហើយ។</p>
                                 </div>
                             </div>
                         </div>
@@ -187,11 +188,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/bycicle.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Bicycle</h5>
-                                    <p class="card-text"><strong>Category:</strong> Transport</p>
-                                    <p class="card-text"><strong>Item:</strong> Kids’ Bike</p>
-                                    <p class="card-text"><strong>Contact:</strong> 016778899</p>
-                                    <p><strong>Description:</strong> Gently used kids’ bike in good condition.</p>
+                                    <h5 class="card-title">កង់</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> យានយន្ត</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> កង់កុមារ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 016778899</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> កង់កុមារដែលប្រើប្រាស់ហើយ។</p>
                                 </div>
                             </div>
                         </div>
@@ -199,11 +200,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/កំសៀវ.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Kitchenware</h5>
-                                    <p class="card-text"><strong>Category:</strong> Household</p>
-                                    <p class="card-text"><strong>Item:</strong> Cooking Pots</p>
-                                    <p class="card-text"><strong>Contact:</strong> 017889900</p>
-                                    <p><strong>Description:</strong> Set of gently used cooking pots in good condition.
+                                    <h5 class="card-title">កំសៀវ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> គ្រឿងសង្ហារឹម</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> កំសៀវ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 017889900</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> កំសៀវដែលប្រើប្រាស់ហើយ
                                     </p>
                                 </div>
                             </div>
@@ -212,11 +213,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/bag1.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Bag</h5>
-                                    <p class="card-text"><strong>Category:</strong> Clothes</p>
-                                    <p class="card-text"><strong>Item: </strong>Hand Bag</p>
-                                    <p class="card-text"><strong>Contact:</strong> 017889900</p>
-                                    <p><strong>Description:</strong> Set of gently used Hand Bag in good condition.</p>
+                                    <h5 class="card-title">កាបូប</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សម្លៀកបំពាក់</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> កាបូបដៃ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 017889900</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> កាបូបដៃនៅក្នុងស្ថានភាពល្អ។</p>
                                 </div>
                             </div>
                         </div>
@@ -232,10 +233,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/Schoolbag.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">School Bags</h5>
-                                    <p class="card-text"><strong>Category:</strong> Accessories</p>
-                                    <p class="card-text"><strong>Item:</strong> Backpack</p>
-                                    <p class="card-text"><strong>Contact:</strong> 014556677</p>
+                                    <h5 class="card-title">កាតាប</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> គ្រឿងសង្ហារឹម</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> កាបូបសាលា</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 014556677</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> កាបូបសាលាដែលប្រើប្រាស់ហើយនៅក្នុងស្ថានភាពល្អ។</p>
                                 </div>
                             </div>
                         </div>
@@ -243,10 +245,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/homedecor.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Curtains</h5>
-                                    <p class="card-text"><strong>Category:</strong> Home Decor</p>
-                                    <p class="card-text"><strong>Item:</strong> Window Curtains</p>
-                                    <p class="card-text"><strong>Contact:</strong> 018990011</p>
+                                    <h5 class="card-title">រុក្ខជាតិ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> គ្រឿងសង្ហារឹម</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> ដើមរុក្ខជាតិ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 018990011</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> ដើមរុក្ខជាតិផ្ទះដែលប្រើប្រាស់ហើយនៅក្នុងស្ថានភាពល្អ។</p>
                                 </div>
                             </div>
                         </div>
@@ -254,10 +257,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/princessshoesjpg.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Smartphone</h5>
-                                    <p class="card-text"><strong>Category:</strong> Electronics</p>
-                                    <p class="card-text"><strong>Item:</strong> Samsung Galaxy S9</p>
-                                    <p class="card-text"><strong>Contact:</strong> 019101112</p>
+                                    <h5 class="card-title">ស្បែកជើងព្រេងស្រី</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> ស្បែកជើង</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> ស្បែកជើងព្រេងស្រី</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 019101112</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> ស្បែកជើងព្រេងស្រីដែលប្រើប្រាស់ហើយនៅក្នុងស្ថានភាពល្អ។</p>
                                 </div>
                             </div>
                         </div>
@@ -265,10 +269,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/blank1.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Blankets</h5>
-                                    <p class="card-text"><strong>Category:</strong> Household</p>
-                                    <p class="card-text"><strong>Item:</strong> Warm Blankets</p>
-                                    <p class="card-text"><strong>Contact:</strong> 010121314</p>
+                                    <h5 class="card-title">ភួយ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> គ្រឿងសង្ហារឹម</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> ភួយក្តៅ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 010121314</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> ភួយក្តៅដែលប្រើប្រាស់ហើយនៅក្នុងស្ថានភាពល្អ។</p>
                                 </div>
                             </div>
                         </div>
@@ -276,10 +281,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/toy.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Toys</h5>
-                                    <p class="card-text"><strong>Category:</strong> Kids</p>
-                                    <p class="card-text"><strong>Item:</strong> Teddy Bears</p>
-                                    <p class="card-text"><strong>Contact:</strong> 011141516</p>
+                                    <h5 class="card-title">តុក្កតា</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> ក្មេង</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> តុក្កតា Teddy Bears</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 011141516</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> តុក្កតា ដែលប្រើប្រាស់ហើយនៅក្នុងស្ថានភាពល្អ។</p>
                                 </div>
                             </div>
                         </div>
@@ -287,35 +293,24 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/lamp.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Furniture</h5>
-                                    <p class="card-text"><strong>Category:</strong> Household</p>
-                                    <p class="card-text"><strong>Item:</strong> Wooden Table</p>
-                                    <p class="card-text"><strong>Contact:</strong> 098765432</p>
+                                    <h5 class="card-title">គ្រឿងសង្ហារឹម</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> គ្រឿងសង្ហារឹម</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> អំពូល</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 098765432</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> អំពូលដែលប្រើប្រាស់ហើយនៅក្នុងស្ថានភាពល្អ។</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="assets/Kropum/img/pc1.jpg" alt="Electronics" class="card-img">
-                                <div class="card-body">
-                                    <h5 class="card-title">Old Laptop</h5>
-                                    <p class="card-text"><strong>Category:</strong> Electronics</p>
-                                    <p class="card-text"><strong>Item:</strong> Dell Latitude</p>
-                                    <p class="card-text"><strong>Contact:</strong> 011223344</p>
-                                    <p><strong>Description:</strong> Used laptop in working condition.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
+                                                <div class="col-md-4">
                             <div class="card">
                                 <img src="assets/Kropum/img/clothes.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Used Clothes</h5>
-                                    <p class="card-text"><strong>Category:</strong> Clothes</p>
-                                    <p class="card-text"><strong>Item:</strong> T-shirts & Jeans</p>
-                                    <p class="card-text"><strong>Contact:</strong> 012345678</p>
-                                    <p><strong>Description:</strong> Gently used clothing in good.</p>
+                                    <h5 class="card-title">អាវក្រៅ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សម្លៀកបំពាក់</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> អាវក្រៅ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 012345678</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> Size M.</p>
                                 </div>
                             </div>
                         </div>
@@ -323,11 +318,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/wooden table.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Furniture</h5>
-                                    <p class="card-text"><strong>Category:</strong> Household</p>
-                                    <p class="card-text"><strong>Item:</strong> Wooden Table</p>
-                                    <p class="card-text"><strong>Contact:</strong> 098765432</p>
-                                    <p><strong>Description:</strong> Gently used wooden table.</p>
+                                    <h5 class="card-title">តុឈើ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សម្ភារៈផ្ទះ</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> តុឈើ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 098765432</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> តុឈើដែលប្រើប្រាស់ហើយ។</p>
                                 </div>
                             </div>
                         </div>
@@ -335,23 +330,23 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/pc1.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Old Laptop</h5>
-                                    <p class="card-text"><strong>Category:</strong> Electronics</p>
-                                    <p class="card-text"><strong>Item:</strong> Dell Latitude</p>
-                                    <p class="card-text"><strong>Contact:</strong> 011223344</p>
-                                    <p><strong>Description:</strong> Used laptop in working condition.</p>
+                                    <h5 class="card-title">Laptop</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> ឧបករណ៍អេឡិចត្រូនិក</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> Dell Latitude</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 011223344</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> Laptop ប្រើប្រាស់ក្នុងស្ថានភាពធ្វើការបាន។</p>
                                 </div>
-                            </div>
+                            </div>  
                         </div>
                         <div class="col-md-4">
                             <div class="card">
                                 <img src="assets/Kropum/img/book.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title"> Books</h5>
-                                    <p class="card-text"><strong>Category:</strong> Books</p>
-                                    <p class="card-text"><strong>Item:</strong> Storybooks</p>
-                                    <p class="card-text"><strong>Contact:</strong> 015667788</p>
-                                    <p><strong>Description:</strong> A collection of gently used children's storybooks.
+                                    <h5 class="card-title"> សៀវភៅ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សៀវភៅ</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> សៀវភៅរឿង</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 015667788</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> សៀវភៅរឿងដែលប្រើប្រាស់ហើយ។
                                     </p>
                                 </div>
                             </div>
@@ -360,11 +355,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/shoes.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Shoes</h5>
-                                    <p class="card-text"><strong>Category:</strong> Clothes</p>
-                                    <p class="card-text"><strong>Item:</strong> Sneakers (Size 40)</p>
-                                    <p class="card-text"><strong>Contact:</strong> 012334455</p>
-                                    <p><strong>Description:</strong> Lightly used sneakers in good condition.</p>
+                                    <h5 class="card-title">ស្បែកជើង</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សម្លៀកបំពាក់</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> ស្បែកជើងកីឡា (ទំហំ 40)</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 012334455</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> ស្បែកជើងកីឡាដែលប្រើប្រាស់ហើយ។</p>
                                 </div>
                             </div>
                         </div>
@@ -372,11 +367,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/2-Seater Sofa.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Sofa</h5>
-                                    <p class="card-text"><strong>Category:</strong> Furniture</p>
-                                    <p class="card-text"><strong>Item:</strong> 2-Seater Sofa</p>
-                                    <p class="card-text"><strong>Contact:</strong> 013445566</p>
-                                    <p><strong>Description:</strong> Comfortable 2-seater sofa in good condition.</p>
+                                    <h5 class="card-title">សាឡុង</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> គ្រឿងសង្ហារឹម</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> 2-Seater Sofa</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 013445566</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> សាឡុងដែលប្រើប្រាស់ហើយ។</p>
                                 </div>
                             </div>
                         </div>
@@ -384,11 +379,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/bycicle.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Bicycle</h5>
-                                    <p class="card-text"><strong>Category:</strong> Transport</p>
-                                    <p class="card-text"><strong>Item:</strong> Kids’ Bike</p>
-                                    <p class="card-text"><strong>Contact:</strong> 016778899</p>
-                                    <p><strong>Description:</strong> Gently used kids’ bike in good condition.</p>
+                                    <h5 class="card-title">កង់</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> យានយន្ត</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> កង់កុមារ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 016778899</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> កង់កុមារដែលប្រើប្រាស់ហើយ។</p>
                                 </div>
                             </div>
                         </div>
@@ -396,11 +391,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/កំសៀវ.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Kitchenware</h5>
-                                    <p class="card-text"><strong>Category:</strong> Household</p>
-                                    <p class="card-text"><strong>Item:</strong> Cooking Pots</p>
-                                    <p class="card-text"><strong>Contact:</strong> 017889900</p>
-                                    <p><strong>Description:</strong> Set of gently used cooking pots in good condition.
+                                    <h5 class="card-title">កំសៀវ</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> គ្រឿងសង្ហារឹម</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> កំសៀវ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 017889900</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> កំសៀវដែលប្រើប្រាស់ហើយ
                                     </p>
                                 </div>
                             </div>
@@ -409,35 +404,11 @@
                             <div class="card">
                                 <img src="assets/Kropum/img/bag1.jpg" alt="" class="card-img">
                                 <div class="card-body">
-                                    <h5 class="card-title">Bag</h5>
-                                    <p class="card-text"><strong>Category:</strong> Clothes</p>
-                                    <p class="card-text"><strong>Item: </strong>Hand Bag</p>
-                                    <p class="card-text"><strong>Contact:</strong> 017889900</p>
-                                    <p><strong>Description:</strong> Set of gently used Hand Bag in good condition.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="assets/Kropum/img/ជ្រុញ.jpg" alt="" class="card-img">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bag</h5>
-                                    <p class="card-text"><strong>Category:</strong> Clothes</p>
-                                    <p class="card-text"><strong>Item: </strong>Hand Bag</p>
-                                    <p class="card-text"><strong>Contact:</strong> 017889900</p>
-                                    <p><strong>Description:</strong> Set of gently used Hand Bag in good condition.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="assets/Kropum/img/ម៉ាស៊ីនផ្លុំសក់.jpg" alt="" class="card-img">
-                                <div class="card-body">
-                                    <h5 class="card-title">Bag</h5>
-                                    <p class="card-text"><strong>Category:</strong> Clothes</p>
-                                    <p class="card-text"><strong>Item: </strong>Hand Bag</p>
-                                    <p class="card-text"><strong>Contact:</strong> 017889900</p>
-                                    <p><strong>Description:</strong> Set of gently used Hand Bag in good condition.</p>
+                                    <h5 class="card-title">កាបូប</h5>
+                                    <p class="card-text"><strong>ប្រភេទ:</strong> សម្លៀកបំពាក់</p>
+                                    <p class="card-text"><strong>វត្ថុ:</strong> កាបូបដៃ</p>
+                                    <p class="card-text"><strong>ទំនាក់ទំនង:</strong> 017889900</p>
+                                    <p><strong>ការពិពណ៌នា:</strong> កាបូបដៃនៅក្នុងស្ថានភាពល្អ។</p>
                                 </div>
                             </div>
                         </div>
@@ -448,8 +419,8 @@
         </div>
         <!-- Post New Item button -->
         <div class="text-center mt-4">
-            <a href="reuse.html" class="btn btn-primary btn-lg">
-                <i class="fa fa-plus-circle"></i> Post New Item
+            <a href="reuse.html" class="btn btn-success btn-lg">
+                <i class="fa fa-plus-circle"></i> បរិច្ចាគវត្ថុថ្មី
             </a>
         </div>
 
