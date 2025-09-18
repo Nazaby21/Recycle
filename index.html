@@ -307,7 +307,7 @@
                 <li>
                   <a class="dropdown-item py-2" href="#">
                     <i class="bi bi-person-circle"></i>
-                    <span class="ms-2">ពត៌មានអ្នកប្រើប្រាស់</span>
+                    <span class="ms-2">ពត៌មានផ្ទាល់ខ្លួន</span>
                   </a>
                 </li>
                 <li>
@@ -340,11 +340,8 @@
     </header>
     <main>
       <section class="hero-banner mt-9 mt-md-0">
-        <img
-          src="assets/image/enviroment.jpg"
-          alt=""
-          class="bg-banner-img position-relative"
-        />
+        <img src="assets/image/enviroment.jpg" alt="" class="bg-banner-img" />
+        <div class="overlay"></div>
         <div class="container banner">
           <div class="row d-flex align-items-center">
             <div class="col-12 col-md-6">
@@ -366,7 +363,7 @@
               </a>
             </div>
             <div class="col-12 col-md-6">
-              <div class="banner-img position-relative d-none d-md-block">
+              <div class="banner-img d-none d-md-block">
                 <img
                   src="assets/image/banner-1.png"
                   alt=""
@@ -616,13 +613,42 @@
           </div>
         </div>
       </section>
-      <section class="section-random">
-        <div class="container">
-          <div class="row">
-            <div class="test"></div>
-          </div>
-        </div>
-      </section>
+      <section class="section-comment py-8 position-relative">
+  <!-- Background image -->
+  <img
+    src="assets/image/banner-2.jpg"
+    alt=""
+    class="w-100 h-100 position-absolute top-0 start-0"
+    style="object-fit: cover; z-index: 1"
+  />
+
+  <!-- Overlay -->
+  <div class="overlay-1"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-3">
+    <div class="row justify-content-center text-center">
+      <div class="col-12">
+        <h2 class="scale-up-ver-center text-white mb-4 fw-bold">
+          តើអ្នកមានមតិយោបលយ៉ាងណាមកលើគេហទំព័ររបស់ពួកយើង?
+        </h2>
+      </div>
+      <div class="col-12 col-md-8 col-lg-6">
+        <form action="" class="comment-form p-4 rounded-4 shadow-lg">
+          <textarea
+            class="text-area rounded-3 p-3"
+            placeholder="មតិយោបល....."
+            rows="5"
+          ></textarea>
+          <button type="submit" class="btn submit-btn mt-3 w-100 bg-success">
+            ដាក់ស្នើ
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

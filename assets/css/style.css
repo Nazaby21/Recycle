@@ -43,15 +43,15 @@ body {
   transform: translateX(-80%) !important;
 }
 
-.avatar{
+.avatar {
   cursor: pointer;
 }
 
-.register-btn{
+.register-btn {
   transition: 0.3s;
 }
 
-.register-btn:hover{
+.register-btn:hover {
   background-color: #198754;
   color: #fff;
   transition: 0.3s;
@@ -91,8 +91,68 @@ body {
   animation: smooth-bounce 3s infinite cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
+.text-area {
+  outline: 0px;
+  height: 150px;
+  resize: none;
+}
+
+/* Overlay */
+.overlay-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Comment Form Box */
+.comment-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s ease;
+}
+
+.comment-form:hover {
+  transform: translateY(-5px);
+}
+
+/* Textarea */
+.text-area {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-area:focus {
+  border-color: #198754;
+  box-shadow: 0 0 10px rgba(25, 135, 84, 0.3);
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  color: #fff;
+  transform: scale(1.03);
+}
+
 /* ============ RESPONSIVE FIXES ============ */
-@media (min-width: 0) and (max-width: 575.98px) {
+
+/* Extra small devices (phones, <576px) */
+@media (max-width: 575.98px) {
   .search-2 {
     display: none;
   }
@@ -105,7 +165,6 @@ body {
   .landing-btn {
     font-size: 12px;
   }
-
   .text-fs,
   .btn-fs {
     font-size: 17px;
@@ -115,16 +174,23 @@ body {
     height: 40vh;
   }
   .banner {
-    position: absolute;
     top: 30%;
-    left: 54%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
   .card-responsive {
     height: 310px;
   }
+  .comment-form {
+    padding: 15px;
+  }
+  .text-area {
+    width: 100%;
+    height: 120px;
+  }
 }
 
+/* Small to medium devices (tablets, 576px - 991.98px) */
 @media (min-width: 576px) and (max-width: 991.98px) {
   .search-2 {
     display: none;
@@ -141,16 +207,23 @@ body {
     height: 40vh;
   }
   .banner {
-    position: absolute;
-    top: 30%;
-    left: 55%;
+    top: 32%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
   .card-responsive {
     height: 350px;
   }
+  .comment-form {
+    padding: 20px;
+  }
+  .text-area {
+    width: 100%;
+    height: 130px;
+  }
 }
 
+/* Large devices (desktops, 992px - 1500px) */
 @media (min-width: 992px) and (max-width: 1500px) {
   .search-1 {
     display: none;
@@ -163,13 +236,32 @@ body {
     height: 70vh;
   }
   .banner {
-    position: absolute;
     top: 40%;
-    left: 55%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
   .card-responsive {
     height: 240px;
+  }
+  .comment-form {
+    padding: 30px;
+  }
+  .text-area {
+    width: 100%;
+    max-width: 700px;
+    height: 150px;
+  }
+}
+
+/* Extra large devices (>1500px) */
+@media (min-width: 1501px) {
+  .comment-form {
+    padding: 40px;
+  }
+  .text-area {
+    width: 100%;
+    max-width: 700px;
+    height: 160px;
   }
 }
 
@@ -308,42 +400,41 @@ body {
   animation-iteration-count: 1;
 }
 
-.slider{
+.slider {
   width: 100%;
   height: 250px;
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 38px -13px rgba(0, 0, 0, 1);
--moz-box-shadow: 0px 0px 38px -13px rgba(0, 0, 0, 1);
-box-shadow: 0px 0px 38px -13px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 38px -13px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 38px -13px rgba(0, 0, 0, 1);
 }
 
-.slider .list{
+.slider .list {
   display: flex;
   width: 100%;
   min-width: calc(100px * 6);
   position: relative;
 }
 
-.slider .list .slide-item{
+.slider .list .slide-item {
   width: 100px;
   height: 50px;
   position: absolute;
   left: 100%;
-  top:70px;
+  top: 70px;
   animation: autoRun 10s linear infinite;
-  animation-delay: calc((10s / 6)* (var(--position) - 1));
+  animation-delay: calc((10s / 6) * (var(--position) - 1));
 }
 
-.slider .list .slide-item img{
+.slider .list .slide-item img {
   width: 100%;
 }
 
 @keyframes autoRun {
-  from{
+  from {
     left: 100%;
   }
-  to{
+  to {
     left: calc(100px * -1);
   }
 }
-
