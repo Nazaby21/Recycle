@@ -281,35 +281,45 @@
 
             <div class="dropdown">
               <img
-                src="assets/image/avatar-guest.webp"
+                src="assets/image/avatar-4.jpg"
                 alt=""
-                class="avatar dropdown-toggle no-caret rounded-circle ms-2"
+                class="avatar dropdown-toggle rounded-circle ms-2"
                 style="width: 40px; height: 40px"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               />
-              <ul class="dropdown-menu dropdown-menu-center">
-                <div
-                  class="notifi d-flex align-items-center border-bottom px-2"
-                >
-                  <h5>Notification</h5>
-                </div>
-                <a
-                  href=""
-                  class="text-decoration-none py-2 pe-2 m-0 float-end"
-                  style="font-size: 14px"
-                  >See all</a
-                >
+              <ul class="dropdown-menu dropdown-menu-center py-0">
+                <li class="notifi border-bottom">
+                  <a
+                    href=""
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt=""
+                      class="avatar dropdown-toggle rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0 mt-1">Nazaby</h6>
+                  </a>
+                </li>
+
                 <li>
-                  <a class="dropdown-item" data-bs-theme-value="light" href="#">
-                    <i class="bi bi-brightness-high"></i>
-                    <span class="ms-2">Light</span>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="ms-2">ពត៌មានផ្ទាល់ខ្លួន</span>
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" data-bs-theme-value="dark" href="#">
-                    <i class="bi bi-moon"></i>
-                    <span class="ms-2">Dark</span>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-gear"></i>
+                    <span class="ms-2">ការកំណត់</span>
+                  </a>
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html">
+                    <i class="bi bi-box-arrow-in-left"></i>
+                    <span class="ms-2">ចាក់ចេញ</span>
                   </a>
                 </li>
               </ul>
@@ -330,11 +340,8 @@
     </header>
     <main>
       <section class="hero-banner mt-9 mt-md-0">
-        <img
-          src="assets/image/enviroment.jpg"
-          alt=""
-          class="bg-banner-img position-relative"
-        />
+        <img src="assets/image/enviroment.jpg" alt="" class="bg-banner-img" />
+        <div class="overlay"></div>
         <div class="container banner">
           <div class="row d-flex align-items-center">
             <div class="col-12 col-md-6">
@@ -356,7 +363,7 @@
               </a>
             </div>
             <div class="col-12 col-md-6">
-              <div class="banner-img position-relative d-none d-md-block">
+              <div class="banner-img d-none d-md-block">
                 <img
                   src="assets/image/banner-1.png"
                   alt=""
@@ -369,7 +376,7 @@
       </section>
       <section class="type-recycle pt-5 pb-8">
         <div class="container">
-          <h2 class="scale-up-ver-center text-center pt-4">
+          <h2 class="scale-up-ver-center text-center pt-4 pb-3">
             ប្រភេទនៃការកែច្នៃ
           </h2>
           <div class="row g-3">
@@ -482,16 +489,28 @@
       </section>
       <section class="collaboration">
         <div class="slider bg-success">
-            <div class="list">
-              <div class="slide-item" style="--position: 1"><img src="assets/image/circleclothes.png" alt=""></div>
-              <div class="slide-item" style="--position: 2"><img src="assets/image/pizza4p.png" alt=""></div>
-              <div class="slide-item" style="--position: 3"><img src="assets/image/trashisnice.png" alt=""></div>
-              <div class="slide-item" style="--position: 4"><img src="assets/image/circleclothes.png" alt=""></div>
-              <div class="slide-item" style="--position: 5"><img src="assets/image/pizza4p.png" alt=""></div>
-              <div class="slide-item" style="--position: 6"><img src="assets/image/trashisnice.png" alt=""></div>
+          <div class="list">
+            <div class="slide-item" style="--position: 1">
+              <img src="assets/image/circleclothes.png" alt="" />
             </div>
+            <div class="slide-item" style="--position: 2">
+              <img src="assets/image/pizza4p.png" alt="" />
+            </div>
+            <div class="slide-item" style="--position: 3">
+              <img src="assets/image/trashisnice.png" alt="" />
+            </div>
+            <div class="slide-item" style="--position: 4">
+              <img src="assets/image/circleclothes.png" alt="" />
+            </div>
+            <div class="slide-item" style="--position: 5">
+              <img src="assets/image/pizza4p.png" alt="" />
+            </div>
+            <div class="slide-item" style="--position: 6">
+              <img src="assets/image/trashisnice.png" alt="" />
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
       <section class="benefit">
         <div class="text-center pt-8 bg-body-secondary">
           <h2 class="scale-up-ver-center m-0">អត្ថប្រយោជន៍នៃការកែច្នៃ</h2>
@@ -594,13 +613,42 @@
           </div>
         </div>
       </section>
-      <section class="section-random">
-        <div class="container">
-          <div class="row">
-            <div class="test"></div>
-          </div>
-        </div>
-      </section>
+      <section class="section-comment py-8 position-relative">
+  <!-- Background image -->
+  <img
+    src="assets/image/banner-2.jpg"
+    alt=""
+    class="w-100 h-100 position-absolute top-0 start-0"
+    style="object-fit: cover; z-index: 1"
+  />
+
+  <!-- Overlay -->
+  <div class="overlay-1"></div>
+
+  <!-- Content -->
+  <div class="container position-relative z-3">
+    <div class="row justify-content-center text-center">
+      <div class="col-12">
+        <h2 class="scale-up-ver-center text-white mb-4 fw-bold">
+          តើអ្នកមានមតិយោបលយ៉ាងណាមកលើគេហទំព័ររបស់ពួកយើង?
+        </h2>
+      </div>
+      <div class="col-12 col-md-8 col-lg-6">
+        <form action="" class="comment-form p-4 rounded-4 shadow-lg">
+          <textarea
+            class="text-area rounded-3 p-3"
+            placeholder="មតិយោបល....."
+            rows="5"
+          ></textarea>
+          <button type="submit" class="btn submit-btn mt-3 w-100 bg-success">
+            ដាក់ស្នើ
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
