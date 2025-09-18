@@ -175,8 +175,11 @@ body {
   }
   .banner {
     top: 30%;
-    left: 50%;
+    left: 54%;
     transform: translate(-50%, -50%);
+  }
+  .text-animation{
+    margin-left: 20px;
   }
   .card-responsive {
     height: 310px;
@@ -208,7 +211,7 @@ body {
   }
   .banner {
     top: 32%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
   }
   .card-responsive {
@@ -237,7 +240,7 @@ body {
   }
   .banner {
     top: 40%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
   }
   .card-responsive {
