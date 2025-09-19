@@ -175,9 +175,9 @@ body {
     left: 54%;
     transform: translate(-50%, -50%);
   }
-  .text-animation{
+  /* .text-animation{
     margin-left: 20px;
-  }
+  } */
   .card-responsive {
     height: 310px;
   }
