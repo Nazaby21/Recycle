@@ -76,9 +76,6 @@ body {
   text-overflow: ellipsis;
 }
 
-.hero-banner {
-  background-color: #f0ffeb;
-}
 
 .banner {
   position: absolute;
@@ -160,6 +157,34 @@ body {
   transform: scale(1.03);
 }
 
+footer {
+  font-size: 15px;
+}
+
+footer a {
+  color: #6c757d; /* gray */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+  color: #198754; /* Bootstrap success green */
+}
+
+footer h5 {
+  font-weight: 600;
+}
+
+.footer-link {
+  color: #6c757d !important;
+}
+
+.footer-link:hover {
+  color: #198754 !important;
+}
+
+
+
 /* ============ RESPONSIVE FIXES ============ */
 
 /* Extra small devices (phones, <576px) */
@@ -229,6 +254,9 @@ body {
     width: 100%;
     height: 130px;
   }
+  .fs-footer{
+    font-size: 22px;
+  }
 }
 
 /* Large devices (desktops, 992px - 1500px) */
@@ -255,6 +283,9 @@ body {
     width: 100%;
     max-width: 700px;
     height: 150px;
+  }
+  .fs-footer{
+    font-size: 27px;
   }
 }
 
