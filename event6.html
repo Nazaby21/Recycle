@@ -76,192 +76,317 @@
 </head>
 
 <body>
-      <header>
-    <nav class="navbar bg-nav fixed-top navbar-expand-lg border shadow" style="height: 70px">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/image/green_leaves_round_logo.png" class="logo" style="width: 40px" alt="logo" />
-        </a>
-
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header bg-nav" style="height: 70px">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <a class="navbar-brand d-block" href="index.html">
-                <img src="assets/image/green_leaves_round_logo.png" style="width: 60px" alt="logo" />
-              </a>
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2">
-              <!-- Search Button -->
-              <form class="d-flex mb-2" role="search">
-                <input class="form-control search-1 d-md-none" type="search" placeholder="Search" aria-label="Search" />
-              </form>
-              <li class="nav-item">
-                <a class="nav-link active fs-5 nav-hover" aria-current="page" href="index.html">ទំព័រដើម</a>
-              </li>
-              <li class="nav-item dropdown fs-5">
-                <a class="nav-link nav-hover no-caret dropdown-toggle" href="index.html" role="button"
+    <header>
+      <nav
+        class="navbar bg-nav fixed-top navbar-expand-lg border shadow"
+        style="height: 70px"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/image/green_leaves_round_logo.png"
+              class="logo"
+              style="width: 40px"
+              alt="logo"
+            />
+          </a>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header bg-nav" style="height: 70px">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand d-block" href="index.html">
+                  <img
+                    src="assets/image/green_leaves_round_logo.png"
+                    style="width: 60px"
+                    alt="logo"
+                  />
+                </a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
+              >
+                <!-- Search Button -->
+                <form class="d-flex mb-2" role="search">
+                  <input
+                    class="form-control search-1 d-md-none"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active fs-5 nav-hover"
+                    aria-current="page"
+                    href="index.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link nav-hover no-caret dropdown-toggle"
+                    href="index.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">ឯកសារ</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                <a class="nav-link nav-hover no-caret dropdown-toggle" href="donation.html" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
-                  អត្ថបទ
+                  សកម្មភាពសង្គម
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">ឯកសារ</a>
+                    <a class="dropdown-item" href="event.html">ព្រឹត្តិការណ៍</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">វីដេអូ</a>
+                    <a class="dropdown-item" href="donation.html">បរិច្ចាគ
+                    </a>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item fs-5">
-                <a class="nav-link nav-hover" href="ng.html">សកម្មភាពសង្គម</a>
-              </li>
-              <li class="nav-item fs-5">
-                <a class="nav-link nav-hover" href="e-commerce.html">ផលិតផលកែច្នៃ</a>
-              </li>
-              <li class="nav-item fs-5">
-                <a class="nav-link nav-hover" aria-current="page" href="about.html">អំពីយើង</a>
-              </li>
-            </ul>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="e-commerce.html"
+                    >ផលិតផលកែច្នៃ</a
+                  >
+                </li>
+                <li class="nav-item fs-5">
+                  <a
+                    class="nav-link nav-hover"
+                    aria-current="page"
+                    href="about.html"
+                    >អំពីយើង</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="user-profile d-flex align-items-center">
-          <button class="navbar-toggler border-0 shadow-none fs-4" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Search Button -->
-          <form class="d-flex" role="search">
-            <input class="form-control mx-2 search-2" type="search" placeholder="Search" aria-label="Search" />
-          </form>
-          <!-- notification -->
-          <div class="dropdown pt-2">
-            <button class="btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-bell fs-5"></i>
-              <span class="badge bg-danger rounded-circle position-absolute start-50 text-center"
-                style="font-size: 10px">
-                4
-              </span>
+          <div class="user-profile d-flex align-items-center">
+            <!-- <button
+              class="navbar-toggler border-0 shadow-none fs-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <!-- Search Button -->
+            <form class="d-flex" role="search">
+              <input
+                class="form-control mx-2 search-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+            <!-- notification -->
+            <div class="dropdown pt-2">
+              <button
+                class="btn dropdown-toggle no-caret"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 text-center"
+                  style="font-size: 10px"
+                >
+                  4
+                </span>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-scroll"
+              >
+                <div
+                  class="notifi d-flex align-items-center justify-content-between border-bottom px-2"
+                >
+                  <h5>Notification</h5>
+                  <i class="bi bi-three-dots"></i>
+                </div>
+                <a
+                  href=""
+                  class="text-decoration-none py-2 pe-2 m-0 float-end"
+                  style="font-size: 14px"
+                  >See all</a
+                >
+                <!-- 1 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-1.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 2 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-2.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">John Doe</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 3 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-3.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Lina</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 4 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-4.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Devid</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 5 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-5.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Dam</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-guest.webp"
+                alt=""
+                class="avatar dropdown-toggle no-caret rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-center">
+                <div
+                  class="notifi d-flex align-items-center border-bottom px-2"
+                >
+                  <h5>Notification</h5>
+                </div>
+                <a
+                  href=""
+                  class="text-decoration-none py-2 pe-2 m-0 float-end"
+                  style="font-size: 14px"
+                  >See all</a
+                >
+                <li>
+                  <a class="dropdown-item" data-bs-theme-value="light" href="#">
+                    <i class="bi bi-brightness-high"></i>
+                    <span class="ms-2">Light</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" data-bs-theme-value="dark" href="#">
+                    <i class="bi bi-moon"></i>
+                    <span class="ms-2">Dark</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-center dropdown-menu-scroll">
-              <div class="notifi d-flex align-items-center justify-content-between border-bottom px-2">
-                <h5>Notification</h5>
-                <i class="bi bi-three-dots"></i>
-              </div>
-              <a href="" class="text-decoration-none py-2 pe-2 m-0 float-end" style="font-size: 14px">See all</a>
-              <!-- 1 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-1.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Pozz Mao</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 2 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-2.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">John Doe</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 3 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-3.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Lina</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 4 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-4.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Devid</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 5 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-5.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Dam</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="dropdown">
-            <img src="assets/image/avatar-guest.webp" alt="" class="avatar dropdown-toggle no-caret rounded-circle ms-2"
-              style="width: 40px; height: 40px" data-bs-toggle="dropdown" aria-expanded="false" />
-            <ul class="dropdown-menu dropdown-menu-center">
-              <div class="notifi d-flex align-items-center border-bottom px-2">
-                <h5>Notification</h5>
-              </div>
-              <a href="" class="text-decoration-none py-2 pe-2 m-0 float-end" style="font-size: 14px">See all</a>
-              <li>
-                <a class="dropdown-item" data-bs-theme-value="light" href="#">
-                  <i class="bi bi-brightness-high"></i>
-                  <span class="ms-2">Light</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" data-bs-theme-value="dark" href="#">
-                  <i class="bi bi-moon"></i>
-                  <span class="ms-2">Dark</span>
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
-
+      </nav>
+    </header>
   <!-- Hero Section -->
 <main>
     <section class="container my-4 py-5">

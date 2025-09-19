@@ -106,26 +106,23 @@
         }
 
         .hero-content .btn {
-          display: block;
+         
           margin: 10px 10px;
         }
+        
       }
 
-      .hero-content .btn-success {
-        background: linear-gradient(135deg, #28a745, #3edc81);
-        border: none;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
+      
     </style>
   </head>
 
   <body>
-    <header>
+       <header>
       <nav
         class="navbar bg-nav fixed-top navbar-expand-lg border shadow"
         style="height: 70px"
       >
-        <div class="container-fluid">
+        <div class="container">
           <a class="navbar-brand" href="index.html">
             <img
               src="assets/image/green_leaves_round_logo.png"
@@ -134,7 +131,6 @@
               alt="logo"
             />
           </a>
-
           <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
@@ -173,7 +169,7 @@
                 </form>
                 <li class="nav-item">
                   <a
-                    class="nav-link fs-5 nav-hover"
+                    class="nav-link active fs-5 nav-hover"
                     aria-current="page"
                     href="index.html"
                     >ទំព័រដើម</a
@@ -230,7 +226,7 @@
             </div>
           </div>
           <div class="user-profile d-flex align-items-center">
-            <button
+            <!-- <button
               class="navbar-toggler border-0 shadow-none fs-4"
               type="button"
               data-bs-toggle="offcanvas"
@@ -239,7 +235,7 @@
               aria-label="Toggle navigation"
             >
               <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
             <!-- Search Button -->
             <form class="d-flex" role="search">
               <input
@@ -418,6 +414,16 @@
                 </li>
               </ul>
             </div>
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
         </div>
       </nav>
@@ -549,7 +555,7 @@
       <!-- Donations place Section -->
       <section id="donations" class="container my-5">
         <h2>
-          <i class="fas fa-map-marker-alt me-2 mb-3"></i>កន្លែងទទួលបរិច្ចាគ
+          <i class="fas fa-map-marker-alt me-2 mb-3 text-danger"></i>កន្លែងទទួលបរិច្ចាគ
           និងកែច្នៃ
         </h2>
         <div class="row g-4">
