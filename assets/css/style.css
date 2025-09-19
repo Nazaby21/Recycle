@@ -153,9 +153,6 @@ body {
 
 /* Extra small devices (phones, <576px) */
 @media (max-width: 575.98px) {
-  .search-2 {
-    display: none;
-  }
   .logo {
     width: 40px !important;
   }
@@ -195,9 +192,6 @@ body {
 
 /* Small to medium devices (tablets, 576px - 991.98px) */
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .search-2 {
-    display: none;
-  }
   .logo {
     width: 40px !important;
   }
@@ -228,9 +222,6 @@ body {
 
 /* Large devices (desktops, 992px - 1500px) */
 @media (min-width: 992px) and (max-width: 1500px) {
-  .search-1 {
-    display: none;
-  }
   .logo {
     width: 45px !important;
   }
