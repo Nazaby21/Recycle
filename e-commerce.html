@@ -7,15 +7,19 @@
     <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/makara/style.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/theme.css">
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/chhorng/style.css" />
+    
   </head>
   <body>
     <header>
@@ -23,8 +27,8 @@
         class="navbar bg-nav fixed-top navbar-expand-lg border shadow"
         style="height: 70px"
       >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
             <img
               src="assets/image/green_leaves_round_logo.png"
               class="logo"
@@ -32,7 +36,6 @@
               alt="logo"
             />
           </a>
-
           <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
@@ -41,7 +44,7 @@
           >
             <div class="offcanvas-header bg-nav" style="height: 70px">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <a class="navbar-brand d-block" href="#">
+                <a class="navbar-brand d-block" href="index.html">
                   <img
                     src="assets/image/green_leaves_round_logo.png"
                     style="width: 60px"
@@ -61,9 +64,9 @@
                 class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
               >
                 <!-- Search Button -->
-                <form class="d-flex mb-2" role="search">
+                <form class="d-flex mb-2 d-block d-md-none" role="search">
                   <input
-                    class="form-control search-1 d-md-none"
+                    class="form-control"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
@@ -96,8 +99,28 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item fs-5">
-                  <a class="nav-link nav-hover" href="ng.html">សកម្មភាពសង្គម</a>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link nav-hover no-caret dropdown-toggle"
+                    href="donation.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html"
+                        >បរិច្ចាគ
+                      </a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item fs-5">
                   <a class="nav-link active nav-hover" href="e-commerce.html"
@@ -116,20 +139,10 @@
             </div>
           </div>
           <div class="user-profile d-flex align-items-center">
-            <button
-              class="navbar-toggler border-0 shadow-none fs-4"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
             <!-- Search Button -->
-            <form class="d-flex" role="search">
+            <form class="d-flex d-none d-md-block mx-3" role="search">
               <input
-                class="form-control mx-2 search-2"
+                class="form-control mx-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
@@ -271,46 +284,66 @@
 
             <div class="dropdown">
               <img
-                src="assets/image/avatar-guest.webp"
+                src="assets/image/avatar-4.jpg"
                 alt=""
-                class="avatar dropdown-toggle no-caret rounded-circle ms-2"
+                class="avatar dropdown-toggle rounded-circle ms-2"
                 style="width: 40px; height: 40px"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               />
-              <ul class="dropdown-menu dropdown-menu-center">
-                <div
-                  class="notifi d-flex align-items-center border-bottom px-2"
-                >
-                  <h5>Notification</h5>
-                </div>
-                <a
-                  href=""
-                  class="text-decoration-none py-2 pe-2 m-0 float-end"
-                  style="font-size: 14px"
-                  >See all</a
-                >
+              <ul class="dropdown-menu dropdown-menu-center py-0">
+                <li class="notifi border-bottom">
+                  <a
+                    href=""
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt=""
+                      class="avatar dropdown-toggle rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0 mt-1">Nazaby</h6>
+                  </a>
+                </li>
+
                 <li>
-                  <a class="dropdown-item" data-bs-theme-value="light" href="#">
-                    <i class="bi bi-brightness-high"></i>
-                    <span class="ms-2">Light</span>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="ms-2">ពត៌មានផ្ទាល់ខ្លួន</span>
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" data-bs-theme-value="dark" href="#">
-                    <i class="bi bi-moon"></i>
-                    <span class="ms-2">Dark</span>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-gear"></i>
+                    <span class="ms-2">ការកំណត់</span>
+                  </a>
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html">
+                    <i class="bi bi-box-arrow-in-left"></i>
+                    <span class="ms-2">ចាក់ចេញ</span>
                   </a>
                 </li>
               </ul>
             </div>
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section style="margin-top: 100px; ">
-        <div class="container ">
+      <section class="mt-12">
+        <div class="container">
           <div class="row g-4">
             <!-- Left Title -->
             <div class="col-sm-12 col-md-6">
