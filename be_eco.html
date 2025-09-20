@@ -1,60 +1,28 @@
 <!DOCTYPE html>
 <html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be Eco</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Be Eco</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+  </head>
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&display=swap" rel="stylesheet">
-  
-
-  <style>
-    body {
-      font-family: 'Hanuman', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.7;
-    }
-    h2 {
-      border-bottom: 2px solid #28a745;
-      padding-bottom: 5px;
-      margin-top: 40px;
-    }
-    .icon-list li {
-      margin-bottom: 8px;
-    }
-    .callout {
-      padding: 15px;
-      margin: 20px 0;
-      border-left: 5px solid #28a745;
-      background-color: #e8f5e9;
-    }
-    .accordion-button:not(.collapsed) {
-      color: #fff;
-      background-color: #28a745;
-    }
-    .accordion-button {
-      color: #28a745;
-    }
-  </style>
-</head>
-
-<body>
+  <body>
     <header>
-      <nav
-        class="navbar bg-nav fixed-top navbar-expand-lg border shadow"
-        style="height: 70px"
-      >
+      <nav class="navbar bg-nav fixed-top navbar-expand-lg border shadow">
         <div class="container">
           <a class="navbar-brand" href="index.html">
             <img
@@ -70,7 +38,7 @@
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
-            <div class="offcanvas-header bg-nav" style="height: 70px">
+            <div class="offcanvas-header bg-nav">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                 <a class="navbar-brand d-block" href="index.html">
                   <img
@@ -92,9 +60,9 @@
                 class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
               >
                 <!-- Search Button -->
-                <form class="d-flex mb-2" role="search">
+                <form class="d-flex mb-2 d-block d-md-none" role="search">
                   <input
-                    class="form-control search-1 d-md-none"
+                    class="form-control"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
@@ -102,7 +70,7 @@
                 </form>
                 <li class="nav-item">
                   <a
-                    class="nav-link active fs-5 nav-hover"
+                    class="nav-link fs-5 nav-hover"
                     aria-current="page"
                     href="index.html"
                     >ទំព័រដើម</a
@@ -123,25 +91,33 @@
                       <a class="dropdown-item" href="#">ឯកសារ</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">វីដេអូ</a>
+                      <a class="dropdown-item" href="minea.html">វីដេអូ</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown fs-5">
-                <a class="nav-link nav-hover no-caret dropdown-toggle" href="donation.html" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  សកម្មភាពសង្គម
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="event.html">ព្រឹត្តិការណ៍</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="donation.html">បរិច្ចាគ
-                    </a>
-                  </li>
-                </ul>
-              </li>
+                  <a
+                    class="nav-link active nav-hover no-caret dropdown-toggle"
+                    href="donation.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html"
+                        >បរិច្ចាគ
+                      </a>
+                    </li>
+                  </ul>
+                </li>
                 <li class="nav-item fs-5">
                   <a class="nav-link nav-hover" href="e-commerce.html"
                     >ផលិតផលកែច្នៃ</a
@@ -159,20 +135,10 @@
             </div>
           </div>
           <div class="user-profile d-flex align-items-center">
-            <!-- <button
-              class="navbar-toggler border-0 shadow-none fs-4"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
             <!-- Search Button -->
-            <form class="d-flex" role="search">
+            <form class="d-flex d-none d-md-block me-3" role="search">
               <input
-                class="form-control mx-2 search-2"
+                class="form-control mx-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
@@ -314,35 +280,45 @@
 
             <div class="dropdown">
               <img
-                src="assets/image/avatar-guest.webp"
+                src="assets/image/avatar-4.jpg"
                 alt=""
-                class="avatar dropdown-toggle no-caret rounded-circle ms-2"
+                class="avatar dropdown-toggle rounded-circle ms-2"
                 style="width: 40px; height: 40px"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               />
-              <ul class="dropdown-menu dropdown-menu-center">
-                <div
-                  class="notifi d-flex align-items-center border-bottom px-2"
-                >
-                  <h5>Notification</h5>
-                </div>
-                <a
-                  href=""
-                  class="text-decoration-none py-2 pe-2 m-0 float-end"
-                  style="font-size: 14px"
-                  >See all</a
-                >
+              <ul class="dropdown-menu dropdown-menu-center py-0">
+                <li class="notifi border-bottom">
+                  <a
+                    href=""
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt=""
+                      class="avatar dropdown-toggle rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0 mt-1">Nazaby</h6>
+                  </a>
+                </li>
+
                 <li>
-                  <a class="dropdown-item" data-bs-theme-value="light" href="#">
-                    <i class="bi bi-brightness-high"></i>
-                    <span class="ms-2">Light</span>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="ms-2">ពត៌មានផ្ទាល់ខ្លួន</span>
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" data-bs-theme-value="dark" href="#">
-                    <i class="bi bi-moon"></i>
-                    <span class="ms-2">Dark</span>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-gear"></i>
+                    <span class="ms-2">ការកំណត់</span>
+                  </a>
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html">
+                    <i class="bi bi-box-arrow-in-left"></i>
+                    <span class="ms-2">ចាក់ចេញ</span>
                   </a>
                 </li>
               </ul>
@@ -361,114 +337,250 @@
         </div>
       </nav>
     </header>
-  <main>
-    <div class="container my-4">
+    <main>
+      <div class="container my-4">
+        <!-- Hero Banner -->
+        <div class="text-center py-10">
+          <h1 class="fw-bold">Be Eco Sustainable Shop</h1>
+          <img
+            src="assets/Kropum/img/beco____-.jpg"
+            alt="Be Eco"
+            class="img-fluid rounded mt-3"
+            style="max-width: 50%"
+          />
+        </div>
 
-    <!-- Hero Banner -->
-    <div class="text-center py-10">
-      <h1 class="fw-bold">Be Eco Sustainable Shop</h1>
-      <img src="assets/Kropum/img/beco____-.jpg" alt="Be Eco" class="img-fluid rounded mt-3" style="max-width: 50%;">
-    </div>
+        <!-- About Section -->
+        <section>
+          <h2 class="text-eco">អំពីពួកយើង</h2>
+          <p>
+            ហាង Be Eco Sustainable Shop ផ្តល់ជូនការជាវទិញ ៤ ថ្ងៃក្នុងមួយសប្តាហ៍
+            និងរៀបចំព្រឹត្តិការណ៍ និងសន្និសីទផ្ដោតលើការអភិរក្សបរិស្ថាន។
+            អ្នកអាចស្វែងរកផលិតផលបរិស្ថានកម្ពុជា និងសិប្បកម្មក្នុងស្រុក
+            រួមទាំងមុខម្ហូប អំណោយ សម្លៀកបំពាក់ គ្រឿងប្រើផ្ទះ
+            និងផលិតផលប្រចាំថ្ងៃដែលធ្វើឡើងពីសម្ភារៈចាស់។
+          </p>
+        </section>
 
-    <!-- About Section -->
-    <section>
-      <h2>អំពីពួកយើង</h2>
-      <p>
-        ហាង Be Eco Sustainable Shop ផ្តល់ជូនការជាវទិញ ៤ ថ្ងៃក្នុងមួយសប្តាហ៍ និងរៀបចំព្រឹត្តិការណ៍ និងសន្និសីទផ្ដោតលើការអភិរក្សបរិស្ថាន។ 
-        អ្នកអាចស្វែងរកផលិតផលបរិស្ថានកម្ពុជា និងសិប្បកម្មក្នុងស្រុក រួមទាំងមុខម្ហូប អំណោយ សម្លៀកបំពាក់ គ្រឿងប្រើផ្ទះ និងផលិតផលប្រចាំថ្ងៃដែលធ្វើឡើងពីសម្ភារៈចាស់។
-      </p>
-    </section>
+        <!-- What We Take -->
+        <section>
+          <h2 class="text-eco">អ្វីដែលយើងទទួល</h2>
+          <ul class="list-unstyled icon-list">
+            <li>🍫 ម្ហូបដែលមិនទាន់បើក, ភេសជ្ជៈ,​ មិនផុតកំណត់</li>
+            <li>👕 សម្លៀកបំពាក់ និង គ្រឿងតុបតែងខ្លួន</li>
+            <li>🏠 ទ្រព្យសម្បត្តិលម្អផ្ទះ</li>
+            <li>👟 ស្បែកជើង, 👜 កាបូប, 🎒 កាបូបស្ពាយ</li>
+            <li>🛏️ កន្សែង, គ្រែ, ខ្នើយ</li>
+            <li>
+              🎨 គ្រៀងតុបតែងផ្ទះ, របស់សិប្បកម្ម, សម្ភារៈសិក្សា, ល្បែងកម្សាន្ត
+            </li>
+            <li>🧸 តុក្កតា, ប្រដាប់ក្មេងលេង</li>
+            <li>🧴 ដបថ្ម, ផ្លាស្ទីកស្ងួត, សាប៊ូ</li>
+            <li>📚 សៀវភៅ, DVD, ទស្សនាវដ្តី</li>
+          </ul>
+        </section>
 
-    <!-- What We Take -->
-    <section>
-      <h2>អ្វីដែលយើងទទួល</h2>
-      <ul class="list-unstyled icon-list">
-        <li>🍫 ម្ហូបដែលមិនទាន់បើក, ភេសជ្ជៈ,​ មិនផុតកំណត់</li>
-        <li>👕 សម្លៀកបំពាក់ និង គ្រឿងតុបតែងខ្លួន</li>
-        <li>🏠 ទ្រព្យសម្បត្តិលម្អផ្ទះ</li>
-        <li>👟 ស្បែកជើង, 👜 កាបូប, 🎒 កាបូបស្ពាយ</li>
-        <li>🛏️ កន្សែង, គ្រែ, ខ្នើយ</li>
-        <li>🎨 គ្រៀងតុបតែងផ្ទះ, របស់សិប្បកម្ម, សម្ភារៈសិក្សា, ល្បែងកម្សាន្ត</li>
-        <li>🧸 តុក្កតា, ប្រដាប់ក្មេងលេង</li>
-        <li>🧴 ដបថ្ម, ផ្លាស្ទីកស្ងួត, សាប៊ូ</li>
-        <li>📚 សៀវភៅ, DVD, ទស្សនាវដ្តី</li>
-        
-      </ul>
-    </section>
+        <!-- How To Give - Accordion -->
+        <section>
+          <h2 class="text-eco">របៀបបរិច្ចាគ</h2>
+          <div class="accordion" id="howToGive">
+            <!-- Dropoff -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  ១. Dropoff មកផ្ទាល់
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#howToGive"
+              >
+                <div class="accordion-body">
+                  <p>
+                    <strong>Street 464, TTP, Phnom Penh</strong><br />
+                    ម៉ោង៖ 12:00 - 17:30 ពុធ, ព្រហស្បតិ៍, សុក្រ<br />
+                    សៅរ៍ និងអាទិត្យ 10:00 - 18:00<br />
+                    បិទថ្ងៃចន្ទ និងថ្ងៃអង្គារ
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <!-- Contact & Volunteer -->
+        <section>
+          <h2 class="text-eco">ទំនាក់ទំនង និង ស្ម័គ្រចិត្ត</h2>
+          <p>
+            Email:
+            <a href="mailto:beeco.sustainable.kh@gmail.com"
+              >beeco.sustainable.kh@gmail.com</a
+            >
+          </p>
+          <p>
+            Messenger:
+            <a href="https://www.facebook.com/be.eco.cambodia">Facebook</a> /
+            <a
+              href="https://www.instagram.com/be.eco.sustainable?igsh=YWllYnU4NWhteHcy"
+              >Instagram</a
+            >
+          </p>
+          <p>
+            យើងស្វាគមន៍អ្នកស្ម័គ្រចិត្តដែលចង់ចូលរួមជាមួយយើងក្នុងការផ្សព្វផ្សាយ
+            និងអភិរក្សបរិស្ថាន។ សូមផ្ញើសារ
+            ឬមកកាន់ហាងក្នុងម៉ោងបើកហាងប្រសិនបើចាប់អារម្មណ៍។
+          </p>
+          <p>
+            <strong>សូមចំណាំ៖</strong> យើងមិនប្រើ Telegram ឬ WhatsApp
+            សម្រាប់ការទំនាក់ទំនងទេ។ សូមប្រើ Facebook Messenger ឬអ៊ីមែលផ្ទាល់។
+          </p>
+        </section>
 
-    <!-- How To Give - Accordion -->
-    <section>
-      <h2>របៀបបរិច្ចាគ</h2>
-      <div class="accordion" id="howToGive">
-        <!-- Dropoff -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-              ១. Dropoff មកផ្ទាល់
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#howToGive">
-            <div class="accordion-body">
-               <p>
-        <strong>Street 464, TTP, Phnom Penh</strong><br>
-        ម៉ោង៖ 12:00 - 17:30 ពុធ, ព្រហស្បតិ៍, សុក្រ<br>
-        សៅរ៍ និងអាទិត្យ 10:00 - 18:00<br>
-        បិទថ្ងៃចន្ទ និងថ្ងៃអង្គារ
-      </p>
+        <h2 class="text-eco">
+          <i class="bi bi-geo-alt-fill text-danger"></i>ទីតាំងបរិច្ចាគ
+        </h2>
+
+        <div class="accordion" id="locationsAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="loc1">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLoc1"
+              >
+                Be Eco Sustainable Shop (Street 464, TTP)
+              </button>
+            </h2>
+
+            <div
+              id="collapseLoc1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#locationsAccordion"
+            >
+              <div class="accordion-body">
+                <div class="col-md-4">
+                  <div class="card p-3">
+                    <img src="assets/Kropum/img/beco____-.jpg" alt="" />
+                    <h5 class="mt-2">Be Eco Sustainable Shop</h5>
+                    <p>Street 464, TTP</p>
+                    <p>Wed-Fri 12-6, Weekend 10-6</p>
+                    <a
+                      target="_blank"
+                      href="https://maps.app.goo.gl/LoUhX9AiJ2miCTc96"
+                      class="btn btn-success btn-sm"
+                      >View Map</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-    </section>
-
-    <!-- Contact & Volunteer -->
-    <section>
-      <h2>ទំនាក់ទំនង និង ស្ម័គ្រចិត្ត</h2>
-      <p>Email: <a href="mailto:beeco.sustainable.kh@gmail.com">beeco.sustainable.kh@gmail.com</a></p>
-      <p>Messenger: <a href="https://www.facebook.com/be.eco.cambodia">Facebook</a> / <a href="https://www.instagram.com/be.eco.sustainable?igsh=YWllYnU4NWhteHcy">Instagram</a></p>
-      <p>
-        យើងស្វាគមន៍អ្នកស្ម័គ្រចិត្តដែលចង់ចូលរួមជាមួយយើងក្នុងការផ្សព្វផ្សាយ និងអភិរក្សបរិស្ថាន។ សូមផ្ញើសារ ឬមកកាន់ហាងក្នុងម៉ោងបើកហាងប្រសិនបើចាប់អារម្មណ៍។
-      </p>
-       <p>
-        <strong>សូមចំណាំ៖</strong> យើងមិនប្រើ Telegram ឬ WhatsApp សម្រាប់ការទំនាក់ទំនងទេ។ សូមប្រើ Facebook Messenger ឬអ៊ីមែលផ្ទាល់។
-      </p>
-    </section>
-
-      <h2><i class="bi bi-geo-alt-fill text-danger"></i>ទីតាំងបរិច្ចាគ</h2>
-
-    <div class="accordion" id="locationsAccordion">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="loc1">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLoc1">
-        Be Eco Sustainable Shop (Street 464, TTP)
-      </button>
-    </h2>
-    
-    <div id="collapseLoc1" class="accordion-collapse collapse show" data-bs-parent="#locationsAccordion">
-      <div class="accordion-body">
-          <div class="col-md-4">
-    <div class="card p-3">
-      <img src="assets/Kropum/img/beco____-.jpg" alt="">
-      <h5 class="mt-2">Be Eco Sustainable Shop</h5>
-      <p>Street 464, TTP</p>
-      <p>Wed-Fri 12-6, Weekend 10-6</p>
-      <a target="_blank" href="https://maps.app.goo.gl/LoUhX9AiJ2miCTc96" class="btn btn-success btn-sm">View Map</a>
-    </div>
-  </div>
-
       </div>
-    </div>
-  </div>
+    </main>
+    <footer class="bg-footer pt-8">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="index.html"
+              class="footer-img mb-3 d-flex align-items-center"
+            >
+              <img
+                src="assets/image/green_leaves_round_logo.png"
+                alt="logo"
+                style="width: 50px"
+              />
+              <h4 class="ms-2 fw-bold text-success mb-0 mt-3">កែច្នៃ</h4>
+            </a>
 
- 
-</div>
+            <p class="text-secondary">
+              "Your seamless platform for event management, where creativity
+              meets efficiency. We simplify planning, coordinate every detail,
+              and bring your vision to life for unforgettable experiences that
+              inspire."
+            </p>
+          </div>
 
- </div>
-  </main>
- 
+          <!-- Contact Info -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
+              ព័ត៌មានទំនាក់ទំនង
+            </h5>
+            <p class="mb-1">
+              <i class="bi bi-telephone me-2"></i>+855 12 123 456
+            </p>
+            <p class="mb-1">
+              <i class="bi bi-envelope me-2"></i>
+              <a href="mailto:info@gmail.com" class="text-dark"
+                >info@gmail.com</a
+              >
+            </p>
+            <!-- Social Media -->
+            <div class="d-flex gap-3 mt-3">
+              <a href="#" class="text-success"
+                ><i class="bi bi-facebook fs-4"></i
+              ></a>
+              <a href="#" class="text-success"
+                ><i class="bi bi-twitter-x fs-4"></i
+              ></a>
+              <a href="#" class="text-success"
+                ><i class="bi bi-telegram fs-4"></i
+              ></a>
+              <a href="#" class="text-success"
+                ><i class="bi bi-instagram fs-4"></i
+              ></a>
+            </div>
+          </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+          <!-- Quick Links -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
+              តំណភ្ជាប់រហ័ស
+            </h5>
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="donation.html" class="footer-link d-block fs-5"
+                      >បរិច្ចាក</a
+                    >
+                  </li>
+                  <li>
+                    <a href="event.html" class="footer-link d-block fs-5"
+                      >ព្រឹត្តិការណ៍</a
+                    >
+                  </li>
+                  <li>
+                    <a href="about.html" class="footer-link d-block fs-5"
+                      >អំពីយើង</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Bottom bar -->
+        <div class="row border-top py-3 mt-4 align-items-center">
+          <div class="col-6 text-start">
+            <p class="mb-0 small text-secondary">© 2024 Recycle</p>
+          </div>
+          <div class="col-6 d-flex justify-content-end gap-3">
+            <a href="#" class="text-secondary small">Privacy Policy</a>
+            <a href="#" class="text-secondary small">FAQs</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
