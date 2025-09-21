@@ -1,102 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post New Item</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <style>
+      .card {
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Post New Item</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/theme.css">
-  <!--CSS-->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- Icon -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: "Hanuman", sans-serif;
-      background: #f9fafb;
-      color: #333;
-    }
-
-    .card {
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar bg-nav fixed-top navbar-expand-lg border shadow" style="height: 70px">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/image/green_leaves_round_logo.png" class="logo" style="width: 40px" alt="logo" />
-        </a>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header bg-nav" style="height: 70px">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <a class="navbar-brand d-block" href="index.html">
-                <img src="assets/image/green_leaves_round_logo.png" style="width: 60px" alt="logo" />
-              </a>
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2">
-              <!-- Search Button -->
-              <form class="d-flex mb-2" role="search">
-                <input class="form-control search-1 d-md-none" type="search" placeholder="Search" aria-label="Search" />
-              </form>
-              <li class="nav-item">
-                <a class="nav-link active fs-5 nav-hover" aria-current="page" href="index.html">ទំព័រដើម</a>
-              </li>
-              <li class="nav-item dropdown fs-5">
-                <a class="nav-link nav-hover no-caret dropdown-toggle" href="index.html" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  អត្ថបទ
+  <body>
+    <header>
+      <nav class="navbar bg-nav fixed-top navbar-expand-lg border shadow">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/image/green_leaves_round_logo.png"
+              class="logo"
+              style="width: 40px"
+              alt="logo"
+            />
+          </a>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header bg-nav">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand d-block" href="index.html">
+                  <img
+                    src="assets/image/green_leaves_round_logo.png"
+                    style="width: 60px"
+                    alt="logo"
+                  />
                 </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">ឯកសារ</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">វីដេអូ</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown fs-5">
-                <a class="nav-link nav-hover no-caret dropdown-toggle" href="donation.html" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  សកម្មភាពសង្គម
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="event.html">ព្រឹត្តិការណ៍</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="donation.html">បរិច្ចាគ
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item fs-5">
-                <a class="nav-link nav-hover" href="e-commerce.html">ផលិតផលកែច្នៃ</a>
-              </li>
-              <li class="nav-item fs-5">
-                <a class="nav-link nav-hover" aria-current="page" href="about.html">អំពីយើង</a>
-              </li>
-            </ul>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
+              >
+                <!-- Search Button -->
+                <form class="d-flex mb-2 d-block d-md-none" role="search">
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+                <li class="nav-item">
+                  <a
+                    class="nav-link fs-5 nav-hover"
+                    aria-current="page"
+                    href="index.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link nav-hover no-caret dropdown-toggle"
+                    href="index.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">ឯកសារ</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="minea.html">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link active nav-hover no-caret dropdown-toggle"
+                    href="donation.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html"
+                        >បរិច្ចាគ
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="e-commerce.html"
+                    >ផលិតផលកែច្នៃ</a
+                  >
+                </li>
+                <li class="nav-item fs-5">
+                  <a
+                    class="nav-link nav-hover"
+                    aria-current="page"
+                    href="about.html"
+                    >អំពីយើង</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="user-profile d-flex align-items-center">
-          <!-- <button
+          <div class="user-profile d-flex align-items-center">
+            <!-- Search Button -->
+            <form class="d-flex d-none d-md-block me-3" role="search">
+              <input
+                class="form-control mx-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+            <!-- notification -->
+            <div class="dropdown pt-2">
+              <button
+                class="btn dropdown-toggle no-caret"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 text-center"
+                  style="font-size: 10px"
+                >
+                  4
+                </span>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-scroll"
+              >
+                <div
+                  class="notifi d-flex align-items-center justify-content-between border-bottom px-2"
+                >
+                  <h5>Notification</h5>
+                  <i class="bi bi-three-dots"></i>
+                </div>
+                <a
+                  href=""
+                  class="text-decoration-none py-2 pe-2 m-0 float-end"
+                  style="font-size: 14px"
+                  >See all</a
+                >
+                <!-- 1 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-1.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 2 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-2.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">John Doe</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 3 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-3.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Lina</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 4 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-4.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Devid</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 5 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-5.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Dam</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-4.jpg"
+                alt=""
+                class="avatar dropdown-toggle rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-center py-0">
+                <li class="notifi border-bottom">
+                  <a
+                    href=""
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt=""
+                      class="avatar dropdown-toggle rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0 mt-1">Nazaby</h6>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="ms-2">ពត៌មានផ្ទាល់ខ្លួន</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-gear"></i>
+                    <span class="ms-2">ការកំណត់</span>
+                  </a>
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html">
+                    <i class="bi bi-box-arrow-in-left"></i>
+                    <span class="ms-2">ចាក់ចេញ</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
               class="navbar-toggler border-0 shadow-none fs-4"
               type="button"
               data-bs-toggle="offcanvas"
@@ -105,218 +342,120 @@
               aria-label="Toggle navigation"
             >
               <span class="navbar-toggler-icon"></span>
-            </button> -->
-          <!-- Search Button -->
-          <form class="d-flex" role="search">
-            <input class="form-control mx-2 search-2" type="search" placeholder="Search" aria-label="Search" />
-          </form>
-          <!-- notification -->
-          <div class="dropdown pt-2">
-            <button class="btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-bell fs-5"></i>
-              <span class="badge bg-danger rounded-circle position-absolute start-50 text-center"
-                style="font-size: 10px">
-                4
-              </span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-center dropdown-menu-scroll">
-              <div class="notifi d-flex align-items-center justify-content-between border-bottom px-2">
-                <h5>Notification</h5>
-                <i class="bi bi-three-dots"></i>
-              </div>
-              <a href="" class="text-decoration-none py-2 pe-2 m-0 float-end" style="font-size: 14px">See all</a>
-              <!-- 1 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-1.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Pozz Mao</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 2 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-2.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">John Doe</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 3 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-3.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Lina</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 4 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-4.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Devid</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 5 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-5.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Dam</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
           </div>
-
-          <div class="dropdown">
-            <img src="assets/image/avatar-guest.webp" alt="" class="avatar dropdown-toggle no-caret rounded-circle ms-2"
-              style="width: 40px; height: 40px" data-bs-toggle="dropdown" aria-expanded="false" />
-            <ul class="dropdown-menu dropdown-menu-center">
-              <div class="notifi d-flex align-items-center border-bottom px-2">
-                <h5>Notification</h5>
-              </div>
-              <a href="" class="text-decoration-none py-2 pe-2 m-0 float-end" style="font-size: 14px">See all</a>
-              <li>
-                <a class="dropdown-item" data-bs-theme-value="light" href="#">
-                  <i class="bi bi-brightness-high"></i>
-                  <span class="ms-2">Light</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" data-bs-theme-value="dark" href="#">
-                  <i class="bi bi-moon"></i>
-                  <span class="ms-2">Dark</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <button class="navbar-toggler border-0 shadow-none fs-4" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="mt-15 ">
-      <div class="container ">
-        <div class="row justify-content-center">
-          <div class="col-8">
-            <div class="card">
-              <div class="card-body">
-                <h2 class="card-title text-center mt-2">វត្ថុសម្រាប់បរិច្ចាគ</h2>
-                <form>
+      </nav>
+    </header>
+<main>
+  <section class="mt-14 mb-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+          <div class="card shadow-lg border-0 rounded-3">
+            <div class="card-body p-4">
+              <h2 class="card-title text-center mb-4 fw-bold text-success">
+                វត្ថុសម្រាប់បរិច្ចាគ
+              </h2>
+              
+              <form>
+                <!-- Item Name -->
+                <div class="mb-3">
+                  <label for="itemName" class="form-label">បញ្ចូលឈ្មោះវត្ថុ</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="itemName"
+                    placeholder="សូមបញ្ចូលឈ្មោះវត្ថុ"
+                    required
+                  />
+                </div>
 
-                  <!-- Item Name -->
-                  <div class="mb-3">
-                    <label for="itemName" class="form-label">បញ្ជូលឈ្មោះវត្ថុ</label>
-                    <input type="text" class="form-control" id="itemName" placeholder="សូមបញ្ចូលឈ្មោះវត្ថុ">
-                  </div>
+                <!-- Category -->
+                <div class="mb-3">
+                  <label for="itemCategory" class="form-label">ប្រភេទ</label>
+                  <select class="form-select" id="itemCategory" required>
+                    <option selected disabled>ជ្រើសរើសប្រភេទវត្ថុ</option>
+                    <option value="Clothes">សម្លៀកបំពាក់</option>
+                    <option value="Furniture">សម្ភារៈប្រើប្រាស់</option>
+                    <option value="Electronics">ឧបករណ៍អេឡិចត្រូនិក</option>
+                    <option value="Books">សៀវភៅ</option>
+                    <option value="Others">ផ្សេងៗ</option>
+                  </select>
+                </div>
 
-                  <!-- Category -->
-                  <div class="mb-3">
-                    <label for="itemCategory" class="form-label">ប្រភេទ</label>
-                    <select class="form-select" id="itemCategory">
-                      <option selected disabled>ជ្រើសរើសប្រភេទវត្ថុ</option>
-                      <option value="Clothes">សម្លៀកបំពាក់</option>
-                      <option value="Furniture">សម្ភារៈប្រើប្រាស់</option>
-                      <option value="Electronics">ឧបករណ៍អេឡិចត្រូនិក</option>
-                      <option value="Books">សៀវភៅ</option>
-                      <option value="Others">ផ្សេងៗ</option>
-                    </select>
-                  </div>
+                <!-- Upload Image -->
+                <div class="mb-3">
+                  <label for="itemImage" class="form-label">បញ្ចូលរូបភាព</label>
+                  <input class="form-control" type="file" id="itemImage" accept="image/*" required />
+                </div>
 
-                  <!-- Upload Image -->
-                  <div class="mb-3">
-                    <label for="itemImage" class="form-label">បញ្ចូលរូបភាព</label>
-                    <input class="form-control" type="file" id="itemImage">
-                  </div>
+                <!-- Contact -->
+                <div class="mb-3">
+                  <label for="contactInfo" class="form-label">ព័ត៌មានទំនាក់ទំនង</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="contactInfo"
+                    placeholder="លេខទូរស័ព្ទ ឬ អ៊ីមែល"
+                    required
+                  />
+                </div>
 
-                  <!-- Contact -->
-                  <div class="mb-3">
-                    <label for="contactInfo" class="form-label">ព័ត៌មានទំនាក់ទំនង</label>
-                    <input type="text" class="form-control" id="contactInfo" placeholder="លេខទូរស័ព្ទ ឬ អ៊ីមែល">
-                  </div>
+                <!-- Description -->
+                <div class="mb-3">
+                  <label for="itemDescription" class="form-label">ការពិពណ៌នា</label>
+                  <textarea
+                    class="form-control"
+                    id="itemDescription"
+                    rows="3"
+                    placeholder="សូមសរសេរពិពណ៌នាអំពីវត្ថុ..."
+                    required
+                  ></textarea>
+                </div>
 
-                  <!-- Description -->
-                  <div class="mb-3">
-                    <label for="itemDescription" class="form-label">ការពិពណ៌នា</label>
-                    <textarea class="form-control" id="itemDescription" rows="3"
-                      placeholder="សូមសរសេរពិពណ៌នាអំពីវត្ថុ..."></textarea>
-                  </div>
-                  <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal "><i class="bi bi-check-circle-fill"></i>
-                    បញ្ជូន
-                  </button>
-                   <a type="button" class="btn btn-secondary" href="used.html#user-posts"><i class="fa-solid fa-arrow-left"></i>
-                    ត្រឡប់
+                <!-- Buttons -->
+                <div class="d-flex justify-content-between mt-4">
+                  <a href="used.html#user-posts" class="btn btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> ត្រឡប់
                   </a>
-
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content">
-                        <div class="modal-body text-center"><i class="bi bi-check-circle-fill text-success" style="font-size: 60px;"></i><br>
-                         វត្ថុរបស់អ្នកត្រូវបានដាក់បញ្ចូលដោយជោគជ័យ។
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    <i class="bi bi-check-circle-fill"></i> បញ្ជូន
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Success Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-body text-center py-5">
+          <i class="bi bi-check-circle-fill text-success mb-3" style="font-size: 60px"></i>
+          <h5 class="fw-bold">វត្ថុរបស់អ្នកត្រូវបានដាក់បញ្ចូលដោយជោគជ័យ!</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 
 
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
