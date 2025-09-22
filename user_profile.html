@@ -17,13 +17,72 @@
     ></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Recycle</title>
+
+    <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f9;
+    }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    .profile-picture {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #198754;
+    }
+
+    .profile-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-header h2 {
+      font-weight: 700;
+    }
+
+    .profile-header p {
+      color: #6c757d;
+    }
+
+    .profile-info .list-group-item {
+      border: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .activity-card {
+      margin-top: 20px;
+    }
+
+    .activity-card h5 {
+      border-bottom: 1px solid #dee2e6;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    .activity-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f3f5;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+  </style>
   </head>
   <body>
     <header>
-      <nav
-        class="navbar bg-nav fixed-top navbar-expand-lg border shadow"
-        style="height: 70px"
-      >
+      <nav class="navbar bg-nav fixed-top navbar-expand-lg border shadow">
         <div class="container">
           <a class="navbar-brand" href="index.html">
             <img
@@ -39,7 +98,7 @@
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
-            <div class="offcanvas-header bg-nav" style="height: 70px">
+            <div class="offcanvas-header bg-nav">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                 <a class="navbar-brand d-block" href="index.html">
                   <img
@@ -61,9 +120,9 @@
                 class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
               >
                 <!-- Search Button -->
-                <form class="d-flex mb-2" role="search">
+                <form class="d-flex mb-2 d-block d-md-none" role="search">
                   <input
-                    class="form-control search-1 d-md-none"
+                    class="form-control"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
@@ -92,7 +151,7 @@
                       <a class="dropdown-item" href="#">ឯកសារ</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">វីដេអូ</a>
+                      <a class="dropdown-item" href="minea.html">វីដេអូ</a>
                     </li>
                   </ul>
                 </li>
@@ -137,9 +196,9 @@
           </div>
           <div class="user-profile d-flex align-items-center">
             <!-- Search Button -->
-            <form class="d-flex" role="search">
+            <form class="d-flex d-none d-md-block me-3" role="search">
               <input
-                class="form-control mx-2 search-2"
+                class="form-control mx-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
@@ -307,7 +366,7 @@
                 <li>
                   <a class="dropdown-item py-2" href="#">
                     <i class="bi bi-person-circle"></i>
-                    <span class="ms-2">ពត៌មានអ្នកប្រើប្រាស់</span>
+                    <span class="ms-2">ពត៌មានផ្ទាល់ខ្លួន</span>
                   </a>
                 </li>
                 <li>
@@ -338,7 +397,68 @@
         </div>
       </nav>
     </header>
+    <main>
+      <div class="container mt-15 mb-10">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="profile-card">
+              <!-- Profile Header -->
+              <div class="profile-header">
+                <img
+                  src="assets/image/avatar-4.jpg"
+                  alt="Profile Picture"
+                  class="profile-picture mb-3"
+                />
+                <h2>John Doe</h2>
+                <p>Web Developer | Cambodia</p>
+              </div>
 
+              <!-- Profile Info -->
+              <div class="profile-info mb-4">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong>Email:</strong> john.doe@example.com
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Phone:</strong> +855 12 345 678
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Joined:</strong> January 2024
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Address:</strong> Phnom Penh, Cambodia
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Edit Profile Button -->
+              <div class="text-center mb-4">
+                <a href="#" class="btn btn-success px-4">
+                  <i class="fas fa-edit me-2"></i>Edit Profile
+                </a>
+              </div>
+
+              <!-- Activity Section -->
+              <div class="activity-card">
+                <h5>Recent Activity</h5>
+                <div class="activity-item">
+                  <span>Posted a new item</span>
+                  <small>2 hours ago</small>
+                </div>
+                <div class="activity-item">
+                  <span>Updated profile picture</span>
+                  <small>1 day ago</small>
+                </div>
+                <div class="activity-item">
+                  <span>Made a purchase</span>
+                  <small>3 days ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="bg-footer pt-8 border-top">
       <div class="container">
         <div class="row g-4">
