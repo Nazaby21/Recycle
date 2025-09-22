@@ -20,3 +20,14 @@ AOS.init({
   duration: 1000,
   once: false, // run loop
 });
+
+document.getElementById("showMoreActivity").addEventListener("click", function() {
+    let extra = document.getElementById("extraActivity");
+    if (extra.classList.contains("d-none")) {
+      extra.classList.remove("d-none");
+      this.innerText = "View Less";
+    } else {
+      extra.classList.add("d-none");
+      this.innerText = "View More";
+    }
+  });

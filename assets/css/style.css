@@ -104,6 +104,32 @@ body {
   resize: none;
 }
 
+/* user profile */
+.user-pf-body{
+  background-color: #f8f9fa;
+}
+.profile-sidebar {
+  min-height: 100vh;
+}
+.profile-sidebar img {
+  object-fit: cover;
+}
+.timeline li {
+  border-left: 2px solid #198754;
+  padding-left: 10px;
+  position: relative;
+}
+.timeline li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #198754;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+  top: 6px;
+}
+
 /* Overlay */
 .overlay-1 {
   position: absolute;
@@ -524,7 +550,7 @@ footer h5 {
 }
 
 /* payment */
-.bg-payment{
+.bg-payment {
   background-color: #f0ffeb;
 }
 /* Default: small screens → bottom */
