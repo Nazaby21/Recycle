@@ -989,6 +989,15 @@ input[type="number"] {
   border: none;
 }
 
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
 .about-area .about-sec-col .card-body {
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
 }
