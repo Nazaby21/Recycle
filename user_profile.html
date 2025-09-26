@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile | Recycle</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/d9ad53b8e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+  <body class="user-pf-body">
+    <header>
+      <nav class="navbar bg-nav fixed-top navbar-expand-lg border shadow">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/image/green_leaves_round_logo.png"
+              class="logo"
+              style="width: 40px"
+              alt="logo"
+            />
+          </a>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header bg-nav">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand d-block" href="index.html">
+                  <img
+                    src="assets/image/green_leaves_round_logo.png"
+                    style="width: 60px"
+                    alt="logo"
+                  />
+                </a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
+              >
+                <!-- Search Button -->
+                <form class="d-flex mb-2 d-block d-md-none" role="search">
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+                <li class="nav-item">
+                  <a
+                    class="nav-link fs-5 nav-hover"
+                    aria-current="page"
+                    href="index.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link nav-hover no-caret dropdown-toggle"
+                    href="index.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">ឯកសារ</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="minea.html">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link nav-hover no-caret dropdown-toggle"
+                    href="donation.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html"
+                        >បរិច្ចាគ
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="e-commerce.html"
+                    >ផលិតផលកែច្នៃ</a
+                  >
+                </li>
+                <li class="nav-item fs-5">
+                  <a
+                    class="nav-link nav-hover"
+                    aria-current="page"
+                    href="about.html"
+                    >អំពីយើង</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="user-profile d-flex align-items-center">
+            <!-- Search Button -->
+            <form class="d-flex d-none d-md-block me-3" role="search">
+              <input
+                class="form-control mx-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+            <!-- notification -->
+            <div class="dropdown pt-2">
+              <button
+                class="btn dropdown-toggle no-caret"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 text-center"
+                  style="font-size: 10px"
+                >
+                  4
+                </span>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-scroll"
+              >
+                <div
+                  class="notifi d-flex align-items-center justify-content-between border-bottom px-2"
+                >
+                  <h5>Notification</h5>
+                  <i class="bi bi-three-dots"></i>
+                </div>
+                <a
+                  href=""
+                  class="text-decoration-none py-2 pe-2 m-0 float-end"
+                  style="font-size: 14px"
+                  >See all</a
+                >
+                <!-- 1 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-1.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 2 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-2.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">John Doe</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 3 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-3.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Lina</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 4 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-4.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Devid</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 5 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-5.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Dam</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-4.jpg"
+                alt=""
+                class="avatar dropdown-toggle rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-center py-0">
+                <li class="notifi border-bottom">
+                  <a
+                    href="user_profile.html"
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt=""
+                      class="avatar dropdown-toggle rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0 mt-1">Nazaby</h6>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item py-2" href="user_profile.html">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="ms-2">ពត៌មានផ្ទាល់ខ្លួន</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_setting.html">
+                    <i class="bi bi-gear"></i>
+                    <span class="ms-2">ការកំណត់</span>
+                  </a>
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html">
+                    <i class="bi bi-box-arrow-in-left"></i>
+                    <span class="ms-2">ចាក់ចេញ</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-fluid mt-7 pt-4">
+      <div class="row">
+        <!-- Sidebar for md+ only -->
+        <div
+          class="col-md-3 d-none d-md-block bg-white shadow-sm p-4 vh-100 sticky-top"
+        >
+          <div class="text-center mb-4">
+            <img
+              src="assets/image/avatar-4.jpg"
+              alt="Profile Picture"
+              class="rounded-circle border border-3 border-success mb-3"
+              style="width: 120px; height: 120px"
+            />
+            <h4 class="fw-bold">John Doe</h4>
+          </div>
+
+          <!-- Sidebar Links -->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="bi bi-person me-2 text-success"></i>
+              <a href="#" class="text-decoration-none text-dark">Overview</a>
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-clock-history me-2 text-success"></i>
+              <a href="#activity" class="text-decoration-none text-dark"
+                >Activity</a
+              >
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-gear me-2 text-success"></i>
+              <a href="user_setting.html" class="text-decoration-none text-dark"
+                >Settings</a
+              >
+            </li>
+            <li class="list-group-item border-top">
+              <i class="bi bi-box-arrow-right me-2 text-danger"></i>
+              <a href="landing.html" class="text-decoration-none text-danger"
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-12 col-md-9 p-4">
+          <!-- Profile Image for sm screens -->
+          <div class="d-md-none text-center mb-4">
+            <img
+              src="assets/image/avatar-4.jpg"
+              alt="Profile Picture"
+              class="rounded-circle border border-3 border-success mb-3"
+              style="width: 120px; height: 120px"
+            />
+            <h4 class="fw-bold">John Doe</h4>
+            <p class="text-muted">Web Developer | Cambodia</p>
+          </div>
+
+          <!-- Profile Information -->
+          <div class="card shadow-sm mb-4">
+            <div class="card-header bg-success text-white">
+              <h5 class="mb-0">Profile Information</h5>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col-sm-6">
+                  <strong>Email:</strong> john.doe@example.com
+                </div>
+                <div class="col-sm-6">
+                  <strong>Phone:</strong> +855 12 345 678
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-6">
+                  <strong>Joined:</strong> January 2024
+                </div>
+                <div class="col-sm-6">
+                  <strong>Address:</strong> Phnom Penh, Cambodia
+                </div>
+              </div>
+              <div class="text-end">
+                <a href="user_setting.html" class="btn btn-success"
+                  ><i class="fas fa-edit me-2"></i>Edit Profile</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="card shadow-sm mb-4" id="activity">
+            <div class="card-header bg-success text-white">
+              <h5 class="mb-0">Recent Activity</h5>
+            </div>
+            <div class="card-body">
+              <ul class="timeline list-unstyled">
+                <li class="mb-3">
+                  <span class="fw-bold">📦 Posted a new item</span
+                  ><small class="text-muted d-block">2 hours ago</small>
+                </li>
+                <li class="mb-3">
+                  <span class="fw-bold">🖼️ Updated profile picture</span
+                  ><small class="text-muted d-block">1 day ago</small>
+                </li>
+                <li class="mb-3">
+                  <span class="fw-bold">🛒 Made a purchase</span
+                  ><small class="text-muted d-block">3 days ago</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Security Section -->
+          <div class="card shadow-sm mb-4" id="security">
+            <div class="card-header bg-success text-white">
+              <h5 class="mb-0">Account Security</h5>
+            </div>
+            <div class="card-body">
+              <p>
+                <i class="bi bi-shield-lock me-2 text-success"></i>Password last
+                changed: <strong>2 months ago</strong>
+              </p>
+              <p>
+                <i class="bi bi-phone me-2 text-success"></i>Two-Factor
+                Authentication: <span class="text-danger">Disabled</span>
+              </p>
+              <div class="text-end">
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  data-bs-toggle="modal"
+                  data-bs-target="#securityModal"
+                >
+                  Manage Security
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Security Modal -->
+          <div
+            class="modal fade"
+            id="securityModal"
+            tabindex="-1"
+            aria-labelledby="securityModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                  <h5 class="modal-title" id="securityModalLabel">
+                    <i class="bi bi-shield-lock me-2"></i>Device Login
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p class="mb-3">
+                    These devices are currently logged in to your account:
+                  </p>
+
+                  <ul class="list-group">
+                    <!-- Device 1 -->
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center flex-column flex-md-row"
+                    >
+                      <div>
+                        <strong>Windows PC</strong> - Phnom Penh, Cambodia<br />
+                        <small class="text-muted"
+                          >Last active: 1 hour ago</small
+                        >
+                      </div>
+                      <div class="mt-2 mt-md-0">
+                        <button
+                          class="btn btn-sm btn-danger"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#successModal"
+                        >
+                          Logout
+                        </button>
+                      </div>
+                    </li>
+
+                    <!-- Device 2 -->
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center flex-column flex-md-row"
+                    >
+                      <div>
+                        <strong>iPhone 14</strong> - Phnom Penh, Cambodia<br />
+                        <small class="text-muted"
+                          >Last active: 2 days ago</small
+                        >
+                      </div>
+                      <div class="mt-2 mt-md-0">
+                        <button
+                          class="btn btn-sm btn-danger"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#successModal"
+                        >
+                          Logout
+                        </button>
+                      </div>
+                    </li>
+
+                    <!-- Device 3 -->
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center flex-column flex-md-row"
+                    >
+                      <div>
+                        <strong>MacBook Pro</strong> - Phnom Penh, Cambodia<br />
+                        <small class="text-muted"
+                          >Last active: 5 days ago</small
+                        >
+                      </div>
+                      <div class="mt-2 mt-md-0">
+                        <button
+                          class="btn btn-sm btn-danger"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#successModal"
+                        >
+                          Logout
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary rounded-3"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Success Modal -->
+          <div
+            class="modal fade"
+            id="successModal"
+            tabindex="-1"
+            aria-labelledby="successModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content border-success">
+                <div class="modal-header bg-success text-white">
+                  <h5 class="modal-title" id="successModalLabel">
+                    <i class="bi bi-check-circle me-2"></i>Success
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-center">
+                  Device logged out successfully!
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    data-bs-dismiss="modal"
+                  >
+                    OK
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

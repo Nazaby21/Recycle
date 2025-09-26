@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanuman", Roboto !important;
+}
+
+/* Offcanvas sidebar style */
+.offcanvas-start {
+  width: 250px;
+}
+
+.sidebar .nav-link {
+  color: #495057;
+  padding: 12px 20px;
+  margin: 2px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #e9ecef;
+  color: #2196f3;
+}
+
+.sidebar .nav-link.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.sidebar .nav-section {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 15px 20px 5px;
+  margin-top: 10px;
+}
+
+.brand {
+  padding: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.brand h6 {
+  color: #4caf50;
+  font-weight: 700;
+  margin: 0;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+/* KPI Cards */
+.kpi-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6c757d;
+}
+
+.kpi-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 5px 0;
+  color: #212529;
+}
+
+.kpi-change.positive {
+  color: #4caf50;
+}
+
+/* setting */
+.chart-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.week-stats-label {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.top-bar {
+      background: white;
+      padding: 12px 20px;
+      border-bottom: 1px solid #e9ecef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .search-box {
+      position: relative;
+      width: 300px;
+    }
+
+    .search-box input {
+      padding-left: 35px;
+      border: 1px solid #e9ecef;
+      border-radius: 6px;
+    }
+
+    .search-box i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .upload-box {
+      cursor: pointer;
+      background-color: #f8f9fa;
+      transition: 0.2s;
+    }
+
+    .upload-box:hover {
+      background-color: #e9ecef;
+    }

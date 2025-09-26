@@ -1,360 +1,719 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="assets/css/theme.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/Kropum/test.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Hanuman:wght@100..900&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap" rel="stylesheet">
-  <script
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <script
       src="https://kit.fontawesome.com/d9ad53b8e3.js"
       crossorigin="anonymous"
     ></script>
-  <title>ព្រឺត្តិការណ៍</title>
-</head>
+    <title>ព្រឺត្តិការណ៍</title>
+  </head>
 
-<body>
-      <header>
-    <nav class="navbar bg-nav fixed-top navbar-expand-lg border shadow" style="height: 70px">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/image/green_leaves_round_logo.png" class="logo" style="width: 40px" alt="logo" />
-        </a>
+  <body>
+    <header>
+      <nav class="navbar bg-nav fixed-top navbar-expand-lg border shadow">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/image/green_leaves_round_logo.png"
+              class="logo"
+              style="width: 40px"
+              alt="logo"
+            />
+          </a>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header bg-nav">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand d-block" href="index.html">
+                  <img
+                    src="assets/image/green_leaves_round_logo.png"
+                    style="width: 60px"
+                    alt="logo"
+                  />
+                </a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
+              >
+                <!-- Search Button -->
+                <form class="d-flex mb-2 d-block d-md-none" role="search">
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+                <li class="nav-item">
+                  <a
+                    class="nav-link fs-5 nav-hover"
+                    aria-current="page"
+                    href="index.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link nav-hover no-caret dropdown-toggle"
+                    href="index.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">ឯកសារ</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="minea.html">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link nav-hover active no-caret dropdown-toggle"
+                    href="donation.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html"
+                        >បរិច្ចាគ
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="e-commerce.html"
+                    >ផលិតផលកែច្នៃ</a
+                  >
+                </li>
+                <li class="nav-item fs-5">
+                  <a
+                    class="nav-link nav-hover"
+                    aria-current="page"
+                    href="about.html"
+                    >អំពីយើង</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="user-profile d-flex align-items-center">
+            <!-- Search Button -->
+            <form class="d-flex d-none d-md-block" role="search">
+              <input
+                class="form-control mx-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+            <!-- notification -->
+            <div class="dropdown pt-2">
+              <button
+                class="btn dropdown-toggle no-caret"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 text-center"
+                  style="font-size: 10px"
+                >
+                  4
+                </span>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-scroll"
+              >
+                <div
+                  class="notifi d-flex align-items-center justify-content-between border-bottom px-2"
+                >
+                  <h5>Notification</h5>
+                  <i class="bi bi-three-dots"></i>
+                </div>
+                <a
+                  href=""
+                  class="text-decoration-none py-2 pe-2 m-0 float-end"
+                  style="font-size: 14px"
+                  >See all</a
+                >
+                <!-- 1 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-1.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 2 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-2.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">John Doe</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 3 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-3.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Lina</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 4 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-4.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Devid</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- 5 -->
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/img/avata/avatar-5.jpg"
+                        alt=""
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Dam</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Neque, at.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header bg-nav" style="height: 70px">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <a class="navbar-brand d-block" href="index.html">
-                <img src="assets/image/green_leaves_round_logo.png" style="width: 60px" alt="logo" />
-              </a>
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2">
-              <!-- Search Button -->
-              <form class="d-flex mb-2" role="search">
-                <input class="form-control search-1 d-md-none" type="search" placeholder="Search" aria-label="Search" />
-              </form>
-              <li class="nav-item">
-                <a class="nav-link active fs-5 nav-hover" aria-current="page" href="index.html">ទំព័រដើម</a>
-              </li>
-              <li class="nav-item dropdown fs-5">
-                <a class="nav-link nav-hover no-caret dropdown-toggle" href="index.html" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  អត្ថបទ
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">ឯកសារ</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">វីដេអូ</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown fs-5">
-                <a class="nav-link nav-hover no-caret dropdown-toggle" href="donation.html" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  សកម្មភាពសង្គម
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="event.html">ព្រឹត្តិការណ៍</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="donation.html">បរិច្ចាគ
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item fs-5">
-                <a class="nav-link nav-hover" href="e-commerce.html">ផលិតផលកែច្នៃ</a>
-              </li>
-              <li class="nav-item fs-5">
-                <a class="nav-link nav-hover" aria-current="page" href="about.html">អំពីយើង</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="user-profile d-flex align-items-center">
-          <button class="navbar-toggler border-0 shadow-none fs-4" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Search Button -->
-          <form class="d-flex" role="search">
-            <input class="form-control mx-2 search-2" type="search" placeholder="Search" aria-label="Search" />
-          </form>
-          <!-- notification -->
-          <div class="dropdown pt-2">
-            <button class="btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-bell fs-5"></i>
-              <span class="badge bg-danger rounded-circle position-absolute start-50 text-center"
-                style="font-size: 10px">
-                4
-              </span>
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-4.jpg"
+                alt=""
+                class="avatar dropdown-toggle rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-center py-0">
+                <li class="notifi border-bottom">
+                  <a
+                    href=""
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt=""
+                      class="avatar dropdown-toggle rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0 mt-1">Nazaby</h6>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="ms-2">ពត៌មានផ្ទាល់ខ្លួន</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="#">
+                    <i class="bi bi-gear"></i>
+                    <span class="ms-2">ការកំណត់</span>
+                  </a>
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html">
+                    <i class="bi bi-box-arrow-in-left"></i>
+                    <span class="ms-2">ចាក់ចេញ</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-center dropdown-menu-scroll">
-              <div class="notifi d-flex align-items-center justify-content-between border-bottom px-2">
-                <h5>Notification</h5>
-                <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-6">
+              <div
+                class="card d-flex justify-content-center mt-20 p-4 border-0"
+              >
+                <h1
+                  class="animate__animated animate__fadeInLeft display-4 fw-bold"
+                >
+                  ព្រឺត្តិការណ៍
+                  <span class="text-success-emphasis align-content-center"
+                    >បៃតង</span
+                  >
+                  & សកម្មភាព
+                </h1>
+                <p class="animate__animated animate__fadeInLeft fw-bolder fa-3">
+                  សកម្មភាពតូចៗ បង្កើតអនាគតធំៗ, ចូលរួមបង្កើតសហគមន៍បៃតងជាមួយគ្នា
+                </p>
               </div>
-              <a href="" class="text-decoration-none py-2 pe-2 m-0 float-end" style="font-size: 14px">See all</a>
-              <!-- 1 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-1.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Pozz Mao</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
+            </div>
+            <div
+              class="col-md-12 col-lg-6 py-15 d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="https://i.pinimg.com/1200x/c0/47/f1/c047f14b32e9bbe9c6164069d8c1a4e7.jpg"
+                alt="banner"
+                class="img-fluid animate__animated animate__fadeInRight"
+                style="width: 50%"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-5">
+        <div class="container"></div>
+      </section>
+      <section>
+        <div class="container">
+          <h1 class="text-center fw-bold">សកម្មភាពបៃតង</h1>
+          <p class="text-center">
+            សកម្មភាពបៃតងគឺជាសកម្មភាពដែលមានគោលបំណងក្នុងការពារបរិស្ថាន
+            និងកាត់បន្ថយបញ្ហាបរិស្ថាន។
+          </p>
+          <div class="row gy-4">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="assets/Kropum/img/Event4.jpg"
+                  class="card-img-top"
+                  alt="event1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a
+                      href="event1.html"
+                      class="text-decoration-none text-success text-color stretched-link"
+                      >Forest EcoPreneurs</a
+                    >
+                  </h5>
+                  <p class="card-text">
+                    សកម្មភាពនេះមានគោលបំណងក្នុងការបង្កើតឱកាសសម្រាប់អ្នកស្រាវជ្រាវ...
+                  </p>
+                  <p class="card-text text-muted">
+                    <i class="fa-solid fa-calendar-days text-success"></i> ១៩​
+                    ធ្នូរ​ ២០២៥
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="assets/Kropum/img/Event6.jpg"
+                  class="card-img-top"
+                  alt="event2"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a
+                      href="event2.html"
+                      class="text-decoration-none text-success text-color stretched-link"
+                      >Workshop Art,Culture</a
+                    >
+                  </h5>
+                  <p class="card-text">
+                    សិក្ខាសាលានេះផ្តោតលើសិល្បៈ និងវប្បធម៌
+                    ដើម្បីលើកកម្ពស់ការយល់ដឹងអំពីបរិស្ថាន....
+                  </p>
+                  <p class="card-text text-muted">
+                    <i class="fa-solid fa-calendar-days text-success"></i> ១៩​
+                    ធ្នូរ​ ២០២៥
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="assets/Kropum/img/event7.jpg"
+                  class="card-img-top"
+                  alt="event3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a
+                      href="event3.html"
+                      class="text-decoration-none text-success text-color stretched-link"
+                      >Plastic Waste</a
+                    >
+                  </h5>
+                  <p class="card-text">
+                    សកម្មភាពនេះផ្តោតលើការកាត់បន្ថយសំណល់ប្លាស្ទិក
+                    និងលើកកម្ពស់ការប្រើ...
+                  </p>
+                  <p class="card-text text-muted">
+                    <i class="fa-solid fa-calendar-days text-success"></i> ២២​
+                    ធ្នូរ​ ២០២៥
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="assets/Kropum/img/event1.jpg"
+                  class="card-img-top"
+                  alt="event3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a
+                      href="event4.html"
+                      class="text-decoration-none text-success text-color stretched-link"
+                      >ECO Leadership Discovery</a
+                    >
+                  </h5>
+                  <p class="card-text">
+                    សកម្មភាពនេះផ្តោតលើការអភិវឌ្ឍជំនាញភាពជាអ្នកដឹកនាំបៃតង
+                    និងការបង្កើតឱកាស...
+                  </p>
+                  <p class="card-text text-muted">
+                    <i class="fa-solid fa-calendar-days text-success"></i> ២៥​
+                    ធ្នូរ​ ២០២៥
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="assets/Kropum/img/Event8.jpg"
+                  class="card-img-top"
+                  alt="event3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a
+                      href="event5.html"
+                      class="text-decoration-none text-success text-color stretched-link"
+                      >យុទ្ធនាការ សម្អាតទីក្រុង</a
+                    >
+                  </h5>
+                  <p class="card-text">
+                    ចូលរួមសម្អាតទីក្រុង ដើម្បីបង្កើនភាពស្អាត
+                    និងបង្កើតបរិយាកាសរស់នៅល្អប្រសើរ...
+                  </p>
+                  <p class="card-text text-muted">
+                    <i class="fa-solid fa-calendar-days text-success"></i> ១៩​
+                    ធ្នូរ​ ២០២៥
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="assets/Kropum/img/event9.jpg"
+                  class="card-img-top"
+                  alt="event3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a
+                      href="event6.html"
+                      class="text-decoration-none text-success text-color stretched-link"
+                      >LCOY</a
+                    >
+                  </h5>
+                  <p class="card-text">
+                    សកម្មភាព LCOY ផ្តោតលើការចូលរួមរបស់យុវជនក្នុងការពារបរិស្ថាន
+                    និង...
+                  </p>
+                  <p class="card-text text-muted">
+                    <i class="fa-solid fa-calendar-days text-success"></i> ១៩​
+                    ធ្នូរ​ ២០២៥
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="assets/Kropum/img/Event2.jpg"
+                  class="card-img-top"
+                  alt="event3"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a
+                      href="event7.html"
+                      class="text-decoration-none text-success text-color stretched-link"
+                      >យុវជនជជែកពិភាក្សា អំពីបរិស្ថាន</a
+                    >
+                  </h5>
+                  <p class="card-text">
+                    សកម្មភាពនេះផ្តោតលើការចូលរួមរបស់យុវជនក្នុងការពិភាក្សា
+                    និងបង្កើតដំណោះស្រា...
+                  </p>
+                  <p class="card-text text-muted">
+                    <i class="fa-solid fa-calendar-days text-success"></i> ១៩​
+                    ធ្នូរ​ ២០២៥
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="assets/Kropum/img/EVENT3.jpg"
+                  class="card-img-top"
+                  alt="event3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">
+                    <a
+                      href="event8.html"
+                      class="text-decoration-none text-success text-color stretched-link"
+                      >ប្រកួតរូបភាពអំពី Waste of life</a
+                    >
+                  </h5>
+                  <p class="card-text">
+                    សកម្មភាពប្រកួតរូបភាពនេះផ្តោតលើការបង្ហាញបញ្ហាសំណល់...
+                  </p>
+                  <p class="card-text text-muted">
+                    <i class="fa-solid fa-calendar-days text-success"></i> ១៩​
+                    ធ្នូរ​ ២០២៥
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <nav aria-label="Course pagination" class="mt-5">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#">&laquo;</a>
               </li>
-              <!-- 2 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-2.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">John Doe</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
               </li>
-              <!-- 3 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-3.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Lina</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 4 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-4.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Devid</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <!-- 5 -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="assets/img/avata/avatar-5.jpg" alt="" class="rounded-circle"
-                      style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Dam</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Neque, at.
-                      </p>
-                    </div>
-                  </div>
-                </a>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
               </li>
             </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-footer pt-8 border-top">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="index.html"
+              class="footer-img mb-3 d-flex align-items-center"
+            >
+              <img
+                src="assets/image/green_leaves_round_logo.png"
+                alt="logo"
+                style="width: 50px"
+              />
+              <h4 class="ms-2 fw-bold text-success mb-0 mt-3">កែច្នៃ</h4>
+            </a>
+
+            <p class="text-secondary">
+              "Your seamless platform for event management, where creativity
+              meets efficiency. We simplify planning, coordinate every detail,
+              and bring your vision to life for unforgettable experiences that
+              inspire."
+            </p>
           </div>
 
-          <div class="dropdown">
-            <img src="assets/image/avatar-guest.webp" alt="" class="avatar dropdown-toggle no-caret rounded-circle ms-2"
-              style="width: 40px; height: 40px" data-bs-toggle="dropdown" aria-expanded="false" />
-            <ul class="dropdown-menu dropdown-menu-center">
-              <div class="notifi d-flex align-items-center border-bottom px-2">
-                <h5>Notification</h5>
+          <!-- Contact Info -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
+              ព័ត៌មានទំនាក់ទំនង
+            </h5>
+            <p class="mb-1">
+              <i class="bi bi-telephone me-2"></i>+855 12 123 456
+            </p>
+            <p class="mb-1">
+              <i class="bi bi-envelope me-2"></i>
+              <a href="mailto:info@gmail.com" class="text-dark"
+                >info@gmail.com</a
+              >
+            </p>
+            <!-- Social Media -->
+            <div class="d-flex gap-3 mt-3">
+              <a href="#" class="text-success"
+                ><i class="bi bi-facebook fs-4"></i
+              ></a>
+              <a href="#" class="text-success"
+                ><i class="bi bi-twitter-x fs-4"></i
+              ></a>
+              <a href="#" class="text-success"
+                ><i class="bi bi-telegram fs-4"></i
+              ></a>
+              <a href="#" class="text-success"
+                ><i class="bi bi-instagram fs-4"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
+              តំណភ្ជាប់រហ័ស
+            </h5>
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="donation.html" class="footer-link d-block fs-5"
+                      >បរិច្ចាក</a
+                    >
+                  </li>
+                  <li>
+                    <a href="event.html" class="footer-link d-block fs-5"
+                      >ព្រឹត្តិការណ៍</a
+                    >
+                  </li>
+                  <li>
+                    <a href="about.html" class="footer-link d-block fs-5"
+                      >អំពីយើង</a
+                    >
+                  </li>
+                </ul>
               </div>
-              <a href="" class="text-decoration-none py-2 pe-2 m-0 float-end" style="font-size: 14px">See all</a>
-              <li>
-                <a class="dropdown-item" data-bs-theme-value="light" href="#">
-                  <i class="bi bi-brightness-high"></i>
-                  <span class="ms-2">Light</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" data-bs-theme-value="dark" href="#">
-                  <i class="bi bi-moon"></i>
-                  <span class="ms-2">Dark</span>
-                </a>
-              </li>
-            </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
-<main>
-  
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class=" col-md-12 col-lg-6 ">
-          <div class="card d-flex justify-content-center  mt-20 p-4 border-0">
-            <h1 class="animate__animated animate__fadeInLeft display-4 fw-bold">ព្រឺត្តិការណ៍ <span
-                class="text-success-emphasis align-content-center">បៃតង</span> & សកម្មភាព</h1>
-            <p class="animate__animated animate__fadeInLeft fw-bolder fa-3">សកម្មភាពតូចៗ បង្កើតអនាគតធំៗ, ចូលរួមបង្កើតសហគមន៍បៃតងជាមួយគ្នា</p>
 
+        <!-- Bottom bar -->
+        <div class="row border-top py-3 mt-4 align-items-center">
+          <div class="col-6 text-start">
+            <p class="mb-0 small text-secondary">© 2024 Recycle</p>
           </div>
-        </div>
-        <div class="col-md-12 col-lg-6 py-15 d-flex align-items-center justify-content-center">
-          <img src="https://i.pinimg.com/1200x/c0/47/f1/c047f14b32e9bbe9c6164069d8c1a4e7.jpg" alt="banner"
-            class="img-fluid animate__animated animate__fadeInRight" style="width: 50%;">
-        </div>
-      </div>
-    </div>
-</section>
-<section class="my-5">
-  <div class="container">
-  </div>
-</section>
-<section>
-   <div class="container">
-    <h1 class="text-center fw-bold">សកម្មភាពបៃតង</h1>
-    <p class="text-center">សកម្មភាពបៃតងគឺជាសកម្មភាពដែលមានគោលបំណងក្នុងការពារបរិស្ថាន និងកាត់បន្ថយបញ្ហាបរិស្ថាន។</p>
-    <div class="row gy-4">
-      <div class=" col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
-          <img src="assets/Kropum/img/Event4.jpg"
-            class="card-img-top" alt="event1">
-          <div class="card-body">
-            <h5 class="card-title fw-bold"><a href="event1.html" class="text-decoration-none text-success text-color stretched-link">Forest EcoPreneurs</a></h5>
-            <p class="card-text">សកម្មភាពនេះមានគោលបំណងក្នុងការបង្កើតឱកាសសម្រាប់អ្នកស្រាវជ្រាវ...</p>
-            <p class="card-text text-muted"><i class="fa-solid fa-calendar-days text-success"></i> ១៩​ ធ្នូរ​ ២០២៥</p>
+          <div class="col-6 d-flex justify-content-end gap-3">
+            <a href="#" class="text-secondary small">Privacy Policy</a>
+            <a href="#" class="text-secondary small">FAQs</a>
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
-          <img src="assets/Kropum/img/Event6.jpg"
-            class="card-img-top" alt="event2">
-          <div class="card-body">
-            <h5 class="card-title fw-bold"><a href="event2.html" class="text-decoration-none text-success text-color stretched-link">Workshop Art,Culture</a></h5>
-            <p class="card-text">សិក្ខាសាលានេះផ្តោតលើសិល្បៈ និងវប្បធម៌ ដើម្បីលើកកម្ពស់ការយល់ដឹងអំពីបរិស្ថាន....</p>
-            <p class="card-text text-muted"><i class="fa-solid fa-calendar-days text-success"></i> ១៩​ ធ្នូរ​ ២០២៥</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
-          <img src="assets/Kropum/img/event7.jpg"
-            class="card-img-top" alt="event3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold"><a href="event3.html" class="text-decoration-none text-success text-color stretched-link">Plastic Waste</a></h5>
-            <p class="card-text">សកម្មភាពនេះផ្តោតលើការកាត់បន្ថយសំណល់ប្លាស្ទិក និងលើកកម្ពស់ការប្រើ...</p>
-            <p class="card-text text-muted"><i class="fa-solid fa-calendar-days text-success"></i> ២២​ ធ្នូរ​ ២០២៥</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
-          <img src="assets/Kropum/img/event1.jpg"
-            class="card-img-top" alt="event3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold"><a href="event4.html" class="text-decoration-none text-success text-color stretched-link">ECO Leadership Discovery</a></h5>
-            <p class="card-text">សកម្មភាពនេះផ្តោតលើការអភិវឌ្ឍជំនាញភាពជាអ្នកដឹកនាំបៃតង និងការបង្កើតឱកាស...</p>
-            <p class="card-text text-muted"><i class="fa-solid fa-calendar-days text-success"></i> ២៥​ ធ្នូរ​ ២០២៥</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
-          <img src="assets/Kropum/img/Event8.jpg"
-            class="card-img-top" alt="event3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold"><a href="event5.html" class="text-decoration-none text-success text-color stretched-link">យុទ្ធនាការ សម្អាតទីក្រុង</a></h5>
-            <p class="card-text">ចូលរួមសម្អាតទីក្រុង ដើម្បីបង្កើនភាពស្អាត និងបង្កើតបរិយាកាសរស់នៅល្អប្រសើរ...</p>
-            <p class="card-text text-muted"><i class="fa-solid fa-calendar-days text-success"></i> ១៩​ ធ្នូរ​ ២០២៥</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
-          <img src="assets/Kropum/img/event9.jpg"
-            class="card-img-top" alt="event3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold"><a href="event6.html" class="text-decoration-none text-success text-color stretched-link">LCOY</a></h5>
-            <p class="card-text">សកម្មភាព LCOY ផ្តោតលើការចូលរួមរបស់យុវជនក្នុងការពារបរិស្ថាន និង...</p>
-            <p class="card-text text-muted"><i class="fa-solid fa-calendar-days text-success"></i> ១៩​ ធ្នូរ​ ២០២៥</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
-          <img src="assets/Kropum/img/Event2.jpg"
-
-            class="card-img-top" alt="event3">
-           
-          <div class="card-body">
-            <h5 class="card-title fw-bold"><a href="event7.html" class="text-decoration-none text-success text-color stretched-link">យុវជនជជែកពិភាក្សា អំពីបរិស្ថាន</a></h5>
-            <p class="card-text">សកម្មភាពនេះផ្តោតលើការចូលរួមរបស់យុវជនក្នុងការពិភាក្សា និងបង្កើតដំណោះស្រា...</p>
-            <p class="card-text text-muted"><i class="fa-solid fa-calendar-days text-success"></i> ១៩​ ធ្នូរ​ ២០២៥</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3">
-        <div class="card">
-          <img src="assets/Kropum/img/EVENT3.jpg"
-            class="card-img-top" alt="event3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold"><a href="event8.html" class="text-decoration-none text-success text-color stretched-link">ប្រកួតរូបភាពអំពី Waste of life</a></h5>
-            <p class="card-text">សកម្មភាពប្រកួតរូបភាពនេះផ្តោតលើការបង្ហាញបញ្ហាសំណល់...</p>
-            <p class="card-text text-muted"><i class="fa-solid fa-calendar-days text-success"></i> ១៩​ ធ្នូរ​ ២០២៥</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Pagination -->
-    <nav aria-label="Course pagination" class="mt-5">
-      <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-        <li class="page-item active "><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
-        <li class="page-item"><a class="page-link" href="#">5</a></li>
-        <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-      </ul>
-    </nav>
-  </div>
-</section>
-</main>
-  <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
+    </footer>
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
