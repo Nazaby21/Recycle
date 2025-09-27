@@ -21,7 +21,9 @@ AOS.init({
   once: false, // run loop
 });
 
-document.getElementById("showMoreActivity").addEventListener("click", function() {
+document
+  .getElementById("showMoreActivity")
+  .addEventListener("click", function () {
     let extra = document.getElementById("extraActivity");
     if (extra.classList.contains("d-none")) {
       extra.classList.remove("d-none");
@@ -31,3 +33,44 @@ document.getElementById("showMoreActivity").addEventListener("click", function()
       this.innerText = "View More";
     }
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll("#purchase .custom-tabs .btn");
+
+  // Initialize styles
+  tabButtons.forEach((btn) => {
+    if (btn.classList.contains("active")) {
+      btn.classList.add("text-white", "bg-success");
+      btn.classList.remove("text-success", "btn-outline-success");
+    } else {
+      btn.classList.add("text-success");
+      btn.classList.remove("text-white", "bg-success");
+    }
+
+    // Hover effect
+    btn.addEventListener("mouseenter", () => {
+      if (!btn.classList.contains("active")) {
+        btn.classList.add("text-white");
+      }
+    });
+
+    btn.addEventListener("mouseleave", () => {
+      if (!btn.classList.contains("active")) {
+        btn.classList.remove("text-white");
+      }
+    });
+  });
+
+  // Update styles on tab change
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("shown.bs.tab", (event) => {
+      tabButtons.forEach((b) => {
+        b.classList.remove("text-white", "bg-success");
+        b.classList.add("text-success", "btn-outline-success");
+      });
+
+      event.target.classList.add("text-white", "bg-success");
+      event.target.classList.remove("text-success", "btn-outline-success");
+    });
+  });
+});
