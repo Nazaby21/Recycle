@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/theme.css" />
   <link rel="stylesheet" href="assets/chhorng/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/d9ad53b8e3.js" crossorigin="anonymous"></script>
@@ -67,7 +68,122 @@
       </div>
     </section>
 
+    <section>
+      <div class="container py-5">
+        <h3>អត្ថបទផ្សេងៗ</h3>
+        <div class="swiper">
+          <!-- Wrapper -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="Plastic_doc.html" class="text-decoration-none text-dark">
+                  <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
+                    <img src="assets/minea/img/image02.png" alt="ការកែច្នៃផ្លាស្ទិក" class="card-img-top rounded-top-3"
+                      style="height: 300px;" />
+                    <div class="card-body">
+                      <p class="card-text">
+                        សំរាមប្លាស្ទិក ត្រូវបានកែច្នៃប្រើជាវត្ថុធាតុផ្សំយ៉ាងសំខាន់ក្នុងការផលិតឥដ្ឋបរិស្ថាន
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card" >
+                <a href="Plastic_doc01.html" class="text-decoration-none text-dark">
+                  <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
+                    <img src="assets/minea/img/image04.png" alt="ការកែច្នៃផ្លាស្ទិក" class="card-img-top rounded-top-3"
+                      style="height: 300px;" />
+                    <div class="card-body">
+                      <p class="card-text">
+                        ពីសំរាមប្លាស្ទិក កែច្នៃក្លាយទៅជាសិល្បៈគំនូរ និងរូបចម្លាក់ដ៏គួរឱ្យកោតសរសើរ
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="Plastic_doc.html" class="text-decoration-none text-dark">
+                  <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
+                    <img src="assets/minea/img/maxresdefault.jpg" alt="ការកែច្នៃផ្លាស្ទិក"
+                      class="card-img-top rounded-top-3" style="height: 300px;" />
+                    <div class="card-body">
+                      <p class="card-text">
+                        តើគេកែច្នៃផ្លាស្ទិកយ៉ាងដូចម្ដេច?
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="Plastic_doc.html" class="text-decoration-none text-dark">
+                  <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
+                    <img src="assets/minea/img/image02.png" alt="ការកែច្នៃផ្លាស្ទិក" class="card-img-top rounded-top-3"
+                      style="height: 300px;" />
+                    <div class="card-body">
+                      <p class="card-text">
+                        សំរាមប្លាស្ទិក ត្រូវបានកែច្នៃប្រើជាវត្ថុធាតុផ្សំយ៉ាងសំខាន់ក្នុងការផលិតឥដ្ឋបរិស្ថាន
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <a href="Plastic_doc01.html" class="text-decoration-none text-dark">
+                  <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
+                    <img src="assets/minea/img/image04.png" alt="ការកែច្នៃផ្លាស្ទិក" class="card-img-top rounded-top-3"
+                      style="height: 300px;" />
+                    <div class="card-body">
+                      <p class="card-text">
+                        ពីសំរាមប្លាស្ទិក កែច្នៃក្លាយទៅជាសិល្បៈគំនូរ និងរូបចម្លាក់ដ៏គួរឱ្យកោតសរសើរ
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- Navigation -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        992: { slidesPerView: 4 },
+      },
+    });
+  </script>
 </body>
 
 </html>
