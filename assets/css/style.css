@@ -544,8 +544,7 @@ footer h5 {
 }
 .btn-addcart:hover {
   background-color: #fff;
-  border: 2px solid green;
-  color: #000;
+  border: 1px solid green;
   color: green;
 }
 
