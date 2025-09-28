@@ -102,10 +102,6 @@ body {
     background-color: transparent;
 }
 
-.nav-pills .nav-link:hover {
-    color: #198754 !important;
-    background-color: transparent !important;
-}
 
 /* =========================================
    6. FORGET / PIN / NEW PASSWORD PAGES
