@@ -1,5 +1,5 @@
 /* Medium screens and up → top */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .toast-position {
     top: 500px;
     bottom: auto;
@@ -15,4 +15,4 @@
   .payment-method {
     border-radius: 0 0 12px 12px;
   }
-}
+} */

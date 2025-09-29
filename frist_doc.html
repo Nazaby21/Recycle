@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/d9ad53b8e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-nav border shadow fixed-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/image/green_leaves_round_logo.png"
+              class="logo"
+              style="width: 40px"
+              alt="logo"
+            />
+          </a>
+
+          <!-- Offcanvas Menu -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header bg-nav">
+              <a class="navbar-brand d-block" href="index.html">
+                <img
+                  src="assets/image/green_leaves_round_logo.png"
+                  class="logo"
+                  alt="logo"
+                />
+              </a>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
+              >
+                <!-- Mobile Search -->
+                <form
+                  class="d-flex mb-3 d-block d-md-none search-1"
+                  role="search"
+                >
+                  <label for="mobile-search" class="visually-hidden"
+                    >Search</label
+                  >
+                  <input
+                    id="mobile-search"
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                  />
+                </form>
+
+                <!-- Menu Items -->
+                <li class="nav-item">
+                  <a class="nav-link fs-5 nav-hover" href="index.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link active dropdown-toggle nav-hover no-caret"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="frist_doc.html">ឯកសារ</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="minea.html">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link dropdown-toggle nav-hover no-caret"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html">បរិច្ចាគ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="e-commerce.html"
+                    >ផលិតផលកែច្នៃ</a
+                  >
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="about.html">អំពីយើង</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Side -->
+          <div class="d-flex align-items-center">
+            <!-- Desktop Search -->
+            <form class="d-flex d-none d-md-block me-3 search-2" role="search">
+              <label for="desktop-search" class="visually-hidden">Search</label>
+              <input
+                id="desktop-search"
+                class="form-control mx-2"
+                type="search"
+                placeholder="Search"
+              />
+            </form>
+
+            <!-- Notification Dropdown -->
+            <div class="dropdown me-2">
+              <button
+                class="btn dropdown-toggle no-caret position-relative"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 top-0 text-center"
+                  style="font-size: 10px"
+                  >4</span
+                >
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-end p-0 shadow"
+                style="width: 320px; max-height: 350px; overflow-y: auto"
+              >
+                <li
+                  class="dropdown-header d-flex justify-content-between align-items-center px-2 py-2 bg-light"
+                >
+                  <span>Notifications</span>
+                  <i class="bi bi-three-dots"></i>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Profile Dropdown -->
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-4.jpg"
+                alt="Profile"
+                class="avatar dropdown-toggle rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-end shadow py-0">
+                <li class="border-bottom">
+                  <a
+                    href="user_profile.html"
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt="Avatar"
+                      class="rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0">Nazaby</h6>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_profile.html"
+                    ><i class="bi bi-person-circle"></i
+                    ><span class="ms-2">ពត៌មានផ្ទាល់ខ្លួន</span></a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_setting.html"
+                    ><i class="bi bi-gear"></i
+                    ><span class="ms-2">ការកំណត់</span></a
+                  >
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html"
+                    ><i class="bi bi-box-arrow-in-left"></i
+                    ><span class="ms-2">ចាក់ចេញ</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Mobile Toggler -->
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4 ms-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <main>
+      <section class="pb-5 mt-11">
+        <div class="container bg-light bg-opacity-75 p-4 rounded-3 shadow-sm">
+          <div class="row gy-4">
+            <!-- Card -->
+            <div class="col-md-6 col-lg-4">
+              <a href="Plastic_doc.html" class="text-decoration-none text-dark">
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="assets/minea/img/image02.png"
+                    alt="ការកែច្នៃផ្លាស្ទិក"
+                    class="card-img-top rounded-top-3"
+                    style="height: 300px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      សំរាមប្លាស្ទិក
+                      ត្រូវបានកែច្នៃប្រើជាវត្ថុធាតុផ្សំយ៉ាងសំខាន់ក្នុងការផលិតឥដ្ឋបរិស្ថាន
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a
+                href="Plastic_doc01.html"
+                class="text-decoration-none text-dark"
+              >
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="assets/minea/img/image04.png"
+                    alt="ការកែច្នៃផ្លាស្ទិក"
+                    class="card-img-top rounded-top-3"
+                    style="height: 300px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      ពីសំរាមប្លាស្ទិក កែច្នៃក្លាយទៅជាសិល្បៈគំនូរ
+                      និងរូបចម្លាក់ដ៏គួរឱ្យកោតសរសើរ
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href="Plastic_doc.html" class="text-decoration-none text-dark">
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="assets/minea/img/maxresdefault.jpg"
+                    alt="ការកែច្នៃផ្លាស្ទិក"
+                    class="card-img-top rounded-top-3"
+                    style="height: 300px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">តើគេកែច្នៃផ្លាស្ទិកយ៉ាងដូចម្ដេច?</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href="Plastic_doc.html" class="text-decoration-none text-dark">
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="assets/minea/img/image02.png"
+                    alt="ការកែច្នៃផ្លាស្ទិក"
+                    class="card-img-top rounded-top-3"
+                    style="height: 300px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      សំរាមប្លាស្ទិក
+                      ត្រូវបានកែច្នៃប្រើជាវត្ថុធាតុផ្សំយ៉ាងសំខាន់ក្នុងការផលិតឥដ្ឋបរិស្ថាន
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a
+                href="Plastic_doc01.html"
+                class="text-decoration-none text-dark"
+              >
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="assets/minea/img/image04.png"
+                    alt="ការកែច្នៃផ្លាស្ទិក"
+                    class="card-img-top rounded-top-3"
+                    style="height: 300px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      ពីសំរាមប្លាស្ទិក កែច្នៃក្លាយទៅជាសិល្បៈគំនូរ
+                      និងរូបចម្លាក់ដ៏គួរឱ្យកោតសរសើរ
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a
+                href="Plastic_doc01.html"
+                class="text-decoration-none text-dark"
+              >
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="assets/minea/img/img01.png"
+                    alt="ការកែច្នៃផ្លាស្ទិក"
+                    class="card-img-top rounded-top-3"
+                    style="height: 300px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      គុណសម្បត្តិនៃការប្រើប្រាស់សម្ភារៈកែច្នៃឡើងវិញក្នុងការបន្ថែម
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- End Card -->
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
