@@ -8,6 +8,7 @@
 
 body {
   font-family: "Hanuman", Roboto !important;
+  overflow-x: hidden;
 }
 
 .bg-nav {
