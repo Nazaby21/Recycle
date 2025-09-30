@@ -74,6 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
 // makara
 //increase and decrease
 function changeQty(amount, inputId) {
@@ -84,6 +88,7 @@ function changeQty(amount, inputId) {
   input.value = current;
 }
 
+<<<<<<< HEAD
 const toastEl = document.getElementById('mainToast');
 const toastMessage = document.getElementById('toastMessage');
 const mainToast = new bootstrap.Toast(toastEl);
@@ -92,27 +97,112 @@ const mainToast = new bootstrap.Toast(toastEl);
 document.querySelectorAll('.deleteBtn').forEach((btn) => {
   btn.addEventListener('click', () => {
     toastMessage.textContent = 'អ្នកបានលុបដោយជោគជ័យ ✅';
+=======
+const toastEl = document.getElementById("mainToast");
+const toastMessage = document.getElementById("toastMessage");
+const mainToast = new bootstrap.Toast(toastEl);
+
+// Delete button
+document.querySelectorAll(".deleteBtn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    toastMessage.textContent = "អ្នកបានលុបដោយជោគជ័យ ✅";
+>>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
     mainToast.show();
   });
 });
 
 // Edit button → open modal
+<<<<<<< HEAD
 const editModal = new bootstrap.Modal(document.getElementById('editModal'));
 document.querySelectorAll('.editBtn').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('modal-product-name').textContent =
       btn.dataset.name;
     document.getElementById('modal-product-quantity').value =
+=======
+const editModal = new bootstrap.Modal(document.getElementById("editModal"));
+document.querySelectorAll(".editBtn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.getElementById("modal-product-name").textContent =
+      btn.dataset.name;
+    document.getElementById("modal-product-quantity").value =
+>>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
       btn.dataset.quantity;
     editModal.show();
   });
 });
 
 // Save button
+<<<<<<< HEAD
 document.getElementById('saveBtn').addEventListener('click', () => {
   toastMessage.textContent = '✅ ផលិតផលត្រូវបានកែប្រែដោយជោគជ័យ!';
+=======
+document.getElementById("saveBtn").addEventListener("click", () => {
+  toastMessage.textContent = "✅ ផលិតផលត្រូវបានកែប្រែដោយជោគជ័យ!";
+>>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
   mainToast.show();
   editModal.hide();
 });
 
+<<<<<<< HEAD
 // end
+=======
+// vuthy
+// DataChart
+const ctx = document.getElementById("barChart").getContext("2d");
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: [
+      "អ្នកចុះឈ្មោះចូលរួមព្រឺត្តិការណ៍",
+      "អ្នកចូលរួមបរិចា្ចគ",
+      "អ្នកចូលរួមព្រឺត្តិការណ៍",
+      "អ្នកទស្សនាវីដេអូ",
+      "អត្រាលក់ចេញ",
+    ],
+    datasets: [
+      {
+        label: "ចំនួនទិន្នន័យ",
+        data: [1500, 1900, 3000, 2500, 2000],
+        backgroundColor: "rgba(54, 162, 235, 0.6)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1,
+        borderRadius: 8,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        labels: {
+          font: {
+            family: "Hanuman",
+            size: 14,
+          },
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          font: {
+            family: "Hanuman",
+            size: 13,
+          },
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 500,
+          font: {
+            family: "Hanuman",
+            size: 13,
+          },
+        },
+      },
+    },
+  },
+});
+>>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
