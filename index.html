@@ -31,7 +31,7 @@
         <div class="container">
           <a class="navbar-brand" href="home.html">
             <img
-              src="assets/image/green_leaves_round_logo.png"
+              src="../image/green_leaves_round_logo.png"
               class="ms-0 ms-md-5 logo"
               style="width: 40px"
               alt="logo"
@@ -47,7 +47,7 @@
             <div class="offcanvas-header bg-nav" style="height: 70px">
               <a class="navbar-brand d-block" href="home.html">
                 <img
-                  src="assets/image/green_leaves_round_logo.png"
+                  src="../image/green_leaves_round_logo.png"
                   style="width: 60px"
                   alt="logo"
                 />
@@ -162,7 +162,7 @@
     <main>
       <section class="hero-banner mt-9 mt-md-0">
         <img
-          src="assets/image/enviroment.jpg"
+          src="../image/enviroment.jpg"
           alt=""
           class="bg-banner-img position-relative"
         />
@@ -189,7 +189,7 @@
             <div class="col-12 col-md-6">
               <div class="banner-img position-relative d-none d-md-block">
                 <img
-                  src="assets/image/banner-1.png"
+                  src="../image/banner-1.png"
                   alt=""
                   class="banner-img"
                 />
@@ -218,7 +218,7 @@
                     class="type-img rounded-circle bg-success d-flex justify-content-center align-items-center mb-3 m-auto"
                   >
                     <img
-                      src="assets/image/recycle type/barrel.png"
+                      src="../image/recycle type/barrel.png"
                       alt=""
                       class=""
                     />
@@ -245,7 +245,7 @@
                     class="type-img rounded-circle bg-success d-flex justify-content-center align-items-center mb-3 m-auto"
                   >
                     <img
-                      src="assets/image/recycle type/machin.png"
+                      src="../image/recycle type/machin.png"
                       alt=""
                       class=""
                     />
@@ -271,7 +271,7 @@
                     class="type-img rounded-circle bg-success d-flex justify-content-center align-items-center mb-3 m-auto"
                   >
                     <img
-                      src="assets/image/recycle type/organic.png"
+                      src="../image/recycle type/organic.png"
                       alt=""
                       class=""
                     />
@@ -295,7 +295,7 @@
                     class="type-img rounded-circle bg-success d-flex justify-content-center align-items-center mb-3 m-auto"
                   >
                     <img
-                      src="assets/image/recycle type/energy.png"
+                      src="../image/recycle type/energy.png"
                       alt=""
                       class=""
                     />
@@ -315,22 +315,22 @@
         <div class="slider bg-success">
           <div class="list">
             <div class="slide-item" style="--position: 1">
-              <img src="assets/image/circleclothes.png" alt="" />
+              <img src="../image/circleclothes.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 2">
-              <img src="assets/image/pizza4p.png" alt="" />
+              <img src="../image/pizza4p.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 3">
-              <img src="assets/image/trashisnice.png" alt="" />
+              <img src="../image/trashisnice.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 4">
-              <img src="assets/image/circleclothes.png" alt="" />
+              <img src="../image/circleclothes.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 5">
-              <img src="assets/image/pizza4p.png" alt="" />
+              <img src="../image/pizza4p.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 6">
-              <img src="assets/image/trashisnice.png" alt="" />
+              <img src="../image/trashisnice.png" alt="" />
             </div>
           </div>
         </div>
@@ -363,7 +363,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <img
-                    src="assets/image/Environmental Protection.jpg"
+                    src="../image/Environmental Protection.jpg"
                     alt=""
                     class="img-fluid rounded-4"
                     data-aos="flip-left"
@@ -392,7 +392,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <img
-                    src="assets/image/energy save.jpg"
+                    src="../image/energy save.jpg"
                     alt=""
                     class="img-fluid"
                     data-aos="flip-left"
@@ -423,7 +423,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <img
-                    src="assets/image/climate.jpg"
+                    src="../image/climate.jpg"
                     alt=""
                     class="img-fluid rounded-4"
                     data-aos="flip-left"
@@ -454,7 +454,7 @@
               class="footer-img mb-3 d-flex align-items-center"
             >
               <img
-                src="assets/image/green_leaves_round_logo.png"
+                src="../image/green_leaves_round_logo.png"
                 alt="logo"
                 style="width: 50px"
               />
@@ -550,7 +550,14 @@
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/function.js"></script>
+      <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../js/function.js"></script>
+    <script>
+      // AOS Animation
+      AOS.init({
+        duration: 1000,
+        once: false, // run loop
+      });
+    </script>
   </body>
 </html>
