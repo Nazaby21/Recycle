@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile | Recycle</title>
+    <link
+      rel="icon"
+      href="/assets/image/green_leaves_round_logo.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/d9ad53b8e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+  </head>
+  <body class="user-pf-body">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-nav border shadow fixed-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="home.html">
+            <img
+              src="../image/green_leaves_round_logo.png"
+              class="logo"
+              style="width: 40px"
+              alt="logo"
+            />
+          </a>
+
+          <!-- Offcanvas Menu -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header bg-nav">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand d-block" href="home.html">
+                  <img
+                    src="assets/image/green_leaves_round_logo.png"
+                    style="width: 60px"
+                    alt="logo"
+                  />
+                </a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
+              >
+                <!-- Search (Mobile Only) -->
+                <form
+                  class="d-flex mb-3 d-block d-md-none search-1"
+                  role="search"
+                >
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+
+                <!-- Menu Items -->
+                <li class="nav-item">
+                  <a class="nav-link fs-5 nav-hover" href="home.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link dropdown-toggle nav-hover no-caret"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">ឯកសារ</a></li>
+                    <li>
+                      <a class="dropdown-item" href="video-doc.html">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link dropdown-toggle nav-hover no-caret"
+                    href="donation.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html">បរិច្ចាគ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="e-commerce.html"
+                    >ផលិតផលកែច្នៃ</a
+                  >
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="about.html">អំពីយើង</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Side (Search + Notification + Profile + Toggle) -->
+          <div class="d-flex align-items-center">
+            <!-- Search (Desktop Only) -->
+            <form class="d-flex d-none d-md-block me-3 search-2" role="search">
+              <input
+                class="form-control mx-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+
+            <!-- Notification -->
+            <div class="dropdown me-2">
+              <button
+                class="btn dropdown-toggle no-caret position-relative"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 top-0 text-center"
+                  style="font-size: 10px"
+                  >4</span
+                >
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-end p-0 shadow"
+                style="width: 320px; max-height: 350px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div
+                  class="d-flex align-items-center justify-content-between border-bottom px-2 py-2 bg-light"
+                >
+                  <h6 class="mb-0">ការជូនដំណឹង</h6>
+                  <i class="bi bi-three-dots"></i>
+                </div>
+
+                <!-- Notifications -->
+                <li class="noti-item">
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/image/avatar-4.jpg"
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          ការបញ្ជាទិញរបស់អ្នកបានជោគជ័យ
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- Collapse Extra Notifications -->
+                <div class="collapse" id="extraNoti">
+                  <li class="noti-item">
+                    <a class="dropdown-item" href="#">
+                      <div class="py-2 d-flex align-items-center">
+                        <img
+                          src="assets/image/avatar-5.jpg"
+                          class="rounded-circle"
+                          style="width: 40px; height: 40px"
+                        />
+                        <div class="content ms-3" style="max-width: 220px">
+                          <p class="fw-bolder mb-1">John Doe</p>
+                          <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                            ការងារថ្មី មានសារសំខាន់ល្អណាស់ តែម៉ូតផលិតផល នៅមានកម្រិត មិនមានភាពទាក់ទាញ។
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </div>
+
+                <!-- See More -->
+                <li class="text-center border-top">
+                  <a
+                    class="btn btn-link w-100 py-2 d-block text-decoration-none fw-semibold text-success"
+                    data-bs-toggle="collapse"
+                    href="#extraNoti"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="extraNoti"
+                    style="font-size: 14px"
+                  >
+                    បន្ថែមទៀត
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Profile Dropdown -->
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-4.jpg"
+                alt="Profile"
+                class="avatar dropdown-toggle rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-end shadow py-0">
+                <li class="border-bottom">
+                  <a
+                    href="user_profile.html"
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt="Avatar"
+                      class="rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0">Nazaby</h6>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_profile.html"
+                    ><i class="bi bi-person-circle"></i
+                    ><span class="ms-2">ព័ត៌មានផ្ទាល់ខ្លួន</span></a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_setting.html"
+                    ><i class="bi bi-gear"></i
+                    ><span class="ms-2">ការកំណត់</span></a
+                  >
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html"
+                    ><i class="bi bi-box-arrow-in-left"></i
+                    ><span class="ms-2">ចាកចេញ</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Mobile Toggler -->
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4 ms-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container-fluid mt-7 pt-4">
+      <div class="row">
+        <!-- Sidebar for md+ only -->
+        <div
+          class="col-md-3 d-none d-md-block bg-white shadow-sm p-4 vh-100 sticky-top"
+        >
+          <div class="text-center mb-4">
+            <img
+              src="assets/image/avatar-4.jpg"
+              alt="Profile Picture"
+              class="rounded-circle border border-3 border-success mb-3"
+              style="width: 120px; height: 120px"
+            />
+            <h4 class="fw-bold">John Doe</h4>
+          </div>
+
+          <!-- Sidebar Links -->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="bi bi-person me-2 text-success"></i>
+              <a href="#" class="text-decoration-none text-dark">សង្ខេប</a>
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-clock-history me-2 text-success"></i>
+              <a href="#activity" class="text-decoration-none text-dark"
+                >សកម្មភាព</a
+              >
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-cart me-2 text-success"></i>
+              <a href="#purchase" class="text-decoration-none text-dark"
+                >ទិញទំនិញ</a
+              >
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-gear me-2 text-success"></i>
+              <a href="user_setting.html" class="text-decoration-none text-dark"
+                >ការកំណត់</a
+              >
+            </li>
+            <li class="list-group-item border-top">
+              <i class="bi bi-box-arrow-right me-2 text-danger"></i>
+              <a href="landing.html" class="text-decoration-none text-danger"
+                >ចាកចេញ</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-12 col-md-9 p-4">
+          <!-- Profile Image for sm screens -->
+          <div class="d-md-none text-center mb-4">
+            <img
+              src="assets/image/avatar-4.jpg"
+              alt="Profile Picture"
+              class="rounded-circle border border-3 border-success mb-3"
+              style="width: 120px; height: 120px"
+            />
+            <h4 class="fw-bold">John Doe</h4>
+            <p class="text-muted">Web Developer | Cambodia</p>
+          </div>
+
+          <!-- Profile Information -->
+          <section id="profile-info">
+            <div class="card shadow-sm mb-4">
+              <div class="card-header bg-success text-white">
+                <h5 class="mb-0">ព័ត៌មានផ្ទាល់ខ្លួន</h5>
+              </div>
+              <div class="card-body">
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <strong>Email:</strong> john.doe@example.com
+                  </div>
+                  <div class="col-sm-6">
+                    <strong>Phone:</strong> +855 12 345 678
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <strong>Joined:</strong> January 2024
+                  </div>
+                  <div class="col-sm-6">
+                    <strong>Address:</strong> Phnom Penh, Cambodia
+                  </div>
+                </div>
+                <div class="text-end">
+                  <a href="user_setting.html" class="btn btn-success">
+                    <i class="fas fa-edit me-2"></i>កែសម្រួល
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent Activity -->
+          <section id="activity">
+            <div class="card shadow-sm mb-4">
+              <div class="card-header bg-success text-white">
+                <h5 class="mb-0">សកម្មភាពថ្មីៗ</h5>
+              </div>
+              <div class="card-body">
+                <ul class="timeline list-unstyled">
+                  <li class="mb-3">
+                    <span class="fw-bold">បង្ហោះអ្វីថ្មី</span>
+                    <small class="text-muted d-block">2 ម៉ោងមុន</small>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fw-bold">កែប្រែរូប Profile</span>
+                    <small class="text-muted d-block">1 ថ្ងៃមុន</small>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fw-bold">ទិញទំនិញ</span>
+                    <small class="text-muted d-block">3 ថ្ងៃមុន</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Purchase Section -->
+          <section id="purchase">
+            <div class="card shadow-sm mb-4 custom-card">
+              <div
+                class="card-header bg-success text-white custom-card-header bg-success"
+              >
+                <h5 class="mb-0"><i class="bi bi-cart me-2"></i>ទិញទំនិញ</h5>
+              </div>
+              <div class="card-body">
+                <!-- Tabs -->
+                <ul
+                  class="nav custom-tabs mb-3"
+                  id="purchaseTabs"
+                  role="tablist"
+                >
+                  <li class="nav-item me-2" role="presentation">
+                    <button
+                      class="btn btn-outline-success active"
+                      id="pending-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pending"
+                      type="button"
+                      role="tab"
+                      aria-controls="pending"
+                      aria-selected="true"
+                    >
+                      រង់ចាំ
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="btn btn-outline-success"
+                      id="success-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#success"
+                      type="button"
+                      role="tab"
+                      aria-controls="success"
+                      aria-selected="false"
+                    >
+                      ជោគជ័យ
+                    </button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content mt-3" id="purchaseTabsContent">
+                  <!-- Pending Purchases -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="pending"
+                    role="tabpanel"
+                    aria-labelledby="pending-tab"
+                  >
+                    <ul class="list-group">
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Purchase #1001 - $50
+                        <span class="badge bg-warning text-dark">Pending</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Purchase #1002 - $30
+                        <span class="badge bg-warning text-dark">Pending</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Successful Purchases -->
+                  <div
+                    class="tab-pane fade"
+                    id="success"
+                    role="tabpanel"
+                    aria-labelledby="success-tab"
+                  >
+                    <ul class="list-group">
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Purchase #0999 - $120
+                        <span class="badge bg-success">Success</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                      >
+                        Purchase #0998 - $75
+                        <span class="badge bg-success">Success</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Security Section -->
+          <section id="security">
+            <div class="card shadow-sm mb-4">
+              <div class="card-header bg-success text-white">
+                <h5 class="mb-0">សុវត្ថិភាពគណនី</h5>
+              </div>
+              <div class="card-body">
+                <p>
+                  <i class="bi bi-shield-lock me-2 text-success"></i
+                  >ពាក្យសម្ងាត់បានផ្លាស់ប្តូរចុងក្រោយ៖ <strong>២ ខែមុន</strong>
+                </p>
+                <p>
+                  <i class="bi bi-phone me-2 text-success"></i>Two-Factor
+                  Authentication: <span class="text-danger">Disabled</span>
+                </p>
+                <div class="text-end">
+                  <button
+                    type="button"
+                    class="btn btn-outline-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#securityModal"
+                  >
+                    គ្រប់គ្រងសន្តិសុខ
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Security Modal -->
+            <div
+              class="modal fade"
+              id="securityModal"
+              tabindex="-1"
+              aria-labelledby="securityModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="securityModalLabel">
+                      <i class="bi bi-shield-lock me-2"></i>ឧបករណ៍ចូលប្រើប្រាស់
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close btn-close-white"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="mb-3">
+                      ឧបករណ៍ទាំងនេះបានចូលដំណើរការក្នុងគណនីរបស់អ្នក៖
+                    </p>
+                    <ul class="list-group">
+                      <!-- Device 1 -->
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center flex-column flex-md-row"
+                      >
+                        <div>
+                          <strong>Windows PC</strong> - Phnom Penh, Cambodia<br />
+                          <small class="text-muted"
+                            >សកម្មចុងក្រោយ៖ ១ ម៉ោងមុន</small
+                          >
+                        </div>
+                        <div class="mt-2 mt-md-0">
+                          <button
+                            class="btn btn-sm btn-danger"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#successModal"
+                          >
+                            ចាកចេញ
+                          </button>
+                        </div>
+                      </li>
+                      <!-- Device 2 -->
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center flex-column flex-md-row"
+                      >
+                        <div>
+                          <strong>iPhone 14</strong> - Phnom Penh, Cambodia<br />
+                          <small class="text-muted"
+                            >សកម្មចុងក្រោយ៖ ២ ថ្ងៃមុន</small
+                          >
+                        </div>
+                        <div class="mt-2 mt-md-0">
+                          <button
+                            class="btn btn-sm btn-danger"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#successModal"
+                          >
+                            ចាកចេញ
+                          </button>
+                        </div>
+                      </li>
+                      <!-- Device 3 -->
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center flex-column flex-md-row"
+                      >
+                        <div>
+                          <strong>MacBook Pro</strong> - Phnom Penh, Cambodia<br />
+                          <small class="text-muted"
+                            >សកម្មចុងក្រោយៈ ៥ ថ្ងៃមុន</small
+                          >
+                        </div>
+                        <div class="mt-2 mt-md-0">
+                          <button
+                            class="btn btn-sm btn-danger"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#successModal"
+                          >
+                            ចាកចេញ
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary rounded-3"
+                      data-bs-dismiss="modal"
+                    >
+                      បិទ
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Success Modal -->
+            <div
+              class="modal fade"
+              id="successModal"
+              tabindex="-1"
+              aria-labelledby="successModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-success">
+                  <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="successModalLabel">
+                      <i class="bi bi-check-circle me-2"></i>ជោគជ័យ
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close btn-close-white"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body text-center">
+                    ឧបករណ៍បានចាកចេញដោយជោគជ័យ!
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      data-bs-dismiss="modal"
+                    >
+                      OK
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/function.js"></script>
+  </body>
+</html>

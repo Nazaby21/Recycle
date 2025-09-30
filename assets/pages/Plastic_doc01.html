@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="icon"
+      href="/assets/image/green_leaves_round_logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/d9ad53b8e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-nav border shadow fixed-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="home.html">
+            <img
+              src="../image/green_leaves_round_logo.png"
+              class="logo"
+              style="width: 40px"
+              alt="logo"
+            />
+          </a>
+
+          <!-- Offcanvas Menu -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header bg-nav">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand d-block" href="home.html">
+                  <img
+                    src="assets/image/green_leaves_round_logo.png"
+                    style="width: 60px"
+                    alt="logo"
+                  />
+                </a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
+              >
+                <!-- Search (Mobile Only) -->
+                <form
+                  class="d-flex mb-3 d-block d-md-none search-1"
+                  role="search"
+                >
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+
+                <!-- Menu Items -->
+                <li class="nav-item">
+                  <a class="nav-link fs-5 nav-hover" href="home.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link active dropdown-toggle nav-hover no-caret"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">ឯកសារ</a></li>
+                    <li>
+                      <a class="dropdown-item" href="video-doc.html">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link dropdown-toggle nav-hover no-caret"
+                    href="donation.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html">បរិច្ចាគ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="e-commerce.html"
+                    >ផលិតផលកែច្នៃ</a
+                  >
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="about.html">អំពីយើង</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Side (Search + Notification + Profile + Toggle) -->
+          <div class="d-flex align-items-center">
+            <!-- Search (Desktop Only) -->
+            <form class="d-flex d-none d-md-block me-3 search-2" role="search">
+              <input
+                class="form-control mx-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+
+            <!-- Notification -->
+            <div class="dropdown me-2">
+              <button
+                class="btn dropdown-toggle no-caret position-relative"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 top-0 text-center"
+                  style="font-size: 10px"
+                  >4</span
+                >
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-end p-0 shadow"
+                style="width: 320px; max-height: 350px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div
+                  class="d-flex align-items-center justify-content-between border-bottom px-2 py-2 bg-light"
+                >
+                  <h6 class="mb-0">ការជូនដំណឹង</h6>
+                  <i class="bi bi-three-dots"></i>
+                </div>
+
+                <!-- Notifications -->
+                <li class="noti-item">
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/image/avatar-4.jpg"
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          ការបញ្ជាទិញរបស់អ្នកបានជោគជ័យ
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- Collapse Extra Notifications -->
+                <div class="collapse" id="extraNoti">
+                  <li class="noti-item">
+                    <a class="dropdown-item" href="#">
+                      <div class="py-2 d-flex align-items-center">
+                        <img
+                          src="assets/image/avatar-5.jpg"
+                          class="rounded-circle"
+                          style="width: 40px; height: 40px"
+                        />
+                        <div class="content ms-3" style="max-width: 220px">
+                          <p class="fw-bolder mb-1">John Doe</p>
+                          <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                            ការងារថ្មី មានសារសំខាន់ល្អណាស់ តែម៉ូតផលិតផល
+                            នៅមានកម្រិត មិនមានភាពទាក់ទាញ។
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </div>
+
+                <!-- See More -->
+                <li class="text-center border-top">
+                  <a
+                    class="btn btn-link w-100 py-2 d-block text-decoration-none fw-semibold text-success"
+                    data-bs-toggle="collapse"
+                    href="#extraNoti"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="extraNoti"
+                    style="font-size: 14px"
+                  >
+                    បន្ថែមទៀត
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Profile Dropdown -->
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-4.jpg"
+                alt="Profile"
+                class="avatar dropdown-toggle rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-end shadow py-0">
+                <li class="border-bottom">
+                  <a
+                    href="user_profile.html"
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt="Avatar"
+                      class="rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0">Nazaby</h6>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_profile.html"
+                    ><i class="bi bi-person-circle"></i
+                    ><span class="ms-2">ព័ត៌មានផ្ទាល់ខ្លួន</span></a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_setting.html"
+                    ><i class="bi bi-gear"></i
+                    ><span class="ms-2">ការកំណត់</span></a
+                  >
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html"
+                    ><i class="bi bi-box-arrow-in-left"></i
+                    ><span class="ms-2">ចាកចេញ</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Mobile Toggler -->
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4 ms-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="py-5 mt-8">
+        <div class="container bg-light p-4 rounded-3 shadow-sm">
+          <!-- Title -->
+          <h2 class="fw-bold mb-4 text-center text-success">
+            ពីសំរាមប្លាស្ទិក កែច្នៃក្លាយទៅជាសិល្បៈគំនូរ
+            និងរូបចម្លាក់ដ៏គួរឱ្យកោតសរសើរ
+          </h2>
+
+          <div class="row g-4 align-items-start">
+            <!-- Content -->
+            <div class="col-lg-8">
+              <p class="lh-lg">
+                ប្លាស្ទិក
+                បន្ទាប់ពីប្រើប្រាស់រួចហើយនឹងក្លាយទៅជាសំណល់មួយប្រភេទដែលប៉ះពាល់យ៉ាងខ្លាំងដល់បរិស្ថាន
+                ព្រោះវាមិនងាយរលាយ កប់ក្នុងដីក៏ពិបាក បោះក្នុងទឹកក៏មិនកើត
+                ហើយបើដុតចោលក៏បង្កជាផ្សែងពុលប៉ះពាល់ដល់បរិយាកាស និងស្រទាប់អូហ្សូន។
+                អាស្រ័យដោយមើលឃើញពីផលប៉ះពាល់នេះ
+                យុវជនកូនខ្មែរមួយរូបបានកែច្នៃកាកសំណល់ប្លាស្ទិកទៅជាស្នាដៃសិល្បៈថ្មី
+                ទាំងគំនូរ និងរូបចម្លាក់ ដែលកំពុងទទួលបានការស្ញប់ស្ញែងពីសហគមន៍។
+              </p>
+
+              <p class="lh-lg">
+                លោក <strong>រៀម មុនីស៊ីឡុង</strong> សិល្បករពីខេត្តសៀមរាប
+                ត្រូវបានគេស្គាល់ថាជាអ្នកកែច្នៃសំរាមទៅជាស្នាដៃសិល្បៈជាច្រើនទម្រង់
+                ហើយទទួលបានការគាំទ្រពីប្រជាពលរដ្ឋ ស្ថាប័ន
+                និងអង្គការក្រៅរដ្ឋាភិបាល រហូតទទួលបានពានរង្វាន់ជាច្រើន។
+              </p>
+
+              <p class="lh-lg">
+                ការចំណាយពេលក្នុងការផលិតអាស្រ័យលើទំហំស្នាដៃ៖ ស្នាដៃតូចៗប្រហែល ១–២
+                សប្ដាហ៍ ខណៈស្នាដៃធំៗអាចចំណាយពេល ១–២ ខែ
+                ហើយតម្រូវឱ្យមានកម្លាំងបន្ថែមពីក្រុមការងារ។ មុនពេលវិបត្តិកូវីដ
+                លោកមានក្រុមប្រមាណ ១០ នាក់ជួយផលិត។
+              </p>
+
+              <p class="lh-lg">
+                លោកបានចាប់ផ្ដើមអាជីពនេះតាំងពីឆ្នាំ ២០០៩
+                បន្ទាប់ពីបញ្ឈប់ការងារជាជាងគំនូរតាមវត្តអារាម
+                ហើយបានរៀនកែច្នៃក្រដាសចាស់ៗ ទៅជាគ្រឿងតាំងលម្អ។ ពេលក្រោយ
+                លោកចូលរួមកែច្នៃសំណល់សរីរាង្គ សំណល់ផ្ទះបាយ និងប្លាស្ទិកបញ្ចូលគ្នា
+                ទៅជាស្នាដៃសិល្បៈប្លែកៗ។
+              </p>
+
+              <p class="lh-lg">
+                ទោះបីជាមានផលប៉ះពាល់ដូចជាក្លិនមិនល្អ ឬការដឹកជញ្ជូនពិបាក
+                លោកមុនីស៊ីឡុងមានគម្រោងបង្កើតក្រុមរឹងមាំមួយ និងបើកជាសាលកែច្នៃ
+                ដើម្បីរក្សា និងបង្ហាញស្នាដៃដល់ភ្ញៀវជាតិ និងអន្តរជាតិ
+                ជាការចូលរួមសម្អាតបរិស្ថាន និងកាត់បន្ថយសំណល់ប្លាស្ទិក។
+              </p>
+            </div>
+
+            <!-- Image -->
+            <div class="col-lg-4 text-center">
+              <img
+                src="../image/minea/image03.png"
+                alt="សិល្បៈពីសំរាមប្លាស្ទិក"
+                class="img-fluid rounded-3 shadow-sm"
+              />
+              <img
+                src="../image/minea/image05.png"
+                alt="សិល្បៈពីសំរាមប្លាស្ទិក"
+                class="img-fluid rounded-3 shadow-sm"
+                style="margin-top: 30px"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container py-5">
+          <h3>អត្ថបទផ្សេងៗ</h3>
+          <div class="swiper">
+            <!-- Wrapper -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card">
+                  <a
+                    href="Plastic_doc.html"
+                    class="text-decoration-none text-dark"
+                  >
+                    <div
+                      class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                    >
+                      <img
+                        src="../image/minea/image02.png"
+                        alt="ការកែច្នៃផ្លាស្ទិក"
+                        class="card-img-top rounded-top-3"
+                        style="height: 300px"
+                      />
+                      <div class="card-body" style="height: 100px">
+                        <p class="card-text">
+                          សំរាមប្លាស្ទិក
+                          ត្រូវបានកែច្នៃប្រើជាវត្ថុធាតុផ្សំយ៉ាងសំខាន់ក្នុងការផលិតឥដ្ឋបរិស្ថាន
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <a
+                    href="Plastic_doc01.html"
+                    class="text-decoration-none text-dark"
+                  >
+                    <div
+                      class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                    >
+                      <img
+                        src="../image/minea/image04.png"
+                        alt="ការកែច្នៃផ្លាស្ទិក"
+                        class="card-img-top rounded-top-3"
+                        style="height: 300px"
+                      />
+                      <div class="card-body" style="height: 100px">
+                        <p class="card-text">
+                          ពីសំរាមប្លាស្ទិក កែច្នៃក្លាយទៅជាសិល្បៈគំនូរ
+                          និងរូបចម្លាក់ដ៏គួរឱ្យកោតសរសើរ
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <a
+                    href="Plastic_doc.html"
+                    class="text-decoration-none text-dark"
+                  >
+                    <div
+                      class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                    >
+                      <img
+                        src="../image/minea/maxresdefault.jpg"
+                        alt="ការកែច្នៃផ្លាស្ទិក"
+                        class="card-img-top rounded-top-3"
+                        style="height: 300px"
+                      />
+                      <div class="card-body" style="height: 100px">
+                        <p class="card-text">
+                          តើគេកែច្នៃផ្លាស្ទិកយ៉ាងដូចម្ដេច?
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <a
+                    href="Plastic_doc.html"
+                    class="text-decoration-none text-dark"
+                  >
+                    <div
+                      class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                    >
+                      <img
+                        src="../image/minea/bb_02.png"
+                        alt="ការកែច្នៃផ្លាស្ទិក"
+                        class="card-img-top rounded-top-3"
+                        style="height: 300px"
+                      />
+                      <div class="card-body" style="height: 100px">
+                        <p class="card-text">
+                          ជំនាញកែច្នៃបន្លែ និង​ផ្លែឈើ
+                          ជំនាញថ្មី​ជួយ​កសិករកែច្នៃផលិតផលកសិកម្ម
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <a
+                    href="Plastic_doc01.html"
+                    class="text-decoration-none text-dark"
+                  >
+                    <div
+                      class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                    >
+                      <img
+                        src="../image/minea/coffee-img.png"
+                        alt="ការកែច្នៃផ្លាស្ទិក"
+                        class="card-img-top rounded-top-3"
+                        style="height: 300px"
+                      />
+                      <div class="card-body" style="height: 100px">
+                        <p class="card-text">
+                          ប្រយោជន៍នៃកាកកាហ្វេចំពោះដំណាំដែលអ្នកមិននឹកស្មានដល់
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          576: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          992: { slidesPerView: 4 },
+        },
+      });
+    </script>
+  </body>
+</html>

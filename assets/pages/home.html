@@ -3,54 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
     <link
       rel="icon"
       href="/assets/image/green_leaves_round_logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/theme.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/d9ad53b8e3.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Recycle</title>
   </head>
   <body>
     <header>
-      <nav
-        class="navbar bg-nav fixed-top navbar-expand-lg"
-        style="height: 70px"
-      >
+      <nav class="navbar navbar-expand-lg bg-nav border shadow fixed-top">
         <div class="container">
+          <!-- Logo -->
           <a class="navbar-brand" href="home.html">
             <img
-              src="assets/image/green_leaves_round_logo.png"
-              class="ms-0 ms-md-5 logo"
+              src="../image/green_leaves_round_logo.png"
+              class="logo"
               style="width: 40px"
               alt="logo"
             />
           </a>
 
-          <!-- <div
+          <!-- Offcanvas Menu -->
+          <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
-            <div class="offcanvas-header bg-nav" style="height: 70px">
-              <a class="navbar-brand d-block" href="home.html">
-                <img
-                  src="assets/image/green_leaves_round_logo.png"
-                  style="width: 60px"
-                  alt="logo"
-                />
-              </a>
+            <div class="offcanvas-header bg-nav">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand d-block" href="home.html">
+                  <img
+                    src="../image/green_leaves_round_logo.png"
+                    style="width: 60px"
+                    alt="logo"
+                  />
+                </a>
+              </h5>
               <button
                 type="button"
                 class="btn-close"
@@ -58,40 +61,29 @@
                 aria-label="Close"
               ></button>
             </div>
+
             <div class="offcanvas-body">
               <ul
                 class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
               >
+                <!-- Search (Mobile Only) -->
+                <form
+                  class="d-flex mb-3 d-block d-md-none search-1"
+                  role="search"
+                >
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+
+                <!-- Menu Items -->
                 <li class="nav-item">
-                  <a
-                    class="nav-link active fs-5 nav-hover"
-                    aria-current="page"
-                    href="home.html"
+                  <a class="nav-link active fs-5 nav-hover" href="home.html"
                     >ទំព័រដើម</a
                   >
-                </li>
-                <li class="nav-item dropdown fs-5">
-                  <a
-                    class="nav-link nav-hover no-caret dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    អត្ថបទ
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="assets/pages/signin.html"
-                        >ឯកសារ</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="project-folder/signin.html"
-                        >វីដេអូ</a
-                      >
-                    </li>
-                  </ul>
                 </li>
                 <li class="nav-item dropdown fs-5">
                   <a
@@ -101,41 +93,196 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="frist_doc.html">ឯកសារ</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="video-doc.html">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link dropdown-toggle nav-hover no-caret"
+                    href="donation.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
                     សកម្មភាពសង្គម
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="project-folder/signin.html"
+                      <a class="dropdown-item" href="event.html"
                         >ព្រឹត្តិការណ៍</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="project-folder/signin.html"
-                        >បរិច្ចាគ</a
-                      >
+                      <a class="dropdown-item" href="donation.html">បរិច្ចាគ</a>
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item fs-5">
-                  <a
-                    class="nav-link nav-hover"
-                    href="project-folder/signin.html"
+                  <a class="nav-link nav-hover" href="e-commerce.html"
                     >ផលិតផលកែច្នៃ</a
                   >
                 </li>
                 <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="about.html">អំពីយើង</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Side (Search + Notification + Profile + Toggle) -->
+          <div class="d-flex align-items-center">
+            <!-- Search (Desktop Only) -->
+            <form class="d-flex d-none d-md-block me-3 search-2" role="search">
+              <input
+                class="form-control mx-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+
+            <!-- Notification -->
+            <div class="dropdown me-2">
+              <button
+                class="btn dropdown-toggle no-caret position-relative"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 top-0 text-center"
+                  style="font-size: 10px"
+                  >4</span
+                >
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-end p-0 shadow"
+                style="width: 320px; max-height: 350px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div
+                  class="d-flex align-items-center justify-content-between border-bottom px-2 py-2 bg-light"
+                >
+                  <h6 class="mb-0">ការជូនដំណឹង</h6>
+                  <i class="bi bi-three-dots"></i>
+                </div>
+
+                <!-- Notifications -->
+                <li class="noti-item">
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="../image/avatar-4.jpg"
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          ការបញ្ជាទិញរបស់អ្នកបានជោគជ័យ
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- Collapse Extra Notifications -->
+                <div class="collapse" id="extraNoti">
+                  <li class="noti-item">
+                    <a class="dropdown-item" href="#">
+                      <div class="py-2 d-flex align-items-center">
+                        <img
+                          src="../image/avatar-5.jpg"
+                          class="rounded-circle"
+                          style="width: 40px; height: 40px"
+                        />
+                        <div class="content ms-3" style="max-width: 220px">
+                          <p class="fw-bolder mb-1">John Doe</p>
+                          <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                            ការងារថ្មី មានសារសំខាន់ល្អណាស់ តែម៉ូតផលិតផល នៅមានកម្រិត មិនមានភាពទាក់ទាញ។
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </div>
+
+                <!-- See More -->
+                <li class="text-center border-top">
                   <a
-                    class="nav-link nav-hover"
-                    href="project-folder/signin.html"
-                    >អំពីយើង</a
+                    class="btn btn-link w-100 py-2 d-block text-decoration-none fw-semibold text-success"
+                    data-bs-toggle="collapse"
+                    href="#extraNoti"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="extraNoti"
+                    style="font-size: 14px"
+                  >
+                    បន្ថែមទៀត
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Profile Dropdown -->
+            <div class="dropdown">
+              <img
+                src="../image/avatar-4.jpg"
+                alt="Profile"
+                class="avatar dropdown-toggle rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-end shadow py-0">
+                <li class="border-bottom">
+                  <a
+                    href="user_profile.html"
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="../image/avatar-4.jpg"
+                      alt="Avatar"
+                      class="rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0">Nazaby</h6>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_profile.html"
+                    ><i class="bi bi-person-circle"></i
+                    ><span class="ms-2">ព័ត៌មានផ្ទាល់ខ្លួន</span></a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_setting.html"
+                    ><i class="bi bi-gear"></i
+                    ><span class="ms-2">ការកំណត់</span></a
+                  >
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html"
+                    ><i class="bi bi-box-arrow-in-left"></i
+                    ><span class="ms-2">ចាកចេញ</span></a
                   >
                 </li>
               </ul>
             </div>
-          </div> -->
-          <div class="user-login d-flex align-items-center">
+
+            <!-- Mobile Toggler -->
             <button
-              class="navbar-toggler fs-6 mt-1 landing-nav"
+              class="navbar-toggler border-0 shadow-none fs-4 ms-2"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
@@ -144,31 +291,21 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a
-              href="assets/pages/signin.html"
-              class="btn btn-success mx-1 mt-1 landing-btn"
-              >ចូលគណនី</a
-            >
-            <a
-              href="assets/pages/register.html"
-              class="btn border border-success mx-1 mt-1 landing-btn register-btn"
-              >បង្កើតគណនី</a
-            >
           </div>
         </div>
       </nav>
     </header>
     <main>
       <section class="hero-banner mt-9 mt-md-0">
-        <img
-          src="assets/image/enviroment.jpg"
-          alt=""
-          class="bg-banner-img position-relative"
-        />
+        <img src="../image/enviroment.jpg" alt="" class="bg-banner-img" />
+        <div class="overlay"></div>
         <div class="container banner">
           <div class="row d-flex align-items-center">
             <div class="col-12 col-md-6">
-              <h6 class="text-success fs-6 mt-5" id="text-animation"></h6>
+              <h6
+                class="text-success fs-6 mt-5 text-animation"
+                id="text-animation"
+              ></h6>
               <h2 class="mt-3 text-fs">
                 សាមគ្គីគ្នានាំមកនៅការជោគជ័យ, ចូររួមទាំងអស់គ្នាដើម្បី<span
                   class="text-success"
@@ -186,9 +323,9 @@
               </a>
             </div>
             <div class="col-12 col-md-6">
-              <div class="banner-img position-relative d-none d-md-block">
+              <div class="banner-img d-none d-md-block">
                 <img
-                  src="assets/image/banner-1.png"
+                  src="../image/banner-1.png"
                   alt=""
                   class="banner-img"
                 />
@@ -197,16 +334,16 @@
           </div>
         </div>
       </section>
-      <section class="type-recycle pt-5 pb-8">
+      <section class="type-recycle pt-2 pb-8">
         <div class="container">
           <h2 class="scale-up-ver-center text-center pt-4 pb-3">
             ប្រភេទនៃការកែច្នៃ
           </h2>
           <div class="row g-3">
             <!-- 1 -->
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 ">
               <div
-                class="card card-responsive p-4"
+                class="card card-responsive p-4 "
                 data-aos="fade-zoom-in"
                 data-aos-easing="ease-in-back"
                 data-aos-delay="50"
@@ -217,7 +354,7 @@
                     class="type-img rounded-circle bg-success d-flex justify-content-center align-items-center mb-3 m-auto"
                   >
                     <img
-                      src="assets/image/recycle type/barrel.png"
+                      src="../image/recycle type/barrel.png"
                       alt=""
                       class=""
                     />
@@ -244,7 +381,7 @@
                     class="type-img rounded-circle bg-success d-flex justify-content-center align-items-center mb-3 m-auto"
                   >
                     <img
-                      src="assets/image/recycle type/machin.png"
+                      src="../image/recycle type/machin.png"
                       alt=""
                       class=""
                     />
@@ -270,7 +407,7 @@
                     class="type-img rounded-circle bg-success d-flex justify-content-center align-items-center mb-3 m-auto"
                   >
                     <img
-                      src="assets/image/recycle type/organic.png"
+                      src="../image/recycle type/organic.png"
                       alt=""
                       class=""
                     />
@@ -294,7 +431,7 @@
                     class="type-img rounded-circle bg-success d-flex justify-content-center align-items-center mb-3 m-auto"
                   >
                     <img
-                      src="assets/image/recycle type/energy.png"
+                      src="../image/recycle type/energy.png"
                       alt=""
                       class=""
                     />
@@ -314,28 +451,28 @@
         <div class="slider bg-success">
           <div class="list">
             <div class="slide-item" style="--position: 1">
-              <img src="assets/image/circleclothes.png" alt="" />
+              <img src="../image/circleclothes.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 2">
-              <img src="assets/image/pizza4p.png" alt="" />
+              <img src="../image/pizza4p.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 3">
-              <img src="assets/image/trashisnice.png" alt="" />
+              <img src="../image/trashisnice.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 4">
-              <img src="assets/image/circleclothes.png" alt="" />
+              <img src="../image/circleclothes.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 5">
-              <img src="assets/image/pizza4p.png" alt="" />
+              <img src="../image/pizza4p.png" alt="" />
             </div>
             <div class="slide-item" style="--position: 6">
-              <img src="assets/image/trashisnice.png" alt="" />
+              <img src="../image/trashisnice.png" alt="" />
             </div>
           </div>
         </div>
       </section>
       <section class="benefit">
-        <div class="text-center pt-8 bg-body-secondary">
+        <div class="text-center pt-5 bg-body-secondary">
           <h2 class="scale-up-ver-center m-0">អត្ថប្រយោជន៍នៃការកែច្នៃ</h2>
         </div>
         <div class="content">
@@ -362,7 +499,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <img
-                    src="assets/image/Environmental Protection.jpg"
+                    src="../image/Environmental Protection.jpg"
                     alt=""
                     class="img-fluid rounded-4"
                     data-aos="flip-left"
@@ -391,7 +528,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <img
-                    src="assets/image/energy save.jpg"
+                    src="../image/energy save.jpg"
                     alt=""
                     class="img-fluid"
                     data-aos="flip-left"
@@ -422,7 +559,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <img
-                    src="assets/image/climate.jpg"
+                    src="../image/climate.jpg"
                     alt=""
                     class="img-fluid rounded-4"
                     data-aos="flip-left"
@@ -436,10 +573,41 @@
           </div>
         </div>
       </section>
-      <section class="section-random">
-        <div class="container">
-          <div class="row">
-            <div class="test"></div>
+      <section class="section-comment py-8 position-relative">
+        <!-- Background image -->
+        <img
+          src="../image/banner-2.jpg"
+          alt=""
+          class="w-100 h-100 position-absolute top-0 start-0"
+          style="object-fit: cover; z-index: 1"
+        />
+
+        <!-- Overlay -->
+        <div class="overlay-1"></div>
+
+        <!-- Content -->
+        <div class="container position-relative z-3">
+          <div class="row justify-content-center text-center">
+            <div class="col-12">
+              <h2 class="scale-up-ver-center text-white mb-4 fw-bold">
+                តើអ្នកមានមតិយោបលយ៉ាងណាមកលើគេហទំព័ររបស់ពួកយើង?
+              </h2>
+            </div>
+            <div class="col-12 col-md-8 col-lg-6">
+              <form action="" class="comment-form p-4 rounded-4 shadow-lg">
+                <textarea
+                  class="text-area rounded-3 p-3"
+                  placeholder="មតិយោបល....."
+                  rows="5"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="btn submit-btn mt-3 w-100 bg-success"
+                >
+                  ដាក់ស្នើ
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -453,7 +621,7 @@
               class="footer-img mb-3 d-flex align-items-center"
             >
               <img
-                src="assets/image/green_leaves_round_logo.png"
+                src="../image/green_leaves_round_logo.png"
                 alt="logo"
                 style="width: 50px"
               />
@@ -547,7 +715,10 @@
         </div>
       </div>
     </footer>
-    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/function.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/function.js"></script>
   </body>
 </html>

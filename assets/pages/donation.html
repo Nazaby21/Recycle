@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco Donation & Events Cambodia</title>
+    <link
+      rel="icon"
+      href="/assets/image/green_leaves_round_logo.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-nav border shadow fixed-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="home.html">
+            <img
+              src="../image/green_leaves_round_logo.png"
+              class="logo"
+              style="width: 40px"
+              alt="logo"
+            />
+          </a>
+
+          <!-- Offcanvas Menu -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header bg-nav">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand d-block" href="home.html">
+                  <img
+                    src="assets/image/green_leaves_round_logo.png"
+                    style="width: 60px"
+                    alt="logo"
+                  />
+                </a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
+              >
+                <!-- Search (Mobile Only) -->
+                <form
+                  class="d-flex mb-3 d-block d-md-none search-1"
+                  role="search"
+                >
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+
+                <!-- Menu Items -->
+                <li class="nav-item">
+                  <a class="nav-link fs-5 nav-hover" href="home.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link dropdown-toggle nav-hover no-caret"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="frist_doc.html">ឯកសារ</a></li>
+                    <li>
+                      <a class="dropdown-item" href="video-doc.html">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link active dropdown-toggle nav-hover no-caret"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html">បរិច្ចាគ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="e-commerce.html"
+                    >ផលិតផលកែច្នៃ</a
+                  >
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="about.html">អំពីយើង</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Side (Search + Notification + Profile + Toggle) -->
+          <div class="d-flex align-items-center">
+            <!-- Search (Desktop Only) -->
+            <form class="d-flex d-none d-md-block me-3 search-2" role="search">
+              <input
+                class="form-control mx-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+
+            <!-- Notification -->
+            <div class="dropdown me-2">
+              <button
+                class="btn dropdown-toggle no-caret position-relative"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 top-0 text-center"
+                  style="font-size: 10px"
+                  >4</span
+                >
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-end p-0 shadow"
+                style="width: 320px; max-height: 350px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div
+                  class="d-flex align-items-center justify-content-between border-bottom px-2 py-2 bg-light"
+                >
+                  <h6 class="mb-0">ការជូនដំណឹង</h6>
+                  <i class="bi bi-three-dots"></i>
+                </div>
+
+                <!-- Notifications -->
+                <li class="noti-item">
+                  <a class="dropdown-item" href="#">
+                    <div class="py-2 d-flex align-items-center">
+                      <img
+                        src="assets/image/avatar-4.jpg"
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
+                      <div class="content ms-3" style="max-width: 220px">
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
+                        <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                          ការបញ្ជាទិញរបស់អ្នកបានជោគជ័យ
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- Collapse Extra Notifications -->
+                <div class="collapse" id="extraNoti">
+                  <li class="noti-item">
+                    <a class="dropdown-item" href="#">
+                      <div class="py-2 d-flex align-items-center">
+                        <img
+                          src="assets/image/avatar-5.jpg"
+                          class="rounded-circle"
+                          style="width: 40px; height: 40px"
+                        />
+                        <div class="content ms-3" style="max-width: 220px">
+                          <p class="fw-bolder mb-1">John Doe</p>
+                          <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                            ការងារថ្មី មានសារសំខាន់ល្អណាស់ តែម៉ូតផលិតផល នៅមានកម្រិត មិនមានភាពទាក់ទាញ។
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </div>
+
+                <!-- See More -->
+                <li class="text-center border-top">
+                  <a
+                    class="btn btn-link w-100 py-2 d-block text-decoration-none fw-semibold text-success"
+                    data-bs-toggle="collapse"
+                    href="#extraNoti"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="extraNoti"
+                    style="font-size: 14px"
+                  >
+                    បន្ថែមទៀត
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Profile Dropdown -->
+            <div class="dropdown">
+              <img
+                src="assets/image/avatar-4.jpg"
+                alt="Profile"
+                class="avatar dropdown-toggle rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-end shadow py-0">
+                <li class="border-bottom">
+                  <a
+                    href="user_profile.html"
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="assets/image/avatar-4.jpg"
+                      alt="Avatar"
+                      class="rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0">Nazaby</h6>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_profile.html"
+                    ><i class="bi bi-person-circle"></i
+                    ><span class="ms-2">ព័ត៌មានផ្ទាល់ខ្លួន</span></a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_setting.html"
+                    ><i class="bi bi-gear"></i
+                    ><span class="ms-2">ការកំណត់</span></a
+                  >
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="landing.html"
+                    ><i class="bi bi-box-arrow-in-left"></i
+                    ><span class="ms-2">ចាកចេញ</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Mobile Toggler -->
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4 ms-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Carousel -->
+      <section>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active"
+              style="
+                background-image: url('https://images.pexels.com/photos/31670489/pexels-photo-31670489.jpeg');
+              "
+            >
+              <div
+                class="d-flex h-100 justify-content-center align-items-center"
+              >
+                <div class="hero-content">
+                  <h1>
+                    <h1><span class="icon">♻️</span> Zero-Waste</h1>
+                  </h1>
+                  <p>ប្រើប្រាស់ឡើងវិញ, កាត់បន្ថយ, និងជួយសហគមន៍</p>
+                  <a href="donate.html" class="btn btn-success"
+                    >កន្លែងទទួលបរិច្ចាគ</a
+                  >
+                  <a href="used.html" class="btn btn-light"
+                    >បរិច្ចាគរបស់ដែលអ្នកប្រើប្រាស់រួច
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="carousel-item"
+              style="
+                background-image: url('https://images.pexels.com/photos/1131458/pexels-photo-1131458.jpeg');
+              "
+            >
+              <div
+                class="d-flex h-100 justify-content-center align-items-center"
+              >
+                <div class="hero-content">
+                  <h1>
+                    <span class="icon">♻️</span>ចូលរួមក្នុងការកាត់បន្ថយកាកសំណល់
+                  </h1>
+                  <p>បរិច្ចាគ, កែច្នៃ និងធ្វើឱ្យកម្ពុជាស្រស់ស្អាត</p>
+                  <a href="donate.html" class="btn btn-success"
+                    >កន្លែងទទួលបរិច្ចាគ
+                  </a>
+                  <a href="used.html" class="btn btn-light"
+                    >បរិច្ចាគរបស់ដែលអ្នកប្រើប្រាស់រួច
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="carousel-item"
+              style="
+                background-image: url('https://images.pexels.com/photos/8180523/pexels-photo-8180523.jpeg');
+              "
+            >
+              <div
+                class="d-flex h-100 justify-content-center align-items-center"
+              >
+                <div class="hero-content">
+                  <h1>
+                    <span class="icon">♻️</span>កែច្នៃប្លាស្ទិក
+                    និងវត្ថុប្រើប្រាស់ឡើងវិញ
+                  </h1>
+                  <p>អប់រំ និងចូលរួមក្នុងគម្រោងការពារបរិស្ថាន</p>
+                  <a href="donate.html" class="btn btn-success"
+                    >កន្លែងទទួលបរិច្ចាគ
+                  </a>
+                  <a href="used.html" class="btn btn-light"
+                    >បរិច្ចាគរបស់ដែលអ្នកប្រើប្រាស់រួច
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!-- How It Works Section -->
+      <section>
+        <div class="container text-center my-5">
+          <h2 class="mb-4">របៀបដំណើរការ</h2>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <i class="fa-solid fa-box-open fa-2x text-success mb-2"></i>
+              <h5>1. ប្រមូល</h5>
+              <p>
+                ជ្រើសរើសវត្ថុដែលអ្នកមិនចាំបាច់ប្រើទៀត ប៉ុន្តែវានៅតែមានប្រយោជន៍
+              </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <i
+                class="fa-solid fa-hand-holding-heart fa-2x text-success mb-2"
+              ></i>
+              <h5>2. បរិច្ចាគ</h5>
+              <p>នាំវត្ថុទាំងនោះទៅកន្លែងដែលត្រូវការ</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <i class="fa-solid fa-smile fa-2x text-success mb-2"></i>
+              <h5>3. បង្កើតឥទ្ធិពល</h5>
+              <p>ការបរិច្ចាគរបស់អ្នកអាចជួយអ្នកដទៃ និងកាត់បន្ថយកាកសំណល់</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Donations place Section -->
+      <section id="donations" class="container my-5">
+        <h2>
+          <i class="fas fa-map-marker-alt me-2 mb-3 text-danger"></i
+          >កន្លែងទទួលបរិច្ចាគ និងកែច្នៃ
+        </h2>
+        <div class="row g-4">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="../image/Kropum/p1.jpg"
+                class="card-img"
+                alt="Pizza 4P’s"
+                style="height: 250px; object-fit: cover"
+              />
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a
+                    href="pizza4ps.html"
+                    class="text-decoration-none text-success stretched-link"
+                    >Pizza 4P’s</a
+                  >
+                </h3>
+                <p class="card-text">
+                  Pizza 4P’s ចូលរួមក្នុងគម្រោង
+                  ដែលកែច្នៃកាកសំណល់ទៅជារបស់ប្រើប្រាស់...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="../image/Kropum/beco____-.jpg"
+                class="card-img"
+                alt="Be Eco"
+                style="height: 250px; object-fit: cover"
+              />
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a
+                    href="be_eco.html"
+                    class="text-decoration-none text-success stretched-link"
+                    >Be Eco</a
+                  >
+                </h3>
+                <p class="card-text">
+                  Be Eco ចូលរួមក្នុងគម្រោង
+                  ដែលកែច្នៃកាកសំណល់ទៅជារបស់ប្រើប្រាស់...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="checklist">
+              <h3 class="card-title">អ្វីដែលអ្នកអាចបរិច្ចាគ</h3>
+              <ul>
+                <li>ប្លាស្ទិកស្អាត (ដប, កញ្ចប់)</li>
+                <li>សំលៀកបំពាក់ដែលនៅស្ថានភាពល្អ</li>
+                <li>របស់ប្រើប្រាស់ក្នុងផ្ទះ</li>
+                <li>សម្ភារៈអេឡិចត្រូនិចចាស់.....</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Donate Section -->
+      <section id="donate-item">
+        <div class="container my-5">
+          <h2 class="mb-4">ចែករំលែករបស់ដែលអ្នកប្រើប្រាស់រួច</h2>
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="text-center p-3 shadow-lg rounded-3">
+                <i class="fa-solid fa-tshirt fa-2x text-success mb-3"></i>
+                <h5 class="card-title">សម្លៀកបំពាក់</h5>
+                <p class="card-text">
+                  បរិច្ចាគសម្លៀកបំពាក់ដែលអ្នកបានប្រើប្រាស់រួច
+                  ដល់មនុស្សដែលកំពុងត្រូវការ
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="text-center p-3 shadow-lg rounded-3">
+                <i class="fa-solid fa-couch fa-2x text-success mb-3"></i>
+                <h5 class="card-title">គ្រឿងសង្ហារិម</h5>
+                <p class="card-text">
+                  ផ្តល់ជីវិតថ្មីដល់គ្រឿងសង្ហារឹមចាស់របស់អ្នក
+                  ដោយបរិច្ចាគវាទៅកាន់កន្លែងដែលត្រូវការ
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="text-center p-3 shadow-lg rounded-3">
+                <i class="fa-solid fa-laptop fa-2x text-success mb-3"></i>
+                <h5 class="card-title">ឧបករណ៍អេឡិចត្រូនិច</h5>
+                <p class="card-text">
+                  កែច្នៃ និងប្រើឡើងវិញឧបករណ៍អេឡិចត្រូនិក ជំនួសឱ្យការបោះចោល.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Donate Partner Section -->
+      <section>
+        <div class="container my-5">
+          <h3 class="mt-4">ដៃគូរដែលទទួលបរិច្ចាគ</h3>
+          <div class="d-flex partners flex-wrap mt-3">
+            <img src="../image/Kropum/p4p.jpg" alt="Pizza 4P’s" />
+            <img src="../image/Kropum/greencam.jpg" alt="GoGreen Cambodia" />
+            <img src="../image/Kropum/theclothes.jpg" alt="The Clothes" />
+            <img src="../image/Kropum/trashisnice.jpg" alt="Trash is Nice" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="cta container mb-5">
+        <div class="">
+          <h2 class="text-light">ចូលរួមជាមួយយើងថ្ងៃនេះ!</h2>
+          <p class="text-light">
+            ការបរិច្ចាគតូចៗរបស់អ្នកអាចបង្កើតការផ្លាស់ប្តូរធំសម្រាប់បរិស្ថាន។
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-footer pt-8 border-top">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="home.html"
+              class="footer-img mb-3 d-flex align-items-center"
+            >
+              <img
+                src="assets/image/green_leaves_round_logo.png"
+                alt="logo"
+                style="width: 50px"
+              />
+              <h4 class="ms-2 fw-bold text-success mb-0 mt-3">កែច្នៃ</h4>
+            </a>
+
+            <p class="text-secondary">
+              គេហទំព័រ “សកម្មភាពបៃតង”
+              ត្រូវបានបង្កើតឡើងដោយមានគោលបំណងក្នុងការផ្សព្វផ្សាយ
+              និងចែករំលែកព័ត៌មានអំពីសកម្មភាពបរិស្ថាន។
+              យើងខិតខំផ្តល់ឱ្យអ្នកនូវព័ត៌មានស្តីពីព្រឹត្តិការណ៍ កម្មវិធី
+              និងយុទ្ធនាការដែលជួយការពារបរិស្ថាន និងលើកកម្ពស់ជីវភាពបៃតង។
+              គោលបំណងរបស់យើងគឺដើម្បីបង្កើតការយល់ដឹង
+              និងលើកទឹកចិត្តឲ្យអ្នកទាំងអស់គ្នាចូលរួមក្នុងការការពារបរិស្ថានសម្រាប់ជំនាន់ក្រោយ។
+            </p>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <div class="row ms-lg-20 g-0">
+              <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
+                ព័ត៌មានទំនាក់ទំនង
+              </h5>
+              <p class="mb-1">
+                <i class="bi bi-telephone me-2"></i>+855 12 123 456
+              </p>
+              <p class="mb-1">
+                <i class="bi bi-envelope me-2"></i>
+                <a href="mailto:info@gmail.com" class="text-dark"
+                  >info@gmail.com</a
+                >
+              </p>
+              <!-- Social Media -->
+              <div class="d-flex gap-3 mt-3">
+                <a href="#" class="text-success"
+                  ><i class="bi bi-facebook fs-4"></i
+                ></a>
+                <a href="#" class="text-success"
+                  ><i class="bi bi-twitter-x fs-4"></i
+                ></a>
+                <a href="#" class="text-success"
+                  ><i class="bi bi-telegram fs-4"></i
+                ></a>
+                <a href="#" class="text-success"
+                  ><i class="bi bi-instagram fs-4"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <div class="row ms-lg-15 g-0 p-0">
+              <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
+                តំណភ្ជាប់រហ័ស
+              </h5>
+              <div class="row">
+                <div class="col-6 p-0">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="donation.html" class="footer-link d-block fs-5"
+                        >បរិច្ចាក</a
+                      >
+                    </li>
+                    <li>
+                      <a href="event.html" class="footer-link d-block fs-5"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a href="about.html" class="footer-link d-block fs-5"
+                        >អំពីយើង</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="row border-top py-3 mt-4 align-items-center">
+          <div class="col-6 text-start">
+            <p class="mb-0 small text-secondary">© 2025 Recycle</p>
+          </div>
+          <div class="col-6 d-flex justify-content-end gap-3">
+            <a href="#" class="text-secondary small">Privacy Policy</a>
+            <a href="#" class="text-secondary small">FAQs</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
