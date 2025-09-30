@@ -74,79 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-<<<<<<< HEAD
-=======
 
->>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
-// makara
-//increase and decrease
-function changeQty(amount, inputId) {
-  let input = document.getElementById(inputId);
-  let current = parseInt(input.value);
-  current += amount;
-  if (current < 1) current = 1;
-  input.value = current;
-}
-
-<<<<<<< HEAD
-const toastEl = document.getElementById('mainToast');
-const toastMessage = document.getElementById('toastMessage');
-const mainToast = new bootstrap.Toast(toastEl);
-
-// Delete button
-document.querySelectorAll('.deleteBtn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    toastMessage.textContent = 'អ្នកបានលុបដោយជោគជ័យ ✅';
-=======
-const toastEl = document.getElementById("mainToast");
-const toastMessage = document.getElementById("toastMessage");
-const mainToast = new bootstrap.Toast(toastEl);
-
-// Delete button
-document.querySelectorAll(".deleteBtn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    toastMessage.textContent = "អ្នកបានលុបដោយជោគជ័យ ✅";
->>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
-    mainToast.show();
-  });
-});
-
-// Edit button → open modal
-<<<<<<< HEAD
-const editModal = new bootstrap.Modal(document.getElementById('editModal'));
-document.querySelectorAll('.editBtn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.getElementById('modal-product-name').textContent =
-      btn.dataset.name;
-    document.getElementById('modal-product-quantity').value =
-=======
-const editModal = new bootstrap.Modal(document.getElementById("editModal"));
-document.querySelectorAll(".editBtn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    document.getElementById("modal-product-name").textContent =
-      btn.dataset.name;
-    document.getElementById("modal-product-quantity").value =
->>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
-      btn.dataset.quantity;
-    editModal.show();
-  });
-});
-
-// Save button
-<<<<<<< HEAD
-document.getElementById('saveBtn').addEventListener('click', () => {
-  toastMessage.textContent = '✅ ផលិតផលត្រូវបានកែប្រែដោយជោគជ័យ!';
-=======
-document.getElementById("saveBtn").addEventListener("click", () => {
-  toastMessage.textContent = "✅ ផលិតផលត្រូវបានកែប្រែដោយជោគជ័យ!";
->>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
-  mainToast.show();
-  editModal.hide();
-});
-
-<<<<<<< HEAD
-// end
-=======
 // vuthy
 // DataChart
 const ctx = document.getElementById("barChart").getContext("2d");
@@ -205,4 +133,44 @@ new Chart(ctx, {
     },
   },
 });
->>>>>>> 5d734cf2e23f782ba8c4fdd8c1316228ec10a66d
+
+// makara
+//increase and decrease
+function changeQty(amount, inputId) {
+  let input = document.getElementById(inputId);
+  let current = parseInt(input.value);
+  current += amount;
+  if (current < 1) current = 1;
+  input.value = current;
+}
+
+const toastEl = document.getElementById("mainToast");
+const toastMessage = document.getElementById("toastMessage");
+const mainToast = new bootstrap.Toast(toastEl);
+
+// Delete button
+document.querySelectorAll(".deleteBtn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    toastMessage.textContent = "អ្នកបានលុបដោយជោគជ័យ ✅";
+    mainToast.show();
+  });
+});
+
+// Edit button → open modal
+const editModal = new bootstrap.Modal(document.getElementById("editModal"));
+document.querySelectorAll(".editBtn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.getElementById("modal-product-name").textContent =
+      btn.dataset.name;
+    document.getElementById("modal-product-quantity").value =
+      btn.dataset.quantity;
+    editModal.show();
+  });
+});
+
+// Save button
+document.getElementById("saveBtn").addEventListener("click", () => {
+  toastMessage.textContent = "✅ ផលិតផលត្រូវបានកែប្រែដោយជោគជ័យ!";
+  mainToast.show();
+  editModal.hide();
+});

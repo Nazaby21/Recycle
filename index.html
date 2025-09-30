@@ -316,7 +316,7 @@
         <div class="slider bg-success">
           <div class="list">
             <div class="slide-item" style="--position: 1">
-              <img src="assets/image/circleclothes.png" alt="" />
+              <img src="assets/" alt="" />
             </div>
             <div class="slide-item" style="--position: 2">
               <img src="assets/image/pizza4p.png" alt="" />
@@ -551,7 +551,14 @@
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/function.js"></script>
+      <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../js/function.js"></script>
+    <script>
+      // AOS Animation
+      AOS.init({
+        duration: 1000,
+        once: false, // run loop
+      });
+    </script>
   </body>
 </html>
