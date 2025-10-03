@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>card</title>
+  <link rel="icon" href="/assets/image/green_leaves_round_logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+</head>
+
+<body class="fs-kp">
+  <main>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+          <h2 class="mb-4 text-center fs-kp fs-1">
+            សូមស្វាគមន៏មកកាន់កន្លែងត្រួតពិនិត្យការបញ្ជាទិញ
+          </h2>
+
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center align-middle" id="cartTable">
+              <thead class="table-dark">
+                <tr>
+                  <th>ចំនួនផលិតផល</th>
+                  <th>ឈ្មោះផលិតផល</th>
+                  <th>តម្លៃ</th>
+                  <th>សកម្មភាព</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2</td>
+                  <td>ធុងទឹកប្លាស្ទិក</td>
+                  <td>$14.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center gap-2 flex-wrap">
+                      <button class="btn btn-danger btn-sm deleteBtn">
+                        លុប
+                      </button>
+                      <button class="btn btn-success btn-sm editBtn" data-name="ធុងទឹកប្លាស្ទិក" data-quantity="2">
+                        កែប្រែ
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>កៅស៊ូប្លាស្ទិកថ្លា</td>
+                  <td>$75.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center gap-2 flex-wrap">
+                      <button class="btn btn-danger btn-sm deleteBtn">
+                        លុប
+                      </button>
+                      <button class="btn btn-success btn-sm editBtn" data-name="កៅស៊ូប្លាស្ទិកថ្លា" data-quantity="1">
+                        កែប្រែ
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>ថូផ្កា</td>
+                  <td>$50.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center gap-2 flex-wrap">
+                      <button class="btn btn-danger btn-sm deleteBtn">
+                        លុប
+                      </button>
+                      <button class="btn btn-success btn-sm editBtn" data-name="កៅស៊ូប្លាស្ទិកថ្លា" data-quantity="10">
+                        កែប្រែ
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>សៀវភៅ</td>
+                  <td>$60.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center gap-2 flex-wrap">
+                      <button class="btn btn-danger btn-sm deleteBtn">
+                        លុប
+                      </button>
+                      <button class="btn btn-success btn-sm editBtn" data-name="កៅស៊ូប្លាស្ទិកថ្លា" data-quantity="20">
+                        កែប្រែ
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="2" class="text-end fs-kp">តម្លៃសរុប:</th>
+                  <th id="cart-total" class="text-danger fs-kp" colspan="2">
+                    $204.00
+                  </th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="text-end mt-3">
+            <a href="payment.html" class="btn btn-success fs-kp">ការបញ្ជាទិញ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- toasts -->
+    <div class="toast-container position-fixed p-3 toast-position">
+      <div id="mainToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <small>Just now</small>
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body fs-kp" id="toastMessage"></div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title fs-kp">កែប្រែផលិតផល</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row gy-4">
+                <div class="col-sm-12 col-md-6">
+                  <div class="card border-0 text-center">
+                    <label class="form-label fw-bold">ឈ្មោះផលិតផល</label>
+                    <p id="modal-product-name"></p>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="card text-center border-0">
+                    <label class="form-label fw-bold">ចំនួនផលិតផល</label>
+                    <input type="number" class="form-control text-center" id="modal-product-quantity" min="1"
+                      max="20" />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+              បិទ
+            </button>
+            <button type="button" class="btn btn-success" id="saveBtn">
+              រក្សាទុកការផ្លាស់ប្តូរ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/makara/index.js"></script> -->
+  <script src="../js/function.js"></script>
+  <script>//increase and decrease
+    const toastEl = document.getElementById("mainToast");
+    const toastMessage = document.getElementById("toastMessage");
+    const mainToast = new bootstrap.Toast(toastEl);
+
+    // Delete button
+    document.querySelectorAll(".deleteBtn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        toastMessage.textContent = "អ្នកបានលុបដោយជោគជ័យ ✅";
+        mainToast.show();
+      });
+    });
+
+    // Edit button → open modal
+    const editModal = new bootstrap.Modal(document.getElementById("editModal"));
+    document.querySelectorAll(".editBtn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.getElementById("modal-product-name").textContent =
+          btn.dataset.name;
+        document.getElementById("modal-product-quantity").value =
+          btn.dataset.quantity;
+        editModal.show();
+      });
+    });
+
+    // Save button
+    document.getElementById("saveBtn").addEventListener("click", () => {
+      toastMessage.textContent = "✅ ផលិតផលត្រូវបានកែប្រែដោយជោគជ័យ!";
+      mainToast.show();
+      editModal.hide();
+    });
+  </script>
+</body>
+
+</html>
