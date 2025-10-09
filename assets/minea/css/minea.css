@@ -15,11 +15,11 @@ body {
     height: 200px;
     border-radius: 10px;
 }
-img{
+/* img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
+    
+} */
 /* comment user */
 .user{
     width: 100%;
