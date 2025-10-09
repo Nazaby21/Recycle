@@ -548,6 +548,47 @@ footer h5 {
 }
 
 /* makara */
+:root {
+      --accent: #0d6efd;
+      --muted: #6c757d;
+    }
+   
+    .hero {
+      background: linear-gradient(90deg, rgba(13,110,253,0.08), rgba(13,110,253,0.02));
+      border-radius: 12px;
+      padding: 36px;
+      margin-bottom: 1.5rem;
+    }
+    .card-adv {
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(18, 38, 63, 0.06);
+      background: #fff;
+    }
+    .icon-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e9f2ff;
+      color: var(--accent);
+      font-size: 24px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    .section-title {
+      font-weight: 700;
+      margin-bottom: .75rem;
+    }
+    .muted { color: var(--muted); }
+
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white; }
+      .card-adv { box-shadow: none; border: 1px solid #ddd; }
+    }
 .fs-kp {
   font-family: "Hanuman", serif !important;
   font-optical-sizing: auto;
