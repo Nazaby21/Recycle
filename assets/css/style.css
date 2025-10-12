@@ -549,46 +549,59 @@ footer h5 {
 
 /* makara */
 :root {
-      --accent: #0d6efd;
-      --muted: #6c757d;
-    }
-   
-    .hero {
-      background: linear-gradient(90deg, rgba(13,110,253,0.08), rgba(13,110,253,0.02));
-      border-radius: 12px;
-      padding: 36px;
-      margin-bottom: 1.5rem;
-    }
-    .card-adv {
-      border: 0;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(18, 38, 63, 0.06);
-      background: #fff;
-    }
-    .icon-circle {
-      width: 56px;
-      height: 56px;
-      border-radius: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #e9f2ff;
-      color: var(--accent);
-      font-size: 24px;
-      margin-right: 12px;
-      flex-shrink: 0;
-    }
-    .section-title {
-      font-weight: 700;
-      margin-bottom: .75rem;
-    }
-    .muted { color: var(--muted); }
+  --accent: #0d6efd;
+  --muted: #6c757d;
+}
 
-    @media print {
-      .no-print { display: none !important; }
-      body { background: white; }
-      .card-adv { box-shadow: none; border: 1px solid #ddd; }
-    }
+.hero {
+  background: linear-gradient(
+    90deg,
+    rgba(13, 110, 253, 0.08),
+    rgba(13, 110, 253, 0.02)
+  );
+  border-radius: 12px;
+  padding: 36px;
+  margin-bottom: 1.5rem;
+}
+.card-adv {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(18, 38, 63, 0.06);
+  background: #fff;
+}
+.icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9f2ff;
+  color: var(--accent);
+  font-size: 24px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.section-title {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.muted {
+  color: var(--muted);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .card-adv {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
 .fs-kp {
   font-family: "Hanuman", serif !important;
   font-optical-sizing: auto;
@@ -844,23 +857,23 @@ footer h5 {
   opacity: 0.8;
 }
 .animated-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 2s forwards;
+}
+
+/* Keyframes for fade + slide effect */
+@keyframes fadeSlideIn {
+  0% {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeSlideIn 2s forwards;
   }
 
-  /* Keyframes for fade + slide effect */
-  @keyframes fadeSlideIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 /* end payment */
 
 /* chhorng */
@@ -1360,6 +1373,89 @@ input[type="number"] {
 }
 
 /* disable */
-.disable-btn{
+.disable-btn {
   font-size: 0.7rem;
+}
+
+/* nitification */
+.pagination .page-item.active .page-link {
+  background-color: #198754; /* Bootstrap success color */
+  border-color: #198754;
+  color: #fff;
+}
+
+/* Hover effect for other pages */
+.pagination .page-link:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+/* Optional: focus state */
+.pagination .page-link:focus {
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.page-header h2 {
+  color: #050505;
+  font-weight: 700;
+}
+
+.notification-item {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.notification-item:hover {
+  background-color: #f5f6f7;
+  transform: translateY(-1px);
+}
+
+.notification-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e7f3ff;
+}
+
+.notification-content h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #050505;
+}
+
+.notification-content p {
+  margin: 0.2rem 0 0;
+  color: #65676b;
+  font-size: 0.95rem;
+}
+
+.notification-time {
+  margin-left: auto;
+  color: #8a8d91;
+  font-size: 0.85rem;
+}
+
+.badge-new {
+  background-color: #1877f2;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  margin-left: 6px;
 }
