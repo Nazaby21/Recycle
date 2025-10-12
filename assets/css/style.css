@@ -1358,3 +1358,8 @@ input[type="number"] {
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
 }
+
+/* disable */
+.disable-btn{
+  font-size: 0.7rem;
+}
