@@ -103,39 +103,56 @@ body {
 }
 
 .top-bar {
-      background: white;
-      padding: 12px 20px;
-      border-bottom: 1px solid #e9ecef;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  background: white;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .search-box {
-      position: relative;
-      width: 300px;
-    }
+.search-box {
+  position: relative;
+  width: 300px;
+}
 
-    .search-box input {
-      padding-left: 35px;
-      border: 1px solid #e9ecef;
-      border-radius: 6px;
-    }
+.search-box input {
+  padding-left: 35px;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+}
 
-    .search-box i {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-    }
+.search-box i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
 
-    .upload-box {
-      cursor: pointer;
-      background-color: #f8f9fa;
-      transition: 0.2s;
-    }
+.upload-box {
+  cursor: pointer;
+  background-color: #f8f9fa;
+  transition: 0.2s;
+}
 
-    .upload-box:hover {
-      background-color: #e9ecef;
-    }
+.upload-box:hover {
+  background-color: #e9ecef;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #198754; /* Bootstrap success color */
+  border-color: #198754;
+  color: #fff;
+}
+
+/* Hover effect for other pages */
+.pagination .page-link:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+/* Optional: focus state */
+.pagination .page-link:focus {
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}

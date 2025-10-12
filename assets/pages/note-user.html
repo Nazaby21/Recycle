@@ -144,8 +144,6 @@
                         <th scope="col">អ៊ីមែល</th>
                         <th scope="col">កត់ត្រាសកម្មភាព</th>
                         <th scope="col">កាលបរិច្ឆេទ</th>
-                        <th scope="col">ការកែប្រែ</th>
-                        <th scope="col">មុខងារ</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -164,179 +162,6 @@
                         <td>sok@example.com</td>
                         <td class="text-primary">ចូលប្រើគណនី</td>
                         <td class="text-center">2025-09-15</td>
-                        <td class="text-center">
-                          <div class="btn-group btn-group-sm">
-                            <a
-                              href="user_setting.html"
-                              class="btn btn-outline-success"
-                            >
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-
-                        <td>
-                          <div class="btn-group btn-group-sm">
-                            <!-- Stop Button -->
-                            <button
-                              class="btn btn-outline-danger"
-                              data-bs-toggle="modal"
-                              data-bs-target="#stopModal"
-                            >
-                              <i class="bi bi-stop-circle"></i>
-                            </button>
-                            <!-- Delete Button -->
-                            <button
-                              class="btn btn-outline-secondary"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="bi bi-trash3"></i>
-                            </button>
-                          </div>
-                        </td>
-
-                        <!-- Stop Modal -->
-                        <div class="modal fade" id="stopModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">បញ្ឈប់ដំណើរការ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់បញ្ឈប់ដំណើរការនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <!-- Open Stop Success Modal -->
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  data-bs-target="#stopSuccessModal"
-                                  data-bs-toggle="modal"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បាទ/ចាស បញ្ឈប់
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Delete Modal -->
-                        <div class="modal fade" id="deleteModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">លុបទិន្នន័យ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <!-- Open Delete Success Modal -->
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  data-bs-target="#deleteSuccessModal"
-                                  data-bs-toggle="modal"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បាទ/ចាស លុប
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Stop Success Modal -->
-                        <div
-                          class="modal fade"
-                          id="stopSuccessModal"
-                          tabindex="-1"
-                        >
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content text-center">
-                              <div class="modal-header">
-                                <h5 class="modal-title text-warning">
-                                  បានបញ្ឈប់
-                                </h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                ដំណើរការត្រូវបានបញ្ឈប់ជោគជ័យ!
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-warning"
-                                  data-bs-dismiss="modal"
-                                >
-                                  OK
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Delete Success Modal -->
-                        <div
-                          class="modal fade"
-                          id="deleteSuccessModal"
-                          tabindex="-1"
-                        >
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content text-center">
-                              <div class="modal-header">
-                                <h5 class="modal-title text-danger">បានលុប</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                ទិន្នន័យត្រូវបានលុបដោយជោគជ័យ!
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-danger"
-                                  data-bs-dismiss="modal"
-                                >
-                                  OK
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </tr>
                       <tr class="text-center">
                         <td class="text-center">2</td>
@@ -353,103 +178,6 @@
                         <td>pov@example.com</td>
                         <td class="text-primary">ចូលប្រើគណនី</td>
                         <td class="text-center">2025-09-14</td>
-                        <td class="text-center">
-                          <div class="btn-group btn-group-sm">
-                            <a href="#" class="btn btn-outline-success">
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="btn-group btn-group-sm">
-                            <!-- Stop Button -->
-                            <button
-                              class="btn btn-outline-danger"
-                              data-bs-toggle="modal"
-                              data-bs-target="#stopModal"
-                            >
-                              <i class="bi bi-stop-circle"></i>
-                            </button>
-                            <!-- Delete Button -->
-                            <button
-                              class="btn btn-outline-secondary"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="bi bi-trash3"></i>
-                            </button>
-                          </div>
-                        </td>
-
-                        <!-- Stop Modal -->
-                        <div class="modal fade" id="stopModal1" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">បញ្ឈប់ដំណើរការ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់បញ្ឈប់ដំណើរការនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmStopBtn1"
-                                >
-                                  បាទ/ចាស បញ្ឈប់
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Delete Modal -->
-                        <div class="modal fade" id="deleteModal1" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">លុបទិន្នន័យ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmDeleteBtn1"
-                                >
-                                  បាទ/ចាស លុប
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </tr>
                       <tr class="text-center">
                         <td class="text-center">3</td>
@@ -466,103 +194,6 @@
                         <td>sophea@example.com</td>
                         <td class="text-danger">ចាកចេញគណនី</td>
                         <td class="text-center">2025-09-13</td>
-                        <td class="text-center">
-                          <div class="btn-group btn-group-sm">
-                            <a href="#" class="btn btn-outline-success">
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="btn-group btn-group-sm">
-                            <!-- Stop Button -->
-                            <button
-                              class="btn btn-outline-danger"
-                              data-bs-toggle="modal"
-                              data-bs-target="#stopModal"
-                            >
-                              <i class="bi bi-stop-circle"></i>
-                            </button>
-                            <!-- Delete Button -->
-                            <button
-                              class="btn btn-outline-secondary"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="bi bi-trash3"></i>
-                            </button>
-                          </div>
-                        </td>
-
-                        <!-- Stop Modal -->
-                        <div class="modal fade" id="stopModal2" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">បញ្ឈប់ដំណើរការ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់បញ្ឈប់ដំណើរការនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmStopBtn2"
-                                >
-                                  បាទ/ចាស បញ្ឈប់
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Delete Modal -->
-                        <div class="modal fade" id="deleteModal2" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">លុបទិន្នន័យ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmDeleteBtn2"
-                                >
-                                  បាទ/ចាស លុប
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </tr>
                       <tr class="text-center">
                         <td class="text-center">4</td>
@@ -579,103 +210,6 @@
                         <td>vanna@example.com</td>
                         <td class="text-primary">ចូលប្រើគណនី</td>
                         <td class="text-center">2025-09-12</td>
-                        <td class="text-center">
-                          <div class="btn-group btn-group-sm">
-                            <a href="#" class="btn btn-outline-success">
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="btn-group btn-group-sm">
-                            <!-- Stop Button -->
-                            <button
-                              class="btn btn-outline-danger"
-                              data-bs-toggle="modal"
-                              data-bs-target="#stopModal"
-                            >
-                              <i class="bi bi-stop-circle"></i>
-                            </button>
-                            <!-- Delete Button -->
-                            <button
-                              class="btn btn-outline-secondary"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="bi bi-trash3"></i>
-                            </button>
-                          </div>
-                        </td>
-
-                        <!-- Stop Modal -->
-                        <div class="modal fade" id="stopModal3" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">បញ្ឈប់ដំណើរការ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់បញ្ឈប់ដំណើរការនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmStopBtn3"
-                                >
-                                  បាទ/ចាស បញ្ឈប់
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Delete Modal -->
-                        <div class="modal fade" id="deleteModal3" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">លុបទិន្នន័យ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmDeleteBtn3"
-                                >
-                                  បាទ/ចាស លុប
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </tr>
                       <tr class="text-center">
                         <td class="text-center">5</td>
@@ -692,103 +226,6 @@
                         <td>chantol@example.com</td>
                         <td class="text-danger">ចាកចេញគណនី</td>
                         <td class="text-center">2025-09-11</td>
-                        <td class="text-center">
-                          <div class="btn-group btn-group-sm">
-                            <a href="#" class="btn btn-outline-success">
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="btn-group btn-group-sm">
-                            <!-- Stop Button -->
-                            <button
-                              class="btn btn-outline-danger"
-                              data-bs-toggle="modal"
-                              data-bs-target="#stopModal"
-                            >
-                              <i class="bi bi-stop-circle"></i>
-                            </button>
-                            <!-- Delete Button -->
-                            <button
-                              class="btn btn-outline-secondary"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="bi bi-trash3"></i>
-                            </button>
-                          </div>
-                        </td>
-
-                        <!-- Stop Modal -->
-                        <div class="modal fade" id="stopModal4" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">បញ្ឈប់ដំណើរការ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់បញ្ឈប់ដំណើរការនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmStopBtn4"
-                                >
-                                  បាទ/ចាស បញ្ឈប់
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Delete Modal -->
-                        <div class="modal fade" id="deleteModal4" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">លុបទិន្នន័យ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmDeleteBtn4"
-                                >
-                                  បាទ/ចាស លុប
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </tr>
                       <tr class="text-center">
                         <td class="text-center">6</td>
@@ -805,103 +242,6 @@
                         <td>savoeun@example.com</td>
                         <td class="text-danger">ចាកចេញគណនី</td>
                         <td class="text-center">2025-09-10</td>
-                        <td class="text-center">
-                          <div class="btn-group btn-group-sm">
-                            <a href="#" class="btn btn-outline-success">
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="btn-group btn-group-sm">
-                            <!-- Stop Button -->
-                            <button
-                              class="btn btn-outline-danger"
-                              data-bs-toggle="modal"
-                              data-bs-target="#stopModal"
-                            >
-                              <i class="bi bi-stop-circle"></i>
-                            </button>
-                            <!-- Delete Button -->
-                            <button
-                              class="btn btn-outline-secondary"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="bi bi-trash3"></i>
-                            </button>
-                          </div>
-                        </td>
-
-                        <!-- Stop Modal -->
-                        <div class="modal fade" id="stopModal5" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">បញ្ឈប់ដំណើរការ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់បញ្ឈប់ដំណើរការនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmStopBtn5"
-                                >
-                                  បាទ/ចាស បញ្ឈប់
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Delete Modal -->
-                        <div class="modal fade" id="deleteModal5" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">លុបទិន្នន័យ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmDeleteBtn5"
-                                >
-                                  បាទ/ចាស លុប
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </tr>
                       <tr class="text-center">
                         <td class="text-center">7</td>
@@ -918,106 +258,35 @@
                         <td>narine@example.com</td>
                         <td class="text-danger">ចាកចេញគណនី</td>
                         <td class="text-center">2025-09-09</td>
-                        <td class="text-center">
-                          <div class="btn-group btn-group-sm">
-                            <a href="#" class="btn btn-outline-success">
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="btn-group btn-group-sm">
-                            <!-- Stop Button -->
-                            <button
-                              class="btn btn-outline-danger"
-                              data-bs-toggle="modal"
-                              data-bs-target="#stopModal"
-                            >
-                              <i class="bi bi-stop-circle"></i>
-                            </button>
-                            <!-- Delete Button -->
-                            <button
-                              class="btn btn-outline-secondary"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="bi bi-trash3"></i>
-                            </button>
-                          </div>
-                        </td>
-
-                        <!-- Stop Modal -->
-                        <div class="modal fade" id="stopModal6" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">បញ្ឈប់ដំណើរការ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់បញ្ឈប់ដំណើរការនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmStopBtn6"
-                                >
-                                  បាទ/ចាស បញ្ឈប់
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Delete Modal -->
-                        <div class="modal fade" id="deleteModal6" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title">លុបទិន្នន័យ</h5>
-                                <button
-                                  type="button"
-                                  class="btn-close"
-                                  data-bs-dismiss="modal"
-                                ></button>
-                              </div>
-                              <div class="modal-body">
-                                តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?
-                              </div>
-                              <div class="modal-footer">
-                                <button
-                                  type="button"
-                                  class="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  បោះបង់
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-success"
-                                  id="confirmDeleteBtn6"
-                                >
-                                  បាទ/ចាស លុប
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </tr>
                     </tbody>
                   </table>
+                  <!-- Pagination -->
+                  <nav aria-label="Course pagination" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#">&laquo;</a>
+                      </li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">5</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">&raquo;</a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
             </div>
