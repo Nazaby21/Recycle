@@ -1,463 +1,733 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education with Video</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Education with Video</title>
+    <link
+      rel="icon"
+      href="/assets/image/green_leaves_round_logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/d9ad53b8e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  </head>
+  <style>
+    .fixed-img {
+      height: 250px;
+      /* all images same height */
+      width: 100%;
+      /* full card width */
+      object-fit: cover;
+      /* crop nicely to fill area */
+    }
+    .hero-banner .overlay {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 79.5%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    @media (max-width: 575.98px) {
+      .hero-banner .overlay{
+        height: 47.05%;
+      }
+    }
 
+    /* Small to medium devices (tablets, 576px - 991.98px) */
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      .hero-banner .overlay{
+        height: 46%;
+      }
+    }
+  </style>
 
-  <link rel="icon" href="/assets/image/green_leaves_round_logo.png" type="image/x-icon" />
-  <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/d9ad53b8e3.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-</head>
-<style>
-  .fixed-img {
-    height: 250px;
-    /* all images same height */
-    width: 100%;
-    /* full card width */
-    object-fit: cover;
-    /* crop nicely to fill area */
-  }
-</style>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-nav border shadow fixed-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="home.html">
+            <img
+              src="../image/green_leaves_round_logo.png"
+              class="logo"
+              style="width: 40px"
+              alt="logo"
+            />
+          </a>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-nav border shadow fixed-top">
-      <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand" href="home.html">
-          <img src="../image/green_leaves_round_logo.png" class="logo" style="width: 40px" alt="logo" />
-        </a>
+          <!-- Offcanvas Menu -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header bg-nav">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand d-block" href="home.html">
+                  <img
+                    src="../image/green_leaves_round_logo.png"
+                    style="width: 60px"
+                    alt="logo"
+                  />
+                </a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
 
-        <!-- Offcanvas Menu -->
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header bg-nav">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <a class="navbar-brand d-block" href="home.html">
-                <img src="../image/green_leaves_round_logo.png" style="width: 60px" alt="logo" />
-              </a>
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2"
+              >
+                <!-- Search (Mobile Only) -->
+                <form
+                  class="d-flex mb-3 d-block d-md-none search-1"
+                  role="search"
+                >
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+
+                <!-- Menu Items -->
+                <li class="nav-item">
+                  <a class="nav-link fs-5 nav-hover" href="home.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link active dropdown-toggle nav-hover no-caret"
+                    href="video-doc.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    អត្ថបទ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="frist_doc.html">ឯកសារ</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="video-doc.html">វីដេអូ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown fs-5">
+                  <a
+                    class="nav-link dropdown-toggle nav-hover no-caret"
+                    href="donation.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    សកម្មភាពសង្គម
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="event.html"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="donation.html">បរិច្ចាគ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="e-commerce.html"
+                    >ផលិតផលកែច្នៃ</a
+                  >
+                </li>
+                <li class="nav-item fs-5">
+                  <a class="nav-link nav-hover" href="about.html">អំពីយើង</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-2">
-              <!-- Search (Mobile Only) -->
-              <form class="d-flex mb-3 d-block d-md-none search-1" role="search">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
-              </form>
+          <!-- Right Side (Search + Notification + Profile + Toggle) -->
+          <div class="d-flex align-items-center">
+            <!-- Search (Desktop Only) -->
+            <form class="d-flex d-none d-md-block me-3 search-2" role="search">
+              <input
+                class="form-control mx-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
 
-              <!-- Menu Items -->
-              <li class="nav-item">
-                <a class="nav-link fs-5 nav-hover" href="home.html">ទំព័រដើម</a>
-              </li>
-              <li class="nav-item dropdown fs-5">
-                <a class="nav-link active dropdown-toggle nav-hover no-caret" href="video-doc.html" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  អត្ថបទ
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="frist_doc.html">ឯកសារ</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="video-doc.html">វីដេអូ</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown fs-5">
-                <a class="nav-link dropdown-toggle nav-hover no-caret" href="donation.html" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  សកម្មភាពសង្គម
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="event.html">ព្រឹត្តិការណ៍</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="donation.html">បរិច្ចាគ</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item fs-5">
-                <a class="nav-link nav-hover" href="e-commerce.html">ផលិតផលកែច្នៃ</a>
-              </li>
-              <li class="nav-item fs-5">
-                <a class="nav-link nav-hover" href="about.html">អំពីយើង</a>
-              </li>
+            <!-- Notification -->
+            <div class="dropdown me-2">
+              <button
+                class="btn dropdown-toggle no-caret position-relative"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell fs-5"></i>
+                <span
+                  class="badge bg-danger rounded-circle position-absolute start-50 top-0 text-center"
+                  style="font-size: 10px"
+                  >4</span
+                >
+              </button>
 
-            </ul>
-          </div>
-        </div>
+              <ul
+                class="dropdown-menu dropdown-menu-center dropdown-menu-end p-0 shadow"
+                style="width: 320px; max-height: 350px; overflow-y: auto"
+              >
+                <!-- Header -->
+                <div
+                  class="d-flex align-items-center justify-content-between border-bottom px-2 py-2 bg-light"
+                >
+                  <h6 class="mb-0">ការជូនដំណឹង</h6>
+                  <i class="bi bi-three-dots"></i>
+                </div>
 
-        <!-- Right Side (Search + Notification + Profile + Toggle) -->
-        <div class="d-flex align-items-center">
-          <!-- Search (Desktop Only) -->
-          <form class="d-flex d-none d-md-block me-3 search-2" role="search">
-            <input class="form-control mx-2" type="search" placeholder="Search" aria-label="Search" />
-          </form>
-
-          <!-- Notification -->
-          <div class="dropdown me-2">
-            <button class="btn dropdown-toggle no-caret position-relative" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <i class="bi bi-bell fs-5"></i>
-              <span class="badge bg-danger rounded-circle position-absolute start-50 top-0 text-center"
-                style="font-size: 10px">4</span>
-            </button>
-
-            <ul class="dropdown-menu dropdown-menu-center dropdown-menu-end p-0 shadow"
-              style="width: 320px; max-height: 350px; overflow-y: auto">
-              <!-- Header -->
-              <div class="d-flex align-items-center justify-content-between border-bottom px-2 py-2 bg-light">
-                <h6 class="mb-0">ការជូនដំណឹង</h6>
-                <i class="bi bi-three-dots"></i>
-              </div>
-
-              <!-- Notifications -->
-              <li class="noti-item">
-                <a class="dropdown-item" href="#">
-                  <div class="py-2 d-flex align-items-center">
-                    <img src="../image/avatar-4.jpg" class="rounded-circle" style="width: 40px; height: 40px" />
-                    <div class="content ms-3" style="max-width: 220px">
-                      <p class="fw-bolder mb-1">Pozz Mao</p>
-                      <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                        ការបញ្ជាទិញរបស់អ្នកបានជោគជ័យ
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-
-              <!-- Collapse Extra Notifications -->
-              <div class="collapse" id="extraNoti">
+                <!-- Notifications -->
                 <li class="noti-item">
                   <a class="dropdown-item" href="#">
                     <div class="py-2 d-flex align-items-center">
-                      <img src="../image/avatar-5.jpg" class="rounded-circle" style="width: 40px; height: 40px" />
+                      <img
+                        src="../image/avatar-4.jpg"
+                        class="rounded-circle"
+                        style="width: 40px; height: 40px"
+                      />
                       <div class="content ms-3" style="max-width: 220px">
-                        <p class="fw-bolder mb-1">John Doe</p>
+                        <p class="fw-bolder mb-1">Pozz Mao</p>
                         <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
-                          ការងារថ្មី មានសារសំខាន់ល្អណាស់ តែម៉ូតផលិតផល
-                          នៅមានកម្រិត មិនមានភាពទាក់ទាញ។
+                          ការបញ្ជាទិញរបស់អ្នកបានជោគជ័យ
                         </p>
                       </div>
                     </div>
                   </a>
                 </li>
-              </div>
 
-              <!-- See More -->
-              <li class="text-center border-top">
-                <a class="btn btn-link w-100 py-2 d-block text-decoration-none fw-semibold text-success"
-                  data-bs-toggle="collapse" href="#extraNoti" role="button" aria-expanded="false"
-                  aria-controls="extraNoti" style="font-size: 14px">
-                  បន្ថែមទៀត
-                </a>
-              </li>
-            </ul>
+                <!-- Collapse Extra Notifications -->
+                <div class="collapse" id="extraNoti">
+                  <li class="noti-item">
+                    <a class="dropdown-item" href="#">
+                      <div class="py-2 d-flex align-items-center">
+                        <img
+                          src="../image/avatar-5.jpg"
+                          class="rounded-circle"
+                          style="width: 40px; height: 40px"
+                        />
+                        <div class="content ms-3" style="max-width: 220px">
+                          <p class="fw-bolder mb-1">John Doe</p>
+                          <p class="fs-6 text-start limit-line-2 mb-0 lh-sm">
+                            ការងារថ្មី មានសារសំខាន់ល្អណាស់ តែម៉ូតផលិតផល
+                            នៅមានកម្រិត មិនមានភាពទាក់ទាញ។
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </div>
+
+                <!-- See More -->
+                <li class="text-center border-top">
+                  <a
+                    class="btn btn-link w-100 py-2 d-block text-decoration-none fw-semibold text-success"
+                    data-bs-toggle="collapse"
+                    href="#extraNoti"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="extraNoti"
+                    style="font-size: 14px"
+                  >
+                    បន្ថែមទៀត
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Profile Dropdown -->
+            <div class="dropdown">
+              <img
+                src="../image/avatar-4.jpg"
+                alt="Profile"
+                class="avatar dropdown-toggle rounded-circle ms-2"
+                style="width: 40px; height: 40px"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu dropdown-menu-end shadow py-0">
+                <li class="border-bottom">
+                  <a
+                    href="user_profile.html"
+                    class="dropdown-item d-flex align-items-center py-2"
+                  >
+                    <img
+                      src="../image/avatar-4.jpg"
+                      alt="Avatar"
+                      class="rounded-circle mx-2"
+                      style="width: 35px; height: 35px"
+                    />
+                    <h6 class="mb-0">Nazaby</h6>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_profile.html"
+                    ><i class="bi bi-person-circle"></i
+                    ><span class="ms-2">ព័ត៌មានផ្ទាល់ខ្លួន</span></a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="user_setting.html"
+                    ><i class="bi bi-gear"></i
+                    ><span class="ms-2">ការកំណត់</span></a
+                  >
+                </li>
+                <li class="border-top">
+                  <a class="dropdown-item py-2" href="/index.html"
+                    ><i class="bi bi-box-arrow-in-left"></i
+                    ><span class="ms-2">ចាកចេញ</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Mobile Toggler -->
+            <button
+              class="navbar-toggler border-0 shadow-none fs-4 ms-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
-
-          <!-- Profile Dropdown -->
-          <div class="dropdown">
-            <img src="../image/avatar-4.jpg" alt="Profile" class="avatar dropdown-toggle rounded-circle ms-2"
-              style="width: 40px; height: 40px" data-bs-toggle="dropdown" aria-expanded="false" />
-            <ul class="dropdown-menu dropdown-menu-end shadow py-0">
-              <li class="border-bottom">
-                <a href="user_profile.html" class="dropdown-item d-flex align-items-center py-2">
-                  <img src="../image/avatar-4.jpg" alt="Avatar" class="rounded-circle mx-2"
-                    style="width: 35px; height: 35px" />
-                  <h6 class="mb-0">Nazaby</h6>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item py-2" href="user_profile.html"><i class="bi bi-person-circle"></i><span
-                    class="ms-2">ព័ត៌មានផ្ទាល់ខ្លួន</span></a>
-              </li>
-              <li>
-                <a class="dropdown-item py-2" href="user_setting.html"><i class="bi bi-gear"></i><span
-                    class="ms-2">ការកំណត់</span></a>
-              </li>
-              <li class="border-top">
-                <a class="dropdown-item py-2" href="/index.html"><i class="bi bi-box-arrow-in-left"></i><span
-                    class="ms-2">ចាកចេញ</span></a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Mobile Toggler -->
-          <button class="navbar-toggler border-0 shadow-none fs-4 ms-2" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="hero-banner mt-9 mt-md-0">
-      <img src="../image/makara/herobanner-v01.png" alt="" class="bg-banner-img " />
-      <div class="overlay"></div>
-      <div class="container banner">
-      </div>
-    </section>
-    <section class="mt-10">
-      <div class="container bg-opacity-75 py-4 rounded-3">
-        <h2 class="scale-up-ver-center text-center pt-1 pb-5">វីដេអូបង្រៀនអំពីការកែច្នៃ</h2>
-        <div class="row gy-4">
-
-          <!-- Card 1 -->
-          <div class="col-md-6 col-lg-4">
-            <a href="video1.html" class="text-decoration-none text-dark">
-              <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
-                <img src="../image/minea/coffee-img.png" alt="" class="card-img-top fixed-img rounded-top-3" />
-                <p class="card-text m-3">
-                  ប្រយោជន៍នៃកាកកាហ្វេចំពោះដំណាំដែលអ្នកមិននឹកស្មានដល់
-                </p>
-                <p class="card-text text-secondary ps-3">កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-md-6 col-lg-4">
-            <a href="video1.html" class="text-decoration-none text-dark">
-              <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
-                <img src="../image/minea/plastic.png" alt="" class="card-img-top fixed-img rounded-top-3" />
-                <p class="card-text m-3">
-                  ការកែច្នៃសំរាមប្លាស្ទិកក្លាយជាគ្រឿងសំណង់និងគ្រឿងសង្ហារឹម
-                </p>
-                <p class="card-text text-secondary ps-3">កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-md-6 col-lg-4">
-            <a href="video1.html" class="text-decoration-none text-dark">
-              <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
-                <img src="../image/minea/ompov.png" alt="" class="card-img-top fixed-img rounded-top-3" />
-                <p class="card-text m-3">
-                  ពីសំណល់កាកអំពៅ ក្លាយទៅជាចានបរិស្ថានគ្មានជាតិគីមី និងងាយស្រួលប្រើប្រាស់
-                </p>
-                <p class="card-text text-secondary ps-3">កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col-md-6 col-lg-4">
-            <a href="video1.html" class="text-decoration-none text-dark">
-              <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
-                <img src="../image/minea/Kitchenwaste.png" alt="" class="card-img-top fixed-img rounded-top-3" />
-                <p class="card-text m-3">
-                  កាកសំណល់ផ្ទះបាយ ក្លាយជាជីដ៏មានតម្លៃចំពោះដំណាំ
-                </p>
-                <p class="card-text text-secondary ps-3">កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="col-md-6 col-lg-4">
-            <a href="video1.html" class="text-decoration-none text-dark">
-              <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
-                <img src="../image/minea/sombokong.png" alt="" class="card-img-top fixed-img rounded-top-3" />
-                <p class="card-text m-3">ធុងសំរាមដែលច្នៃពីសំបកកង់ឡាន</p>
-                <p class="card-text text-secondary ps-3">កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="col-md-6 col-lg-4">
-            <a href="video1.html" class="text-decoration-none text-dark">
-              <div class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3">
-                <img src="../image/minea/img03.png" alt="" class="card-img-top fixed-img rounded-top-3" />
-                <p class="card-text m-3">
-                  ផលិតផលច្នៃប្រឌិតផលិតពីផ្លាស្ទិចកែច្នៃ
-                </p>
-                <p class="card-text text-secondary ps-3">កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥</p>
-              </div>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container my-5">
-        <h2 class="mb-4 text-center">សំណួរ & ចម្លើយ អំពីការកែច្នៃប្លាស្ទិក </h2>
-
-        <div class="accordion" id="plasticFAQ">
-
-          <!-- Question 1 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading1">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
-                aria-expanded="true" aria-controls="collapse1">
-                តើប្លាស្ទិកប្រភេទណាខ្លះដែលអាចកែច្នៃឡើងវិញបាន?
-              </button>
-            </h2>
-            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
-              data-bs-parent="#plasticFAQ">
-              <div class="accordion-body">
-                ប្រភេទផ្លាស្ទិចផ្សេងៗគ្នាដែលអាចកែច្នៃបានរួមមាន PET (Polyethylene Terephthalate), HDPE (High-Density
-                Polyethylene) និង PP (Polypropylene)។ ទាំងនេះត្រូវបានប្រើប្រាស់ជាទូទៅក្នុងដបប្លាស្ទិក ការវេចខ្ចប់
-                និងធុងផ្សេងៗ។
-              </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero-banner mt-9 mt-md-0">
+        <img
+          src="../image/makara/banner-video.png"
+          alt=""
+          class="bg-banner-img position-relative"
+        />
+        <div class="overlay position-absolute"></div>
+        <div class="container banner">
+          <div class="row d-flex align-items-center">
+            <div class="col-12 col-md-6">
+              <h3 class="animated-text text-white">
+                រួមគ្នាកែច្នៃសម្រាប់ពិភពបៃតងជារបស់យើងទាំងអស់គ្នា
+              </h3>
+              <p class="text-white">
+                យើងជឿជាក់ថា
+                ការកែច្នៃសម្ភារៈគឺជាជំហានដ៏សំខាន់មួយក្នុងការការពារបរិស្ថាន
+                និងបង្កើតពិភពបៃតងសម្រាប់ជំនាន់ក្រោយ។
+              </p>
+              <a href="video-doc.html" class="btn btn-success mt-3"
+                >ស្វែងយល់បន្ថែម</a
+              >
             </div>
-          </div>
-
-          <!-- Question 2 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading2">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                តើដបប្លាស្ទិកត្រូវបានកែច្នៃក្នុងដំណើរការកែច្នៃដោយរបៀបណា?
-              </button>
-            </h2>
-            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
-              data-bs-parent="#plasticFAQ">
-              <div class="accordion-body">
-                ការកែច្នៃដបប្លាស្ទិកជាធម្មតាពាក់ព័ន្ធនឹងការប្រមូលផ្លាស្ទិក តម្រៀបវាតាមប្រភេទ
-                និងសម្អាតវាដើម្បីលុបភាពមិនស្អាត។ ជារឿយៗផ្លាស្ទិចត្រូវបានកាត់ជាបំណែកតូចៗ បន្ទាប់មករលាយ
-                និងកំទេចដើម្បីបង្កើតជាបន្ទះប្លាស្ទិកកែច្នៃឡើងវិញ។
-              </div>
-            </div>
-          </div>
-
-          <!-- Question 3 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading3">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                តើដំណើរការ​តម្រៀប​ក្នុង​ការ​កែច្នៃ​សំណល់​ប្លាស្ទីក​ជា​អ្វី?
-              </button>
-            </h2>
-            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
-              data-bs-parent="#plasticFAQ">
-              <div class="accordion-body">
-                ដំណើរការតម្រៀបក្នុងការកែច្នៃសំណល់ប្លាស្ទិកពាក់ព័ន្ធនឹងការបំបែកកាកសំណល់ទូទៅ និងសំណល់ប្លាស្ទិកតាមប្រភេទ
-                និងគុណភាព។ នេះមានសារៈសំខាន់ណាស់ ដោយសារប្រភេទផ្លាស្ទិចខុសៗគ្នា មានតម្រូវការកែច្នៃខុសៗគ្នា។
-              </div>
-            </div>
-          </div>
-          <!-- Question 4 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading4">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                តើផ្លាស្ទិកគ្រប់ប្រភេទអាចកែច្នៃឡើងវិញបានតាមរយៈការកែច្នៃមេកានិចដែរឬទេ?
-              </button>
-            </h2>
-            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
-              data-bs-parent="#plasticFAQ">
-              <div class="accordion-body">
-                មិនមែនប្លាស្ទិកគ្រប់ប្រភេទអាចកែច្នៃឡើងវិញបានតាមរយៈការកែឆ្នៃដោយមេកានិចនោះទេ។
-                ផ្លាស្ទិចខ្លះអាចកែច្នៃឡើងវិញបានតែនៅក្នុងកន្លែងកែច្នៃជាក់លាក់ ដែលត្រូវបានបំពាក់ដើម្បីដោះស្រាយវា។
-                គ្រឿងបរិក្ខារសម្រាប់ជំហានចុងក្រោយនេះត្រូវតែមានសមត្ថភាពកែច្នៃប្លាស្ទិកមួយប្រភេទ
-                ឬមានបច្ចេកវិជ្ជាកែច្នៃប្លាស្ទិកប្រភេទផ្សេងៗគ្នា។
+            <div class="col-12 col-md-6">
+              <div class="banner-img d-none d-lg-block text-center">
+                <img
+                  src="../image/makara/herobanner-video.png"
+                  alt=""
+                  class="banner-img"
+                  style="width: 400px"
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="mt-5">
+        <div class="container bg-opacity-75 py-4 rounded-3">
+          <h2 class="scale-up-ver-center text-center pt-1 pb-5">
+            វីដេអូបង្រៀនអំពីការកែច្នៃ
+          </h2>
+          <div class="row gy-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4">
+              <a href="video1.html" class="text-decoration-none text-dark">
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="../image/minea/coffee-img.png"
+                    alt=""
+                    class="card-img-top fixed-img rounded-top-3"
+                  />
+                  <p class="card-text m-3">
+                    ប្រយោជន៍នៃកាកកាហ្វេចំពោះដំណាំដែលអ្នកមិននឹកស្មានដល់
+                  </p>
+                  <p class="card-text text-secondary ps-3">
+                    កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥
+                  </p>
+                </div>
+              </a>
+            </div>
 
-    </section>
-  </main>
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+              <a href="video1.html" class="text-decoration-none text-dark">
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="../image/minea/plastic.png"
+                    alt=""
+                    class="card-img-top fixed-img rounded-top-3"
+                  />
+                  <p class="card-text m-3">
+                    ការកែច្នៃសំរាមប្លាស្ទិកក្លាយជាគ្រឿងសំណង់និងគ្រឿងសង្ហារឹម
+                  </p>
+                  <p class="card-text text-secondary ps-3">
+                    កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥
+                  </p>
+                </div>
+              </a>
+            </div>
 
-  <footer class="bg-footer pt-8 border-top">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <a href="home.html" class="footer-img mb-3 d-flex align-items-center">
-            <img src="../image/green_leaves_round_logo.png" alt="logo" style="width: 50px" />
-            <h4 class="ms-2 fw-bold text-success mb-0 mt-3">កែច្នៃ</h4>
-          </a>
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4">
+              <a href="video1.html" class="text-decoration-none text-dark">
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="../image/minea/ompov.png"
+                    alt=""
+                    class="card-img-top fixed-img rounded-top-3"
+                  />
+                  <p class="card-text m-3">
+                    ពីសំណល់កាកអំពៅ ក្លាយទៅជាចានបរិស្ថានគ្មានជាតិគីមី
+                    និងងាយស្រួលប្រើប្រាស់
+                  </p>
+                  <p class="card-text text-secondary ps-3">
+                    កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥
+                  </p>
+                </div>
+              </a>
+            </div>
 
-          <p class="text-secondary">
-            គេហទំព័រ “សកម្មភាពបៃតង”
-            ត្រូវបានបង្កើតឡើងដោយមានគោលបំណងក្នុងការផ្សព្វផ្សាយ
-            និងចែករំលែកព័ត៌មានអំពីសកម្មភាពបរិស្ថាន។
-            យើងខិតខំផ្តល់ឱ្យអ្នកនូវព័ត៌មានស្តីពីព្រឹត្តិការណ៍ កម្មវិធី
-            និងយុទ្ធនាការដែលជួយការពារបរិស្ថាន និងលើកកម្ពស់ជីវភាពបៃតង។
-            គោលបំណងរបស់យើងគឺដើម្បីបង្កើតការយល់ដឹង
-            និងលើកទឹកចិត្តឲ្យអ្នកទាំងអស់គ្នាចូលរួមក្នុងការការពារបរិស្ថានសម្រាប់ជំនាន់ក្រោយ។
-          </p>
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4">
+              <a href="video1.html" class="text-decoration-none text-dark">
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="../image/minea/Kitchenwaste.png"
+                    alt=""
+                    class="card-img-top fixed-img rounded-top-3"
+                  />
+                  <p class="card-text m-3">
+                    កាកសំណល់ផ្ទះបាយ ក្លាយជាជីដ៏មានតម្លៃចំពោះដំណាំ
+                  </p>
+                  <p class="card-text text-secondary ps-3">
+                    កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4">
+              <a href="video1.html" class="text-decoration-none text-dark">
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="../image/minea/sombokong.png"
+                    alt=""
+                    class="card-img-top fixed-img rounded-top-3"
+                  />
+                  <p class="card-text m-3">ធុងសំរាមដែលច្នៃពីសំបកកង់ឡាន</p>
+                  <p class="card-text text-secondary ps-3">
+                    កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4">
+              <a href="video1.html" class="text-decoration-none text-dark">
+                <div
+                  class="card h-100 border-0 shadow-sm hover-shadow transition rounded-3"
+                >
+                  <img
+                    src="../image/minea/img03.png"
+                    alt=""
+                    class="card-img-top fixed-img rounded-top-3"
+                  />
+                  <p class="card-text m-3">
+                    ផលិតផលច្នៃប្រឌិតផលិតពីផ្លាស្ទិចកែច្នៃ
+                  </p>
+                  <p class="card-text text-secondary ps-3">
+                    កាលបរិច្ឆេទ៖ ២៣ ខែ មីនា ឆ្នាំ ២០២៥
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <!-- Contact Info -->
-        <div class="col-6 col-md-3 col-lg-4">
-          <div class="row ms-sm-0 ms-lg-20 g-0">
-            <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
-              ព័ត៌មានទំនាក់ទំនង
-            </h5>
-            <p class="mb-1">
-              <i class="bi bi-telephone me-2"></i>+855 12 123 456
+      <section>
+        <div class="container my-5">
+          <h2 class="mb-4 text-center">
+            សំណួរ & ចម្លើយ អំពីការកែច្នៃប្លាស្ទិក
+          </h2>
+
+          <div class="accordion" id="plasticFAQ">
+            <!-- Question 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading1">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse1"
+                  aria-expanded="true"
+                  aria-controls="collapse1"
+                >
+                  តើប្លាស្ទិកប្រភេទណាខ្លះដែលអាចកែច្នៃឡើងវិញបាន?
+                </button>
+              </h2>
+              <div
+                id="collapse1"
+                class="accordion-collapse collapse show"
+                aria-labelledby="heading1"
+                data-bs-parent="#plasticFAQ"
+              >
+                <div class="accordion-body">
+                  ប្រភេទផ្លាស្ទិចផ្សេងៗគ្នាដែលអាចកែច្នៃបានរួមមាន PET
+                  (Polyethylene Terephthalate), HDPE (High-Density Polyethylene)
+                  និង PP (Polypropylene)។
+                  ទាំងនេះត្រូវបានប្រើប្រាស់ជាទូទៅក្នុងដបប្លាស្ទិក ការវេចខ្ចប់
+                  និងធុងផ្សេងៗ។
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse2"
+                  aria-expanded="false"
+                  aria-controls="collapse2"
+                >
+                  តើដបប្លាស្ទិកត្រូវបានកែច្នៃក្នុងដំណើរការកែច្នៃដោយរបៀបណា?
+                </button>
+              </h2>
+              <div
+                id="collapse2"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading2"
+                data-bs-parent="#plasticFAQ"
+              >
+                <div class="accordion-body">
+                  ការកែច្នៃដបប្លាស្ទិកជាធម្មតាពាក់ព័ន្ធនឹងការប្រមូលផ្លាស្ទិក
+                  តម្រៀបវាតាមប្រភេទ និងសម្អាតវាដើម្បីលុបភាពមិនស្អាត។
+                  ជារឿយៗផ្លាស្ទិចត្រូវបានកាត់ជាបំណែកតូចៗ បន្ទាប់មករលាយ
+                  និងកំទេចដើម្បីបង្កើតជាបន្ទះប្លាស្ទិកកែច្នៃឡើងវិញ។
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse3"
+                  aria-expanded="false"
+                  aria-controls="collapse3"
+                >
+                  តើដំណើរការ​តម្រៀប​ក្នុង​ការ​កែច្នៃ​សំណល់​ប្លាស្ទីក​ជា​អ្វី?
+                </button>
+              </h2>
+              <div
+                id="collapse3"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading3"
+                data-bs-parent="#plasticFAQ"
+              >
+                <div class="accordion-body">
+                  ដំណើរការតម្រៀបក្នុងការកែច្នៃសំណល់ប្លាស្ទិកពាក់ព័ន្ធនឹងការបំបែកកាកសំណល់ទូទៅ
+                  និងសំណល់ប្លាស្ទិកតាមប្រភេទ និងគុណភាព។ នេះមានសារៈសំខាន់ណាស់
+                  ដោយសារប្រភេទផ្លាស្ទិចខុសៗគ្នា មានតម្រូវការកែច្នៃខុសៗគ្នា។
+                </div>
+              </div>
+            </div>
+            <!-- Question 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading4">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse4"
+                  aria-expanded="false"
+                  aria-controls="collapse4"
+                >
+                  តើផ្លាស្ទិកគ្រប់ប្រភេទអាចកែច្នៃឡើងវិញបានតាមរយៈការកែច្នៃមេកានិចដែរឬទេ?
+                </button>
+              </h2>
+              <div
+                id="collapse4"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading4"
+                data-bs-parent="#plasticFAQ"
+              >
+                <div class="accordion-body">
+                  មិនមែនប្លាស្ទិកគ្រប់ប្រភេទអាចកែច្នៃឡើងវិញបានតាមរយៈការកែឆ្នៃដោយមេកានិចនោះទេ។
+                  ផ្លាស្ទិចខ្លះអាចកែច្នៃឡើងវិញបានតែនៅក្នុងកន្លែងកែច្នៃជាក់លាក់
+                  ដែលត្រូវបានបំពាក់ដើម្បីដោះស្រាយវា។
+                  គ្រឿងបរិក្ខារសម្រាប់ជំហានចុងក្រោយនេះត្រូវតែមានសមត្ថភាពកែច្នៃប្លាស្ទិកមួយប្រភេទ
+                  ឬមានបច្ចេកវិជ្ជាកែច្នៃប្លាស្ទិកប្រភេទផ្សេងៗគ្នា។
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-footer pt-8 border-top">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a
+              href="home.html"
+              class="footer-img mb-3 d-flex align-items-center"
+            >
+              <img
+                src="../image/green_leaves_round_logo.png"
+                alt="logo"
+                style="width: 50px"
+              />
+              <h4 class="ms-2 fw-bold text-success mb-0 mt-3">កែច្នៃ</h4>
+            </a>
+
+            <p class="text-secondary">
+              គេហទំព័រ “សកម្មភាពបៃតង”
+              ត្រូវបានបង្កើតឡើងដោយមានគោលបំណងក្នុងការផ្សព្វផ្សាយ
+              និងចែករំលែកព័ត៌មានអំពីសកម្មភាពបរិស្ថាន។
+              យើងខិតខំផ្តល់ឱ្យអ្នកនូវព័ត៌មានស្តីពីព្រឹត្តិការណ៍ កម្មវិធី
+              និងយុទ្ធនាការដែលជួយការពារបរិស្ថាន និងលើកកម្ពស់ជីវភាពបៃតង។
+              គោលបំណងរបស់យើងគឺដើម្បីបង្កើតការយល់ដឹង
+              និងលើកទឹកចិត្តឲ្យអ្នកទាំងអស់គ្នាចូលរួមក្នុងការការពារបរិស្ថានសម្រាប់ជំនាន់ក្រោយ។
             </p>
-            <p class="mb-1">
-              <i class="bi bi-envelope me-2"></i>
-              <a href="mailto:info@gmail.com" class="text-dark">info@gmail.com</a>
-            </p>
-            <!-- Social Media -->
-            <div class="d-flex gap-3 mt-3">
-              <a href="#" class="text-success"><i class="bi bi-facebook fs-4"></i></a>
-              <a href="#" class="text-success"><i class="bi bi-twitter-x fs-4"></i></a>
-              <a href="#" class="text-success"><i class="bi bi-telegram fs-4"></i></a>
-              <a href="#" class="text-success"><i class="bi bi-instagram fs-4"></i></a>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <div class="row ms-sm-0 ms-lg-20 g-0">
+              <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
+                ព័ត៌មានទំនាក់ទំនង
+              </h5>
+              <p class="mb-1">
+                <i class="bi bi-telephone me-2"></i>+855 12 123 456
+              </p>
+              <p class="mb-1">
+                <i class="bi bi-envelope me-2"></i>
+                <a href="mailto:info@gmail.com" class="text-dark"
+                  >info@gmail.com</a
+                >
+              </p>
+              <!-- Social Media -->
+              <div class="d-flex gap-3 mt-3">
+                <a href="#" class="text-success"
+                  ><i class="bi bi-facebook fs-4"></i
+                ></a>
+                <a href="#" class="text-success"
+                  ><i class="bi bi-twitter-x fs-4"></i
+                ></a>
+                <a href="#" class="text-success"
+                  ><i class="bi bi-telegram fs-4"></i
+                ></a>
+                <a href="#" class="text-success"
+                  ><i class="bi bi-instagram fs-4"></i
+                ></a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Quick Links -->
-        <div class="col-6 col-md-3 col-lg-4">
-          <div class="row ms-sm-0 ms-lg-15 g-0 p-0">
-            <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
-              តំណភ្ជាប់រហ័ស
-            </h5>
-            <div class="row">
-              <div class="col-6 p-0">
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="donation.html" class="footer-link d-block fs-5">បរិច្ចាក</a>
-                  </li>
-                  <li>
-                    <a href="event.html" class="footer-link d-block fs-5">ព្រឹត្តិការណ៍</a>
-                  </li>
-                  <li>
-                    <a href="about.html" class="footer-link d-block fs-5">អំពីយើង</a>
-                  </li>
-                </ul>
+          <!-- Quick Links -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <div class="row ms-sm-0 ms-lg-15 g-0 p-0">
+              <h5 class="mb-3 fw-bold text-success mt-3 fs-footer">
+                តំណភ្ជាប់រហ័ស
+              </h5>
+              <div class="row">
+                <div class="col-6 p-0">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="donation.html" class="footer-link d-block fs-5"
+                        >បរិច្ចាក</a
+                      >
+                    </li>
+                    <li>
+                      <a href="event.html" class="footer-link d-block fs-5"
+                        >ព្រឹត្តិការណ៍</a
+                      >
+                    </li>
+                    <li>
+                      <a href="about.html" class="footer-link d-block fs-5"
+                        >អំពីយើង</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Bottom bar -->
-      <div class="row border-top py-3 mt-4 align-items-center">
-        <div class="col-6 text-start">
-          <p class="mb-0 small text-secondary">© 2025 Recycle</p>
-        </div>
-        <div class="col-6 d-flex justify-content-end gap-3">
-          <a href="#" class="text-secondary small">Privacy Policy</a>
-          <a href="#" class="text-secondary small">FAQs</a>
+        <!-- Bottom bar -->
+        <div class="row border-top py-3 mt-4 align-items-center">
+          <div class="col-6 text-start">
+            <p class="mb-0 small text-secondary">© 2025 Recycle</p>
+          </div>
+          <div class="col-6 d-flex justify-content-end gap-3">
+            <a href="#" class="text-secondary small">Privacy Policy</a>
+            <a href="#" class="text-secondary small">FAQs</a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
-<script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../js/function.js"></script>
-
+    </footer>
+  </body>
+  <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/function.js"></script>
 </html>
